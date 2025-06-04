@@ -1,0 +1,18 @@
+@use '../../../styles/global' as *;
+@import url('../../../styles/now-icon.css');
+
+.arrow:after{
+    position: relative;
+    right: -6px;
+    font-family: 'nowicon';
+    content: "\e904";
+    font-size: 12px;
+}
+
+.new-window::after{
+    position: relative;
+    right: -8px;
+    font-family: 'nowicon';
+    content: "\e907";
+    font-size: 14px;
+}

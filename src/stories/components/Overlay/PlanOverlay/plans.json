@@ -1,0 +1,48 @@
+{
+  "planName": "Sports & Entertainment Pack",
+  "plans": [
+    {
+      "href": "#",
+      "label": "Select",
+      "planTitle": "12-month",
+      "plansubTitle": "Best Value",
+      "price": "$1,188",
+      "perUnit": "/ 12mth",
+      "planNotes": "Avg. $99 / mth",
+      "isButton": true,
+      "isToggle": true,
+      "disableAfterToggle": true
+    },
+    {
+      "href": "#",
+      "label": "Select",
+      "planTitle": "Free to Go",
+      "plansubTitle": "Flexible",
+      "price": "$128",
+      "perUnit": "/ month",
+      "planNotes": "Cancel at anytime",
+      "isButton": true,
+      "isToggle": true,
+      "disableAfterToggle": true
+    },
+    {
+      "href": "#",
+      "label": "Select",
+      "planTitle": "Day Pass",
+      "plansubTitle": "One-time",
+      "price": "$38",
+      "perUnit": "/ day",
+      "planNotes": "Valid for 24 hours",
+      "isButton": true,
+      "isToggle": true,
+      "disableAfterToggle": true
+    }
+  ],
+  "remarksActive": true,
+  "remarks": [
+    "All plans include access to live sports and entertainment content.",
+    "Day Pass is valid for 24 hours from the time of purchase.",
+    "Free to Go plan can be cancelled anytime without penalty.",
+    "<a href='#'>View full terms and conditions</a>"
+  ]
+} 

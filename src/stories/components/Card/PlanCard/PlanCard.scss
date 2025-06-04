@@ -1,0 +1,283 @@
+@use '../../../../styles/global' as *;
+
+.plan-card {
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+    
+    .pack-image-banner{
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .pack-image-square{
+        display: none;
+    }
+
+    .details{
+        padding: 24px;
+
+        h3{
+            font-family: $heading-font;
+            margin: 0 0 24px 0;
+            font-size: 24px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        p{
+            margin: 24px 0;
+            font-size: 16px;
+            color: $text-grey;
+            font-family: $content-font;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-align: left;
+        }
+
+        .includes {
+            margin: 24px 0;
+            text-align: left;
+
+            h5 {
+                font-family: $heading-font;
+                font-size: 14px;
+                font-weight: 500;
+                margin: 0;
+                font-weight: 600;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 0 15px;
+
+                li {
+                    font-family: $content-font;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    font-weight: 400;
+                    &:last-child{margin: 10px 0 0 0;}
+                    a {
+                        position: relative;
+                        color: #0b0b0b;
+                        text-decoration: none;
+
+                        &::after {
+                            position: relative;
+                            content: "\e904";
+                            font-family: 'nowicon';
+                            font-size: 12px;
+                            right: -8px;
+                            top: 1px;
+                        }
+
+                        &:hover {
+                            color: $secondary-colour;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-control {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .price-wrap {
+                text-align: left;
+                h4 {    
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: left;
+                    font-family: $heading-font;
+                    b{
+                        font-weight: 500;
+                        font-size: 32px;
+                    }
+                }
+
+                small {
+                    display: inline-block;
+                    font-family: $content-font;
+                    color: $text-grey;
+                    margin: 8px 0 0 0;
+                    line-height: 1.4;
+                    font-size: 16px;
+                }
+
+            }            
+
+        }
+
+    }
+
+    // for small card
+    &.sm{
+        max-width: 600px;
+
+        .details{
+            h3{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            .includes{
+
+            }
+            
+    
+            .bottom-control {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .price-wrap {
+                    text-align: center;
+                    h4 {    
+                        text-align: center;
+                    }
+    
+                    small {
+                        margin: 8px 0 24px 0;
+                    }
+    
+                }            
+    
+            }
+    
+        }
+
+    }
+
+    
+
+
+    // for one row
+    &.onerow{
+        @include flex-display;
+        flex-direction: row;
+        align-items: center;
+
+        .pack-image-square{
+            display: flex;
+            width: 50%;
+            height: auto;
+        }
+
+        .pack-image-banner{display: none;}
+
+        .details{
+            .bottom-control {
+                .price-wrap {
+                    text-align: left;
+                }            
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .plan-card {
+
+        &.onerow{
+            flex-direction: column;
+            .pack-image-square{
+                display: none;
+            }
+            .pack-image-banner{display: block;}
+
+            .details{
+                .bottom-control {
+                    .price-wrap {
+                        text-align: center;
+                    }            
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .plan-card{
+        .details{
+            padding: 20px;
+            h3{
+                font-size: 20px;
+                margin: 0 0 20px 0;
+                text-align: center;
+            }
+
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .includes{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h5{
+                    font-size: 13px;
+                }
+
+                ul {
+    
+                    li {
+                        font-size: 14px;
+                        a {
+                            &::after {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .bottom-control {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .price-wrap {
+                    h4 {    
+                        text-align: center;
+                        font-size: 14px;
+                        b{
+                            font-size: 28px;
+                        }
+                    }
+                    small {
+                        margin: 8px 0 24px 0;
+                        font-size: 14px;
+                    }
+    
+                }            
+    
+            }
+        }
+    }
+}

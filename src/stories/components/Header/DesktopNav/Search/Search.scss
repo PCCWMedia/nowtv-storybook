@@ -1,0 +1,27 @@
+@use '../../../../../styles/global' as *;
+
+.search-container {
+    position: relative;
+    display: inline-block;
+
+    .search-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $text-black;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        i {
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+        }
+    }
+} 

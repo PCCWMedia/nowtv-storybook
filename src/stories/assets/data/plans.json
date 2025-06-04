@@ -1,0 +1,104 @@
+{
+  "plans": {
+    "Super Sports & Entertainment Combo": {
+      "planName": "Super Sports & Entertainment Combo",
+      "plansData": [
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "12-month",
+          "price": "$4,656",
+          "perUnit": "/ 12mth",
+          "planNotes": "Avg. $388 / mth"
+        },
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "Monthly",
+          "price": "$428",
+          "perUnit": "/ month",
+          "planNotes": "Cancel at anytime"
+        }
+      ],
+      "remarks": {
+        "active": false,
+        "content": []
+      }
+    },
+    "Max (Ultimate) / Max (Standard)": {
+      "planName": "Max (Ultimate) / Max (Standard)",
+      "plansData": [
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "Monthly",
+          "plansubTitle": "With Max (Ultimate)",
+          "price": "$98",
+          "perUnit": "/ 12mth",
+          "planNotes": "Cancel at anytime"
+        },
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "Monthly",
+          "plansubTitle": "with Max (Standard)",
+          "price": "$78",
+          "perUnit": "/ month",
+          "planNotes": "Cancel at anytime"
+        }
+      ],
+      "remarks": {
+        "active": true,
+        "content": [
+          "Max content is available on Max app including iOS, Android and select Smart TV apps.",
+          "Max Standard: Max app with two Full-HD streams.",
+          "<a href=\"https://www.nowtv.now.com/tnc/nowtvwsmax\">Details on Max app activation and Terms & Conditions</a>"
+        ]
+      }
+    },
+    "NBA Pack": {
+      "planName": "NBA Pack",
+      "plansData": [
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "12-month",
+          "price": "$816",
+          "perUnit": "/ 12mth",
+          "planNotes": "Avg. $68 / mth",
+          "isButton": true,
+          "isToggle": true,
+          "disableAfterToggle": true
+        },
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "Monthly",
+          "price": "$98",
+          "perUnit": "/ month",
+          "planNotes": "Cancel at anytime",
+          "isButton": true,
+          "isToggle": true,
+          "disableAfterToggle": true
+        },
+        {
+          "href": "#",
+          "label": "Select",
+          "planTitle": "Day Pass",
+          "price": "$38",
+          "perUnit": "/ day",
+          "planNotes": "Valid for 24 hours",
+          "isButton": true,
+          "isToggle": true,
+          "disableAfterToggle": true
+        }
+      ],
+      "remarks": {
+        "active": true,
+        "content": [
+          "The early promotion will be valid from 1 Aug 2024 to 31 Aug 2024 (inclusive of the first and last days.)"
+        ]
+      }
+    }
+  }
+}
