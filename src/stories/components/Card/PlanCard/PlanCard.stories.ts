@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import PlanCard from './PlanCard';
-import array from '@storybook/addon-controls';
 
 const meta = {
     title: 'Components/Card/PlanCard',
@@ -14,7 +13,7 @@ const meta = {
         imageSquare: { control: 'text' },
         title: { control: 'text' },
         description: { control: 'text' },
-        planIncludes: { control: array },
+        planIncludes: { control: 'object' },
         price: { control: 'text' },
         notes: { control: 'text' },
         priceType: {
