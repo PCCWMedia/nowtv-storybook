@@ -1,0 +1,9 @@
+import{j as o}from"./jsx-runtime-D_zvdyIk.js";import{C as g}from"./ChatItem-CnlCC_jG.js";const r=[{id:"phone",href:"tel:1833888",iconSrc:"/src/stories/assets/img/icon/icon-chat-phone.svg",alt:"phone",text:"1833888"},{id:"whatsapp",href:"https://api.whatsapp.com/send?phone=85260551888",iconSrc:"/src/stories/assets/img/icon/icon-chat-whatsapp.svg",alt:"whatsapp",text:"WhatsApp",target:"_blank"},{id:"email",href:"mailto:cs@nowtv.now.com",iconSrc:"/src/stories/assets/img/icon/icon-chat-message.svg",alt:"message",text:"Email",target:"_blank"}],d=({optionIds:a})=>{const l=a?r.filter(t=>a.includes(t.id)):r;return o.jsx("div",{className:"chats-wrapper",children:l.map(t=>o.jsx(g,{href:t.href,iconSrc:t.iconSrc,alt:t.alt,text:t.text,target:t.target},t.id))})};d.__docgenInfo={description:"",methods:[],displayName:"ChatOptions",props:{optionIds:{required:!1,tsType:{name:"Array",elements:[{name:"string"}],raw:"string[]"},description:""}}};const x={title:"Components/Chats/ChatOption/ChatsWrapper",component:d,parameters:{docs:{description:{component:"A container for chat options, composed of ChatOptionItem components. Use `optionIds` to filter displayed options."}}}},s={args:{optionIds:void 0}},e={args:{optionIds:["phone","whatsapp"]}};var n,p,i;s.parameters={...s.parameters,docs:{...(n=s.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    optionIds: undefined // 顯示所有選項（電話、WhatsApp、Email）
+  }
+}`,...(i=(p=s.parameters)==null?void 0:p.docs)==null?void 0:i.source}}};var c,m,h;e.parameters={...e.parameters,docs:{...(c=e.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    optionIds: ['phone', 'whatsapp'] // 只顯示電話同 WhatsApp
+  }
+}`,...(h=(m=e.parameters)==null?void 0:m.docs)==null?void 0:h.source}}};const w=["Default","PhoneWhatsapp"];export{s as Default,e as PhoneWhatsapp,w as __namedExportsOrder,x as default};
