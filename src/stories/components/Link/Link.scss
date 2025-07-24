@@ -1,0 +1,44 @@
+@import '../../../styles/variable.scss';
+@import url('../../../styles/now-icon.css');
+
+
+a.arrow:after{
+    position: relative;
+    right: -6px;
+    font-family: 'nowicon';
+    content: "\e904";
+    font-size: 12px;
+}
+
+a.new-window::after{
+    position: relative;
+    right: -8px;
+    font-family: 'nowicon';
+    content: "\e907";
+    font-size: 14px;
+}
+
+
+a.borderLink{
+    width: 100%;
+    font-family: $heading-font;
+    display: inline-flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #9b9b9b;
+    align-items: center;
+    border-radius: 8px;
+    color: $text-black;
+    font-weight: 400;
+    padding: 8px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &:hover{
+        color: white;
+        background-color: $primary-colour;
+        border: 1px solid $primary-colour;
+    }
+}

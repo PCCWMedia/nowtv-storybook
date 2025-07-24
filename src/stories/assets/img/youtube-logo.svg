@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF0000;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<path id="lozenge-path" class="st0" d="M48.96,12.97c-0.57-2.15-2.27-3.84-4.42-4.42C40.64,7.5,25,7.5,25,7.5S9.37,7.5,5.46,8.54
+		c-2.15,0.57-3.84,2.27-4.42,4.42C0,16.86,0,25,0,25s0,8.14,1.04,12.03c0.57,2.15,2.27,3.84,4.42,4.42C9.37,42.5,25,42.5,25,42.5
+		s15.64,0,19.54-1.04c2.15-0.57,3.84-2.27,4.42-4.42C50,33.14,50,25,50,25S50,16.86,48.96,12.97z"/>
+	<polygon id="play-polygon" class="st1" points="20,32.5 32.99,25 20,17.5 	"/>
+</g>
+</svg>

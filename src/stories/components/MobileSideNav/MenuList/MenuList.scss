@@ -1,0 +1,44 @@
+@import '../../../../styles/variable.scss';
+
+.menuList{
+    ul{
+      padding: 0;
+      margin: 0;
+      li{
+        position: relative;
+        list-style: none;
+        a{
+          @include flex-display;
+          font-family: $heading-font;
+          font-weight: 500;
+          font-size: 14px;
+          color: $text-black;
+          height: 50px;
+          padding: 0 22px;
+          align-items: center;
+          justify-content: flex-start;
+          border: 0;
+        }
+
+        &.active{
+          a{
+            color: $secondary-colour;
+          }
+          ul li{
+            a{
+              color: $text-black;
+              font-weight: 400;
+              &:hover{
+                color: $text-black;
+              }
+            }
+          }
+        }
+
+        &.hasSubMenu.active{
+            background-color: #f1f1f1;
+        }
+
+      }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../styles/variable.scss';
+
+  
+.login-profile-btn{
+    -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        position: relative;
+        @include flex-display;
+        flex-direction: row;
+        align-items: center;
+        font-family: "Montserrat", "Noto Sans TC", sans-serif;
+        font-size: 18px;
+        width: auto;
+        padding: 0 20px;
+        height: 73px;
+        background-color: #EF9528;
+        color: white;
+        white-space: nowrap;
+        text-decoration: none;
+        max-width: none;
+
+        i{
+            color: white;
+            font-size: 29px;
+            margin-right: 17px;
+            position: relative;
+            top: 2px;
+        }
+
+        .login-info{
+            display: flex;
+            flex-direction: column;
+            .username{
+                max-width: 150px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+            }
+            .view-acct{
+                font-size: 16px;
+                font-family: "Barlow", "Noto Sans TC", sans-serif;
+            }
+        }
+
+        &:hover{
+            font-weight: 400;
+            background-color: #F37D16;
+        }
+
+}
+
+@media screen and (max-width: 1199px) {
+    .login-profile-btn{
+        height: 50px;
+        padding: 0 16px;
+    }
+}

@@ -1,0 +1,71 @@
+@import url('./now-icon.css');
+
+// swiper css
+.swiper-button-next,
+.swiper-button-prev {
+    content: '';
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba($color: #4a4a4a, $alpha: 0.35);
+    border: 0;
+    z-index: 2;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    
+    font-size: 0px;
+
+    &:after {
+        font-family: 'nowicon' !important;
+        display: inline-block;
+        content: '\e904';
+        font-size: 18px;
+        color: #fff;
+        top: 0;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+    }
+    &:hover{
+        background: rgba($color: #4a4a4a, $alpha: 0.6);
+    }
+}
+
+.swiper-button-prev {
+    left: 0;
+
+    &::after {
+        position: relative;
+        transform: scaleX(-1);
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        content: '';
+        width: 36px;
+        height: 36px;
+        &:after {
+            font-family: 'nowicon' !important;
+            display: inline-block;
+            content: '\e904';
+            font-size: 16px;
+            color: #fff;
+            top: 0;
+        }
+    }
+}

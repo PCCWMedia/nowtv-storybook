@@ -1,0 +1,88 @@
+@import '../../../../styles/variable.scss';
+
+.breadcrumb{
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    ul {
+        margin: 0 0 48px 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin: 0;
+            border-bottom: 1px #D8D8D8 solid;
+            background: #fff;
+            padding: 15px 0;
+            padding: 20px 0 15px 0;
+            position: relative;
+
+            &:before,&:after{
+                content: '';
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top-width: 15px;
+                border-top-style: solid;
+                border-top-color: red;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, -50%);
+                z-index: 9
+            }
+            &:before{
+                border-top-color: #D8D8D8;
+                bottom: -23px;
+            }
+            &:after {
+                border-top-color: white;
+                bottom: -22px;
+            }
+
+            a {
+                font-size: 14px;
+                color: $text-grey;
+                text-decoration: none;
+                font-family:$heading-font;
+            }
+
+            &:nth-child(2) {
+                background-color: #f7f7f7;
+                &:after {
+                    border-top-color: #f7f7f7;
+                }
+            }
+            &:nth-child(3) {
+                background-color: #ECECEC;
+                &:after {
+                    border-top-color: #ECECEC;
+                }
+            }
+            &:nth-child(4) {
+                background-color: #DFDFDF;
+                &:after {
+                    border-top-color: #DFDFDF;
+                }
+            }
+            &:nth-child(5) {
+                background-color: #D4D4D4;
+                &:after {
+                    border-top-color: #D4D4D4;
+                }
+            }
+
+            &:last-child {
+                font-weight: 500;
+            }
+
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    .breadcrumb ul li {
+        padding: 14px 0 10px 0;
+    }
+}

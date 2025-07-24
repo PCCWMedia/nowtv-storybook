@@ -1,0 +1,194 @@
+@import '../../../../styles/variable.scss';
+
+.likenowe-wrapper{
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    h4{
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+        white-space: pretty;
+    }
+    p{
+        font-family: $content-font;
+        margin: 16px 0 0 0;
+        color: $text-grey;
+        text-align: center;
+    }
+
+    .e-to-TV{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin: 24px 0;
+        img{
+            height: 48px;
+            width: auto;
+            margin: 0 12px;
+        }
+    }
+
+    .comparison-table-wrapper{
+        margin: 24px 0;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            tr{
+                border-top: 1px solid #d8d8d8;
+                border-bottom: 1px solid #d8d8d8;
+            }
+            td{
+                padding: 12px 0;
+                text-align: center;
+                font-size: 16px;
+                text-align: left;
+                font-family: $heading-font;
+                font-weight: 400;
+                display: inline-flex;
+                align-items: flex-start;
+                vertical-align: top;
+                padding-left: 32px;
+
+                &:first-child{
+                    font-weight: 500;
+                    padding-left: 0;
+                    width: calc(50% - 150px);;
+                }
+
+                &:nth-child(2){
+                    width: 198px;
+                }
+
+                ul{
+                    margin: 0;
+                    padding: 0 0 0 23px;
+                    li{
+                        font-family: $content-font;
+                        color: $text-grey;
+                        font-weight: 400;
+                    }
+                }
+                div{
+                    padding: 0 0 0 8px;
+                    h6{
+                        margin: 0;
+                        font-family: $content-font;
+                        color: $text-grey;
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                    a{
+                        font-family: $content-font;
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .continue{
+        text-align: center;
+        button{
+            font-family: $content-font;
+            font-size: 16px;
+        }
+    }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .likenowe-wrapper{
+        padding: 32px;
+        p{
+            margin: 14px 0 0 0;
+        }
+
+        .e-to-TV{
+            position: relative;
+            justify-content: space-between;
+            margin: 20px 0;
+            .nowe-logo,.nowtv-logo{
+                width: 50%;
+                text-align: center;
+                justify-content: center;
+            }
+            img{
+                max-width: 100%;
+                height: 40px;
+                margin: 0 10px;
+            }
+            .arrow{
+                left: 50%;
+                transform: translate(-50%, 0);
+                position: absolute;
+            }
+        }
+
+        .comparison-table-wrapper{
+            margin: 20px 0;
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                tr{
+                    border-top: 1px solid #d8d8d8;
+                    border-bottom: 1px solid #d8d8d8;
+                }
+                td{
+                    padding: 10px 0;
+                    font-size: 14px;
+                    padding-left: 0;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &:first-child{
+                        padding-left: 0;
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                        br{display: none;}
+                    }
+
+                    &:nth-child(2){
+                        width: 50%;
+                        padding: 0 0 10px 0;
+                    }
+                    &:nth-child(3){
+                        width: 50%;
+                        padding: 0 0 10px 0%;
+                    }
+                    div{
+                        h6{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .continue{
+            a{
+                font-size: 14px;
+            }
+        }
+
+
+
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .likenowe-wrapper{
+        .e-to-TV{
+            img{
+                height: 32px;
+                margin: 0 8px;
+            }
+        }
+    }
+}

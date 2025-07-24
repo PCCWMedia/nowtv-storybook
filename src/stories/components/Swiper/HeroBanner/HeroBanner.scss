@@ -1,0 +1,272 @@
+.hero-banner{
+    --banner-bg-color: #111111;
+    
+    .swiper {
+        width: 100%;
+        height: 80vh;
+        min-height: 480px;
+        max-height: auto;
+    }
+  
+    .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+  
+    .swiper-slide {
+        a{
+            width: 100%;
+            height: 100%;  
+        }
+        img,picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 75% 50%;
+
+        }
+    }
+
+    .swiper-pagination {
+        .swiper-pagination-bullet{
+            border:2px solid #d8d8d8;
+            opacity: 1;
+            background-color: transparent;
+            margin: 0 6px;
+            &.swiper-pagination-bullet-active{
+                border:2px solid #EF9528;
+            }
+        }
+    }
+
+    .banner-content{
+        display: flex;
+        flex-direction: column;
+        // row-gap: 24px;
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 33.33%;
+        text-align: left;
+        color: white;
+        a{color: white;}
+
+        h1,h2,h3,h4,h5,h6{color: white;}
+
+        h2{
+            margin: 0 0 24px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-wrap: pretty;
+        }
+
+        h5{
+            margin: 0 0 8px 0;
+        }
+        
+        p{
+            font-family: 'Barlow', sans-serif;
+            font-size: 18px;
+            margin: 0 0 24px 0;
+            line-height: 1.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            &:not(:first-of-type) {
+                display: none;
+            }
+        }
+        img{
+            position: relative;
+            align-self: flex-start;
+            &.title-art{
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 88px;
+                margin: 0 0 24px 0;
+            }
+
+            &.chlib-logo{
+                width: auto;
+                height: auto;
+                max-height: 50px;
+                max-width: 150px;
+                margin: 0 0 24px 0;
+            }
+        }
+        a{
+            align-self: flex-start;
+            width: auto;
+            font-size: 16px;
+            font-family: 'Barlow', sans-serif;
+            text-decoration: none;
+            &:hover{
+                font-weight: 500;
+            }
+            &.terms-link{
+                font-size: 14px;
+                margin: 16px 0 0 0;  
+            }
+            &:last-child{margin-top: 16px;}
+            &.arrow::after{
+                font-size: 10px;
+            }
+        }
+        button{
+            display: inline-flex;
+            align-self: flex-start;
+        }
+        small{
+            margin: 16px 0 0 0;
+                font-family: 'Barlow', sans-serif;
+                font-size: 14px;
+        }
+
+        &.dark{
+            h1,h2,h3,h4,h5,h6{color: #0b0b0b;}
+            p,a{color: #0b0b0b;}
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        &.text-center{
+            justify-content: center;text-align: center;
+            display: flex;
+            button,a{align-self: center;}
+        }
+
+
+    }
+}
+
+// responsove
+@media screen and (max-width: 1399px) {
+    .hero-banner{
+        .swiper {
+            max-height: 550px;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .hero-banner{
+        .banner-content{
+            min-width: 320px;
+            left: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero-banner{
+        .swiper {
+            width: 100%;
+            height: auto;
+            min-height: none;
+            max-height: none;
+        }
+
+        .swiper-slide{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .banner-content{
+            position: relative;
+            left: 0;
+            top: none;
+            transform: none;
+            max-width: 100%;
+            text-align: left;
+            width: 100%;
+            padding: 22px 22px 44px 22px;
+            margin-top: -120px;
+            padding-top: 60px;
+            background: linear-gradient(180deg, transparent 0%, var(--banner-bg-color) 15%, var(--banner-bg-color) 20%, var(--banner-bg-color) 40%, var(--banner-bg-color) 100%);
+        
+            &:before {
+                content: '';
+                background-color: var(--banner-bg-color);
+                width: 100%;
+                height: 200%;
+                top: 50%;
+                left: 0;
+                position: absolute;
+                z-index: -1;
+            }
+
+            &.dark{
+                background: linear-gradient(180deg, transparent 0%, #fff 15%, #fff 20%, #fff 40%, #fff 100%);
+                &:before {
+                    background-color: #fff;
+                }
+            }
+
+            img{
+                &.title-art{
+                    max-height: 72px;
+                }
+                &.chlib-logo{
+                    position: absolute;
+                    right: 22px;
+                    bottom: 44px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-banner{
+
+        .banner-content{
+            h3{
+                margin: 0 0 20px 0;
+            }
+            
+            p{
+                font-size: 16px;
+                margin: 0 0 20px 0;
+            }
+            a{
+                font-size: 14px;
+                &.terms-link{
+                    font-size: 12px;
+                }
+            }
+            small{
+                font-size: 12px;
+            }
+
+            img{
+                &.title-art{
+                    max-height: 64px;
+                    margin: 0 0 20px 0;
+                }
+                &.chlib-logo{
+                    max-height: 40px;
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+}

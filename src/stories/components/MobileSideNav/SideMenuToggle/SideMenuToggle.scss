@@ -1,0 +1,43 @@
+@import '../../../../styles/variable.scss';
+@import url('../../../../styles/now-icon.css');
+
+.hasSubMenu {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "\e904";
+        font-family: 'nowicon';
+        top: 18px;
+        font-size: 14px;
+        right: 22px;
+        transition: transform 0.2s linear;
+        transform: rotate(90deg);
+    }
+
+    &.active {
+        &:after {
+            top: 20px;
+            transform: rotate(-90deg);
+            color: $secondary-colour;
+        }
+    }
+
+    .subMenu {
+        overflow-y: hidden;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        height: 0;
+
+        li {
+            a {
+                color: $text-black;
+                transition: color 0.3s ease;
+                &:hover {
+                    color: $secondary-colour;
+                }
+            }
+        }
+    }
+} 

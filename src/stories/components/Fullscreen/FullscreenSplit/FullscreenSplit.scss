@@ -1,0 +1,86 @@
+@import '../../../../styles/variable.scss';
+
+.fullscreen-split {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 60px 0;
+
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left {
+        width: 50%;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+    }
+
+    .right {
+        width: 50%;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 32px;
+
+        h6 {
+            font-weight: 400;
+            color: $text-grey;
+            line-height: 1.4;
+        }
+        .price-tag{
+            margin: -16px 0;
+        }
+        .btn{
+            align-self: flex-start;
+        }
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fullscreen-split {
+        padding: 40px 0;
+
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left, .right {
+            width: 100%;
+            padding: 0;
+        }
+        .left{
+            text-align: center;
+            img{
+                max-width: 400px;
+                margin: 0 0 32px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fullscreen-split {
+        .left{
+            text-align: center;
+            img{
+                max-width: 400px;
+                margin: 0 0 24px 0;
+            }
+        }
+        .right {
+            row-gap: 24px;
+        }
+    }
+} 

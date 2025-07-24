@@ -1,0 +1,79 @@
+@import '../../../../styles/variable.scss';
+
+.faq-column{
+        display: flex;
+        flex: 0 1 calc((100% - 2 * 16px) / 3);
+        flex-direction: column;
+        
+        h5{
+            text-align: left;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px #0B0B0B solid;
+        }
+        .col-link-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            a{
+                display: inline-block;
+                font-size: 16px;
+                text-align: left;
+                margin-bottom: 16px;
+                align-self: flex-start;
+                color: $text-grey;
+                &:last-child{margin-bottom: 0;}
+                &.arrow{
+                    color: $secondary-colour;
+                }
+            }
+        }
+        
+}
+
+@media screen and (max-width: 991px) {
+    .faq-column{
+        flex: 0 1 calc((100% - 1 * 16px) / 2);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .faq-column{
+        flex:initial;
+        width: 100%;
+        h5{
+            position: relative;
+            cursor: pointer;
+            &::after{
+                position: absolute;
+                content: "\e904";
+                font-family: "nowicon";
+                transform: rotate(90deg);
+                top: 6px;
+                right: 22px;
+                font-size: 14px;
+                transition: transform 0.2s linear;
+            }
+        }
+
+        .col-link-wrapper{
+            overflow: hidden;
+            transition: height 0.3s ease;
+            a{
+                font-size: 14px;
+                &:last-child{
+                    padding-bottom: 16px;
+                }
+            }
+        }
+
+        &.active{
+            h5{
+                &::after{
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        
+    }
+}

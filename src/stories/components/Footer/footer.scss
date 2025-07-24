@@ -1,0 +1,239 @@
+@import '../../../styles/variable.scss';
+@import url('../../../styles/now-icon.css');
+
+.footer {
+    width: 100%;
+    padding: 0;
+    background-color: #231F20;
+    margin-top: auto;
+    
+    .footer-wrapper{
+        border-top: 8px solid $primary-colour;
+        @include flex-display;
+        flex-direction: column;
+        align-items: center;
+        .inner{
+            width: 100%;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 35px 0;
+            margin: 0 -12px;
+
+            .column {
+                flex: 1;
+                margin: 0 12px;
+
+                h6{
+                    color: white;
+                    font-family:$content-font;
+                    font-size: 16px;
+                    margin: 0 0 16px 0;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        margin: 5px 0;
+                        text-align: left;
+                        a {
+                            display: inline-block;
+                            text-decoration: none;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-family:$content-font;
+                            padding: 0;
+                            height: auto;
+                            border:0;
+                            margin: 0 0 8px 0;
+                            white-space: break-spaces;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &:last-child a{margin: 0;}
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-top: 1px solid $primary-colour;
+        width: 100%;
+        padding: 16px 0;
+        .inner{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .footer-links {
+            margin: 0 0 16px 0;
+            a {
+                margin-right: 15px;
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                font-family: $content-font;
+                font-weight: 400;
+
+                &:hover {
+                    text-decoration: none;
+                    font-weight: 400;
+                }
+
+                &:after{
+                    content:'|';
+                    margin:0 18px;
+                    color: white;
+                }
+
+                &:last-child:after{
+                    content:'';
+                    margin:0;
+                }
+            }
+        }
+
+        .copyright-text {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: $content-font;
+            p {
+                margin: 0;
+                font-size: 14px;
+                margin-right: 5px;
+                .note-DPMS{
+                    display: inline-block;
+                    margin-left: 16px;
+                }
+            }
+            img{
+                width: auto;
+                height: 14px;
+            }
+            small{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .footer{
+        .footer-wrapper{
+            .inner{
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .column{
+                    flex: none;
+                    width: 16.66%;
+                    margin: 12px;
+                }
+            } 
+        }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .footer {
+        .footer-wrapper{
+            .inner{
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin: 0;
+                .column{
+                    flex: none;
+                    width: 100%;
+                    margin: 0;
+                    border-bottom: 1px solid #616161;
+                    h6{
+                        position: relative;
+                        padding: 16px 0;
+                        margin: 0;
+                        cursor: pointer;
+                        transition: color 0.3s;
+                        &:after{
+                            position: absolute;
+                            content: "\e904";
+                            font-family: 'nowicon';
+                            transform: rotate(90deg);
+                            top: 20px;
+                            right: 22px;
+                            font-size: 14px;
+                            transition: transform 0.2s linear;
+
+                        }
+
+                        &.active:after{
+                            top: 20px;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    ul{
+                        overflow: hidden;
+                        transition: height 0.3s ease;
+                        li:last-child{padding-bottom: 16px;}
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            } 
+        }
+
+        .copyright-wrapper{
+            padding: 32px 0;
+            .footer-links {
+                text-align: center;
+                a{
+                    display: inline-block;
+                    margin: 6px 0;
+                    &::after{margin: 0 12px;}
+                }
+            }
+            .copyright-text{
+                margin: 16px 0 0 0;
+                flex-direction: column;
+                row-gap: 24px;
+                p {
+                    text-align: center;
+                    display: block;
+                    margin: 0;
+                    .note-DPMS{
+                        display: none;
+                    }
+                }
+
+                img{
+                    align-self: center;
+                }
+
+                small{
+                    display: block;
+                    text-align: center;
+                    font-size: 14px;
+                    font-family: $content-font;
+                    line-height: 1.4;
+                }
+                
+            }
+        }
+    }
+    
+}

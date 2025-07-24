@@ -1,0 +1,42 @@
+.device-app-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    .devices-image{
+        img{
+            max-width: 100%;
+        }
+    }
+    .app-col-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        img{
+            width: 100%;
+            max-width: 160px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .device-app-wrapper{
+        flex-direction: column;
+        gap: 24px;
+
+        .app-col-wrapper{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            img{
+                max-width: 140px;
+            }
+        }
+    }
+}

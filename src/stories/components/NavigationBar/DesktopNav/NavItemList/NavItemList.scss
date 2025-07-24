@@ -1,0 +1,10 @@
+@import '../../../../../styles/variable.scss';
+
+.nav-item-list {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    @include flex-display;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,382 @@
+@import '../../../../styles/variable.scss';
+
+.plan-card {
+    border: 1px solid #9b9b9b;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+    
+    .pack-image-banner{
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .pack-image-square{
+        display: none;
+    }
+
+    .details{
+        padding: 24px;
+
+        h4{
+            margin: 0 0 24px 0;
+            text-align: left;
+        }
+
+        p{
+            margin: 24px 0;
+            font-size: 16px;
+            color: $text-grey;
+            font-family: $content-font;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            text-align: left;
+        }
+
+        .includes {
+            margin: 24px 0;
+            text-align: left;
+
+            h6 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 0 15px;
+
+                li {
+                    font-family: $content-font;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    font-weight: 400;
+                    &:last-child{margin: 10px 0 0 0;}
+                    a {
+                        position: relative;
+                        color: #0b0b0b;
+                        text-decoration: none;
+
+                        &::after {
+                            position: relative;
+                            content: "\e904";
+                            font-family: 'nowicon';
+                            font-size: 12px;
+                            right: -8px;
+                            top: 1px;
+                        }
+
+                        &:hover {
+                            color: $secondary-colour;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-control {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .price-wrap {
+                text-align: left;
+                h4 {    
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-align: center;
+                    font-family: $heading-font;
+                    b{
+                        font-weight: 500;
+                        font-size: 32px;
+                    }
+                }
+
+                small {
+                    display: inline-block;
+                    font-family: $content-font;
+                    color: $text-grey;
+                    margin: 8px 0 0 0;
+                    line-height: 1.4;
+                    font-size: 16px;
+                }
+
+            }            
+
+        }
+
+    }
+
+    // for small card
+    &.sm{
+        max-width: 600px;
+
+        .details{
+            h4{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+    
+            .bottom-control {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .price-wrap {
+                    text-align: center;
+                    h4 {    
+                        text-align: center;
+                    }
+    
+                    small {
+                        margin: 8px 0 24px 0;
+                    }
+    
+                }            
+    
+            }
+    
+        }
+
+    }
+
+    // for one row
+    &.onerow{
+        @include flex-display;
+        flex-direction: row;
+        align-items: center;
+
+        .pack-image-square{
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .pack-image-banner{display: none;}
+
+        .details{
+            .bottom-control {
+                .price-wrap {
+                    text-align: left;
+                }            
+            }
+        }
+
+    }
+
+    // for fullscreen
+    &.fullscreen{
+        border:none;
+        @include flex-display;
+        flex-direction: row;
+        align-items: center;
+        border:0;
+        border-radius: 0;
+        padding: 60px 0;
+
+        .pack-img{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+        .pack-image-square{
+            display: flex;
+            width: auto;
+            max-height: 600px;
+            max-width: 100%;
+        }
+        .pack-image-banner{display: none;}
+
+        .details{
+            width: 50%;
+            padding: 0 24px;
+            h2{
+                margin: 0 0 24px 0;
+                text-align: left;
+            }
+            p{
+                font-size: 18px;
+            }
+            .bottom-control {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                .price-wrap {
+                    text-align: left;
+                    small{margin: 8px 0 24px 0;}
+                }            
+            }
+        }
+
+    }
+    
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .plan-card {
+
+        &.onerow{
+            flex-direction: column;
+            .pack-image-square{
+                display: none;
+            }
+            .pack-image-banner{display: block;}
+
+            .details{
+                .bottom-control {
+                    .price-wrap {
+                        text-align: left;
+                    }            
+                }
+            }
+
+        }
+
+        // for fullscreen
+        &.fullscreen{
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+
+            .pack-img{
+                width: 100%;
+            }
+
+            .pack-image-square{
+                width: 100%;
+                max-width: 400px;
+            }
+            // .pack-image-banner{display: block;border-radius: 0;}
+
+            .details{
+                width: 100%;
+                padding: 0;
+                .bottom-control {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    .price-wrap {
+                        text-align: left;
+                    }            
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .plan-card{
+        .details{
+            padding: 20px;
+
+            h4{
+                margin: 0 0 20px 0;
+                text-align: center;
+            }
+
+            p{
+                font-size: 14px;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .includes{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 20px 0;
+
+                h5{
+                    font-size: 13px;
+                }
+
+                ul {
+    
+                    li {
+                        font-size: 14px;
+                        a {
+                            &::after {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .bottom-control {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .price-wrap {
+                    text-align: center;
+                    h4 {    
+                        text-align: center;
+                        font-size: 14px;
+                        b{
+                            font-size: 28px;
+                        }
+                    }
+                    small {
+                        margin: 8px 0 20px 0;
+                        font-size: 14px;
+                    }
+    
+                }            
+    
+            }
+        }
+
+        &.onerow{
+            .details{
+                .bottom-control {
+                    .price-wrap {
+                        text-align: center;
+                    }            
+                }
+            }
+
+        }
+
+        // for fullscreen
+        &.fullscreen{
+
+            .details{
+                h3{text-align: left;margin: 0 0 20px 0;}
+                p{text-align: left;font-size: 16px;}
+                .includes{
+                    align-items: flex-start;
+                }
+
+                .bottom-control {
+                    .price-wrap {
+                        text-align: left;
+                        small{margin: 8px 0 20px 0;}
+                    }            
+                }
+            }
+
+        }
+
+    }
+}

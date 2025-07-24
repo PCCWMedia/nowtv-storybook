@@ -1,0 +1,25 @@
+@import '../../../styles/variable.scss';
+
+// burger menu
+.burger-menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .burger-menu-btn {
+        @include flex-display;
+        width: 40px;
+        height: 40px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        i{
+            font-size: 20px;
+            color: $text-black;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+}

@@ -1,0 +1,419 @@
+@import '../../../styles/variable.scss';
+@import url('../../../styles/now-icon.css');
+
+.getstarted-page .container{
+    .heading{
+        flex-direction: column;
+        text-align: center;
+        @include flex-display;
+        gap: 24px;
+        padding: 48px 0 0 0;
+        align-items: center;
+
+        h4{
+            color:$text-grey;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .likenowE{
+            cursor: pointer;
+            font-family: $heading-font;
+            color: #33058D;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin: 0;
+            display: none;
+            img{
+                width: auto;
+                height: 35px;
+                display: inline-block;
+                margin: 0 8px;
+            }
+            &.active{
+                display: inline-flex;
+            }
+        }
+    }
+
+    // filter wrapper
+    .filter-wrapper{
+        @include flex-display;
+        justify-content: center;
+        margin: 48px 0 0 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .button-wrapper{
+            
+            border:1px solid #d8d8d8;
+            border-radius: 30px;
+            display: inline-flex;
+            align-self: center;
+            flex-direction: row;
+            &:hover,&.active{
+                background-color: rgba($color: $primary-colour, $alpha: 0.3);
+                border: 1px solid $primary-colour;
+                .filter-btn{
+                    color:$text-black;
+                }
+            }
+
+            .close-btn{
+                display: none;
+                position: relative;
+                left: -16px;
+                &:after{
+                    background-color: $primary-colour;
+                    color: white;
+                }
+            }
+
+            &.active > .close-btn{
+                display: inline-block;
+            }
+        }
+
+        .filtered-plans-wrapper{
+            @include flex-display;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            .plans-wrapper{
+                width: 100%;
+                margin: 48px 0;
+            }
+        }
+        
+    }
+
+    // plan cards
+    .plan-card-wrapper{
+        padding: 48px 0 0 0;
+        @include flex-display;
+        flex-direction: column;
+        gap: 20px;
+        .row{
+            @include flex-display;
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+    // or STB
+    .or-stb-wrapper{
+        text-align: center;
+        padding: 48px 0;
+        h2{
+            margin: 0 0 32px 0;
+        }
+
+        .stb-wrapper{
+            position: relative;
+            border-radius: 6px;
+            // border:1px solid #9B9B9B;
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            @include flex-display;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            &::before{
+                z-index: -1;
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 65%;
+                background-image: url("https://www.nowtv.now.com/wp-content/themes/wmx/images/get-started/h1-gradient.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+            }
+
+            .content{
+                position: relative;
+                padding: 30px;
+                text-align: left;
+                width: 100%;
+
+                h2{
+                    font-weight: 500;
+                    display: inline-flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0 0 20px 0;
+                    max-width: 55%;
+                    img{
+                        width: auto;
+                        height: 70px;
+                        margin: 0 16px;
+                        max-width: 100%;
+                    }
+                }
+
+                p{
+                    font-family: $heading-font;
+                    color: white;
+                    margin: 0;
+                    text-align: left;
+                    max-width: 55%;
+                    line-height: 1.4;
+                    font-size: 18px;
+                }
+
+                .image {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translate(0%, -40%);
+                    img{
+                        width: auto;;
+                        height: 270px;
+                    }
+                }
+
+                .chats{
+                    margin: 50px 0 0 0;
+                    width: 60%;
+
+                    a{
+                        text-decoration: none;
+                    }
+
+                }
+
+
+            }
+
+            
+            
+        }
+
+    }
+
+    // more packs 
+    .more-packs-wrapper{
+        margin: 0 0 40px 0;
+        
+        .heading{
+            text-align: center;
+            h2{margin: 0;}
+            h4{color: $text-grey;font-weight: 400;}
+        }
+
+        .genre-packs-wrapper{
+            overflow: hidden;
+            margin: 40px 0 0 0;
+            .genre{
+                position: relative;
+                border-top: 1px solid #d8d8d8;
+                &:last-child {
+                    border-bottom: 1px solid #d8d8d8;
+                }
+
+                h4{
+                    position: relative;
+                    font-weight: 500;
+                    padding: 24px 0;
+                    cursor: pointer;
+                    &:after {
+                        position: absolute;
+                        content: "\e900";
+                        font-family: 'nowicon';
+                        font-size: 12px;
+                        color: #9B9B9B;
+                        right: 12px;
+                        top: 34px;
+                        -webkit-transition: transform 0.2s linear;
+                        -moz-transition: transform 0.2s linear;
+                        -o-transition: transform 0.2s linear;
+                        transition: transform 0.2s linear;
+                    }
+                }
+
+                &.active {
+                    h4:after {
+                        color: $primary-colour;
+                        transform: rotate(180deg);
+                    }
+
+                    .pack-row{
+                        max-height:900px;
+                        padding: 0 0 24px 0;
+                        opacity: 1;
+                    }
+    
+                }
+
+            }
+
+            // pack row
+            .pack-row{
+                padding: 0 0 24px 0;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                -webkit-transition: all 0.3s ease-in;
+                -moz-transition: all 0.3s ease-in;
+                -o-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+                max-height: 0;
+                padding: 0;
+                opacity: 0.3;
+                overflow: hidden;
+                
+                h4{
+                    padding: 0;
+                    cursor:auto;
+                    &::after{
+                        content: '';
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        
+    }
+
+    // watch free
+    .watch-free-wrapper{
+        text-align: center;
+        font-size: 18px;
+        margin: 48px 0;
+        .notes{
+            p{
+                font-family: $heading-font;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 991px) {
+    .getstarted-page .container{
+        .plan-card-wrapper{
+            .row{
+                flex-direction: column;
+
+                .plan-card {
+                    .details{
+                        .top,.includes{height: auto !important;}
+                    }
+                }
+            }
+        }
+
+        // or STB
+        .or-stb-wrapper{
+            .stb-wrapper{
+                .content{
+                    h2,p{max-width: 50%;}
+                    p{padding-right: 16px;}
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .getstarted-page .container{
+
+        .heading{
+            gap: 16px;
+            padding: 36px 0 0 0;
+
+            .likenowE{
+                img{
+                    height: 30px;
+                    margin: 0 6px;
+                }
+            }
+        }
+
+         // plan cards
+        .plan-card-wrapper{
+            padding: 36px 0 0 0;
+        }
+
+        .or-stb-wrapper{
+            h2{text-align: center;}
+
+            .stb-wrapper{
+                flex-direction: column;
+
+                &::before{
+                    height: 65%;
+                }
+    
+                .content{
+                    padding: 20px;
+                    text-align: left;
+    
+                    h2{
+                        width: 100%;
+                        max-width: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        text-align: center;
+                        color: white;
+                        margin: 0 0 16px 0;
+                        flex-direction: column;
+                    }
+                    p{
+                        width: 100%;
+                        max-width: 100%;
+                        text-align: center;
+                        line-height: 1.4;
+                        font-size: 16px;
+                    }
+
+                    .image {
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        right: auto;
+                        top: auto;
+                        transform: none;
+                        margin: 16px 0 0 0;
+                        img{
+                            width: auto;;
+                            height: 230px;
+                        }
+                    }
+    
+                    .chats{
+                        width: 100%;
+                        text-align: center;
+                        margin: 20px 0 0 0;
+
+                    }
+    
+    
+                }
+    
+                
+            }
+
+        }
+
+        // watch free
+        .watch-free-wrapper{
+            font-size: 16px;
+            margin: 36px 0;
+        }
+    }
+}

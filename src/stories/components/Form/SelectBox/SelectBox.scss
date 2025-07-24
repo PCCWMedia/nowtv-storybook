@@ -1,0 +1,126 @@
+@import '../../../../styles/variable.scss';
+
+// select box
+.select-box-group{
+    width: 100%;
+    position: relative;
+    
+    button.select-button{
+        width: 100%;
+        min-width: 320px;
+        background-color: white;
+        padding: 16px 24px;
+        border-radius: 4px;
+        font-size: 20px;
+        border:1px solid #9B9B9B;
+        color: #9b9b9b;
+        text-align: left;
+        font-weight: 400;
+        font-family: $content-font;
+        position: relative;
+        max-height: 58px;
+        cursor: pointer;
+        outline: none;
+
+        &.withvalue{
+            color: #0b0b0b;
+        }
+
+        &::after{
+            content: "\e900";
+            font-family: 'nowicon';
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            right: 16px;
+            font-size: 10px;
+            color: #0b0b0b;
+            -webkit-transition: transform 0.2s linear;
+            -moz-transition: transform 0.2s linear;
+            -o-transition: transform 0.2s linear;
+            transition: transform 0.2s linear;
+        }
+
+        &.active::after{
+            transform: translate(0%, -50%) rotate(180deg);
+        }
+
+        &[disabled]{
+            pointer-events: none;
+            opacity: 0.3;
+        }  
+    }
+
+    ul{
+        position: absolute;
+        margin: 10px 0 0 0;
+        padding: 0 0 0 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 12px 23px 0px rgba(0, 0, 0, 0.13);
+        opacity: 1;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 99;
+        overflow-y: scroll;
+        max-height: 300px;
+
+        &.show{
+            opacity: 1;
+            margin: 5px 0 0 0;
+            pointer-events: all;
+        }
+
+        li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            margin: 0;
+            border-bottom: 1px solid #E0E0E0;
+
+            &:last-child{margin: 0;border-bottom: 0;}
+            
+            button{
+                border:0;
+                background-color: transparent;
+                width: 100%;
+                padding: 16px 24px;
+                text-align: left;
+                margin: 0;
+                font-family: $content-font;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .select-box-group{
+        width: 100%;
+        position: relative;
+    
+        button.select-button{
+            padding: 16px 20px;
+            font-size: 18px; 
+            &::after{
+                font-size: 9px;
+            }
+        }
+        ul{
+            li{
+                button{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

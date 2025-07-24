@@ -1,0 +1,103 @@
+@import '../../../../styles/variable.scss';
+
+
+.fullscreen-bg-template{
+    --banner-bg-color: #111111;
+
+    position: relative;
+    .bg-image{
+        width: 100%;
+        height: auto;
+        margin: 0 0 -5px 0;
+    }
+    .content{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        row-gap: 32px;
+        max-width: 38%;
+        &.left{
+            left: 0;
+            padding-left: 100px;
+        }
+        &.right{
+            right: 0;
+            padding-right: 100px;
+        }
+        h3{
+            color: white;
+        }
+        p{
+            margin: 0;
+            font-size: 18px;
+            font-family: $content-font;
+        }
+        .price-tag{
+            margin: -8px 0;
+        }
+        img{
+            &.ch-logo{
+                width: auto;
+                max-height: 50px;
+                align-self: flex-start;
+            }
+        }
+        a{
+            align-self: flex-start;
+        }
+    }
+}
+
+// responsive
+@media screen and (max-width: 1199px) {
+    .fullscreen-bg-template{
+        .content{
+            &.left{
+                left: 0;
+                padding-left: 50px;
+            }
+            &.right{
+                right: 0;
+                padding-right: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fullscreen-bg-template{
+        .content{
+            position: relative;
+            top: none;
+            transform: none;
+            max-width: 100%;
+            text-align: left;
+            width: 100%;
+            padding: 22px 22px 30px 22px;
+            margin-top: -60px;
+            padding-top: 60px;
+            background: linear-gradient(180deg, transparent 0%, var(--banner-bg-color) 15%, var(--banner-bg-color) 20%, var(--banner-bg-color) 40%, var(--banner-bg-color) 100%);
+            &.left{left: 0;padding-left: 22px;}
+            &.right{right: auto;padding-right: 22px;}
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fullscreen-bg-template{
+        .content{
+            row-gap: 24px;
+            p{
+                font-size: 16px;
+            }
+            img{
+                &.ch-logo{
+                    max-height: 45px;
+                }
+            }
+        }
+    }
+}

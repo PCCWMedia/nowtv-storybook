@@ -1,0 +1,122 @@
+@use '../../../styles/variable.scss' as *;
+
+.notice {
+    position: relative;
+    background: #F7F7F7;
+    box-shadow: 0 1px 4px 0 #ABABAB;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 100%;
+
+    .wrapper {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .icon {
+            width: 40px;
+            height: auto;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .message-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .message {
+                line-height: 1.4;
+                padding-left: 32px;
+
+                h6 {
+                    font-weight: 600;
+                    color: $text-black;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-family: $heading-font;
+                    font-weight: 500;
+                    margin: 0;
+                    color: $text-black;
+                }
+            }
+
+            .cta-options {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        &::after{
+            background-color: #e6e6e6;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .notice {
+        .wrapper {
+            .icon {
+                width: 35px;
+            }
+    
+            .message-wrapper {
+                .message {
+                    padding-left: 24px;
+    
+                    h3 {
+                        font-size: 16px;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .notice {
+        .wrapper {
+            .message-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                padding-left: 15px;
+                .message {
+                    line-height: 1.4;
+                    padding-left: 0;
+                }
+
+                .cta-options {
+                    width: 100%;
+                    margin: 8px 0 0 0;
+                    text-align: center;
+                    justify-content: center;
+                    min-height: 45px;
+                    .btn {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

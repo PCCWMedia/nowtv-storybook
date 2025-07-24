@@ -1,0 +1,133 @@
+@import '../../../../../styles/variable.scss';
+
+
+li.nav-item{
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a{
+        position: relative;
+        @include flex-display;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 73px;
+        padding: 0 24px;
+        white-space: nowrap;
+        color: $text-black;
+        font-family: $heading-font;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease;
+        border-bottom: 4px solid white;
+        padding-top: 4px;
+
+        &:hover{
+            font-weight: 700;
+        }
+
+        &.active{
+            font-weight: 700;
+            color: #CF6B0D;
+            border-bottom: 4px solid #CF6B0D;
+        }
+    }
+
+    &:hover{
+        a{
+            font-weight: 700;
+        }
+    }
+
+    .dropDown{
+        position: absolute; 
+        top: 100%;  
+        left: 50%; 
+        transform: translate(-50%, 0); 
+        width: auto;
+        
+        border-radius: 4px;
+        list-style: none;
+        margin:0;
+        padding: 0;
+        display: none;
+        padding-top: 5px;
+        box-shadow: 0px 2px 2px 0px rgba(171,171,171,0.5);
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(171,171,171,0.5);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(171,171,171,0.5);
+
+
+        li{
+            height: auto;
+            width: auto;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            justify-content: flex-start;
+            background-color: #fff;
+            overflow: hidden;
+            &:first-child{border-top-left-radius: 4px;border-top-right-radius: 4px;}
+            &:last-child{border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;}
+        
+            a{
+                padding: 15px 20px;
+                border:0;
+                font-size: 16px;
+                justify-content: flex-start;
+                width: auto;
+                height: auto;
+                white-space: nowrap;
+                &:hover{
+                    background-color: #F7F7F7;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &:hover .dropDown{
+        display: block;
+        a{
+            font-weight: 500;
+        }
+    }
+
+    // watch button
+    .watch-button{
+        background-color: #f7f7f7;
+        width: 133px;
+        font-weight: 500 !important;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        &:hover{
+            font-weight: 500;
+            background-color: #C9C9C9;
+        }
+    }
+}
+
+// @media screen and (max-width: 1399px) {
+//     li.nav-item{
+//         a{
+//             padding: 0 16px;
+//             font-size: 16px;
+//         }
+
+//         // watch button
+//     .watch-button{
+//         width: 120px;
+//     }
+
+//     }
+    
+// }

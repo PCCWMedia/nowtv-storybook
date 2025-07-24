@@ -1,0 +1,107 @@
+@import '../../../../styles/variable.scss';
+
+.faq-toggle-wrapper{
+    h4{
+        padding: 0 0 16px 0;
+    }
+    .item{
+        border-top: 1px solid #D8D8D8;
+        &:last-child{
+            border-bottom: 1px solid #D8D8D8;
+        }
+        h5{
+            position: relative;
+            padding: 24px 0;
+            cursor: pointer;
+            color: $text-black;
+            &::after{
+                position: absolute;
+                content: "\e904";
+                font-family: "nowicon";
+                transform: rotate(90deg);
+                top: 30px;
+                right: 22px;
+                font-size: 14px;
+                transition: transform 0.2s linear;
+            }
+        }
+        .item-content{
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            font-family: $content-font;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            p,ul{
+                font-size: 16px;
+               margin: 0 0 16px 0;
+               &:last-child{margin-bottom: 24px;}
+            }
+            ul{
+                padding: 0;
+                margin-left: 15px;
+                li{
+                    margin: 0 0 12px 0;
+                    &:last-child{margin: 0;}
+                }
+            }
+        }
+
+        &.active{
+            h5{
+                color: $secondary-colour;
+                &::after{
+                    transform: rotate(-90deg);
+                }
+            }
+            .item-content{
+                height: auto;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    // FAQ
+    .faq-toggle-wrapper{
+        .item{
+            border-top: 1px solid #D8D8D8;
+            &:last-child{
+                border-bottom: 1px solid #D8D8D8;
+            }
+            h5{
+                padding: 20px 0;
+                &::after{
+                    top: 24px;
+                    font-size: 14px;
+                }
+            }
+            .item-content{
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease;
+                font-family: $content-font;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                p,ul{
+                    font-size: 14px;
+                   margin: 0 0 12px 0;
+                   &:last-child{margin-bottom: 20px;}
+                }
+                ul{
+                    padding: 0;
+                    margin-left: 15px;
+                    li{
+                        margin: 0 0 8px 0;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

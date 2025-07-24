@@ -1,0 +1,28 @@
+@import '../../../../styles/variable.scss';
+
+.sideMenu-social-media {
+    @include flex-display;
+    justify-content: flex-start;
+    flex-direction: row;
+    column-gap: 24px;
+
+    .item {
+        a {
+            display: block;
+            
+            img {
+                width: auto;
+                height: 30px;
+                transition: opacity 0.3s ease;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                opacity: 0.4;
+                &:hover {
+                    -webkit-filter: grayscale(0%); 
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+} 

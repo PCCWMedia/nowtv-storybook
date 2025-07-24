@@ -1,0 +1,72 @@
+@import '../../../../styles/variable.scss';
+
+//  checkbox
+.checkbox-group{
+    @include flex-display;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: $content-font;
+    label{
+        display: inline-block;
+        pointer-events: all;
+    }
+    input{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        transition: all 0.15s ease-out 0s;
+        background: none;
+        border: none;
+        color: #aaa;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        border: 1px solid #9b9b9b;
+        padding: 0;
+        border-radius: 4px;
+
+        &:focus{
+            border: 1px solid $secondary-colour;
+        }
+
+        &:checked::before {
+            position: absolute;
+            display: inline-block;
+            font-family: "nowicon";
+            content: "\e902";
+            font-size: 10px;
+            line-height: 1;
+            color: $text-black;
+            padding: 6px 0 0 6px;
+
+        }
+    }
+    p{
+        margin: 0;
+        position: relative;
+        margin-left: 0;
+        top: 4px;
+        font-family: $content-font;
+        color: $text-grey;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .checkbox-group{
+        p{
+            font-size: 14px;
+        }
+    }
+}

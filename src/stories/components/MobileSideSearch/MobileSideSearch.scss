@@ -1,0 +1,71 @@
+@import '../../../styles/variable.scss';
+
+.mobile-search-wrapper{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    padding-bottom: 150px;
+    padding: 22px;
+
+    .search-input-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        column-gap: 8px;
+        .group{
+            width: 100%;
+        }
+        input{
+            width: 100%;
+            padding-left: 64px;
+            font-size: 14px;
+            background-color: #f7f7f7;
+            border:0;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            min-width: auto;
+            &:focus{border:0}
+
+        }
+        button{
+            right: auto;
+            left: 20px;
+        }
+    }
+    .box{
+        width: 100%;
+        margin: 24px 0 0 0;
+        h6{
+            font-family: $content-font;
+            color: #9b9b9b;
+            font-weight: 400;
+            font-size: 14px;
+            margin: 0 0 8px 0;
+        }
+        ul {
+            margin:0;
+            padding: 0 0 0 0;
+            li{
+                list-style: none;
+                padding: 0;
+                
+                border-bottom: 1px solid #d8d8d8;
+                &:last-child{border: 0;}
+                a{
+                    padding: 20px 0;
+                    font-family: $heading-font;
+                    color: $text-black;
+                    width: 100%;
+                    font-size: 14px;
+                    display: block;
+                    font-weight: 500;
+                    &:hover{font-weight: 600;}
+                }
+            }
+        }
+    }
+}

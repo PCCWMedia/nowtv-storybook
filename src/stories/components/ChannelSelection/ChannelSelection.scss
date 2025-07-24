@@ -1,0 +1,97 @@
+@import '../../../styles/variable.scss';
+
+.title-header {
+    margin:0;
+    background: linear-gradient(90deg, #E5E5E5 0%, #F7F7F7 100%);
+    padding: 14px 0;
+
+    h6 {
+        color: $text-grey;
+        font-weight: 400;
+        text-align: left;
+    }
+}
+
+.channel-list-wrapper{
+    padding: 16px 0;
+    ul{
+        padding: 0;
+        margin: 0 -8px;
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            cursor: pointer;
+            border: 1px solid #d8d8d8;
+            -webkit-box-shadow: 1px 1px 2px 0px rgba(171, 171, 171, 1);
+            -moz-box-shadow: 1px 1px 2px 0px rgba(171, 171, 171, 1);
+            box-shadow: 1px 1px 2px 0px rgba(171, 171, 171, 1);
+            border-radius: 6px;
+            padding: 16px;
+            display: inline-flex;
+            width: calc((100% / 6) - 16px);
+            position: relative;
+            text-align: center;
+            margin: 8px;
+            list-style: none;
+            min-height: 100px;
+            background-color: white;
+            align-self: flex-start;
+            justify-content: center;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+
+            img{
+                max-width: 100%;
+                max-height: 45px;
+                align-self: center;
+            }
+
+            &.active{
+                border: 2px solid $primary-colour;
+            }
+        }
+    }
+} 
+
+
+@media screen and (max-width: 1199px) {
+    .channel-list-wrapper{
+        ul li{
+            width: calc((100% / 5) - 16px);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .title-header h6{
+        text-align: center;
+    }
+    .channel-list-wrapper{
+        ul{
+            justify-content: center;
+            margin: 0 -6px;
+            li{
+                margin: 6px;
+                padding: 12px;
+                min-height: 85px;
+                width: calc((100% / 3) - 16px);
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .channel-list-wrapper{
+        ul{
+            li{
+                padding: 6px 12px;
+                min-height: 70px;
+            }
+        }
+
+    }
+}

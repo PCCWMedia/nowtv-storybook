@@ -1,0 +1,524 @@
+@import '../../../styles/variable.scss';
+@import url('../../../styles/now-icon.css');
+
+.myaccount-wrapper{
+    .heading {
+        margin: 60px 0;
+        text-align: center;
+
+        h2 {
+            margin: 0 0 10px 0;
+        }
+
+        h6 {
+            color: $text-grey;
+        }
+    }
+
+    .myaccount-section{
+        section{
+            width: 100%;
+            background: none;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            &:nth-child(2n-1) {
+                background: #F7F7F7;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .title {
+                width: 25%;
+
+                p {
+                    margin: 20px 0 0 0;
+                    color: #9b9b9b;
+                    font-family: $content-font;
+                }
+            }
+
+            .account-details {
+                width: 75%;
+                font-family: $content-font;
+                padding-left: 60px;
+
+                .item{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    margin: 0 0 40px 0;
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    h6 {
+                        width: 25%;
+                        font-family: $content-font;
+                        text-align: left;
+                        font-weight: 400;
+                        color: $text-grey;
+                        padding-right: 12px;
+                        font-size: 16px;
+                    }
+
+                    .information{
+                        width: 75%;
+                        display: flex;
+                        flex-direction: row;
+
+                        .data{
+                            display: flex;
+                            flex-direction: column;
+
+                            b{
+                                position: relative;
+                                top: -4px;
+                                display: inline-flex;
+                                align-items: center;
+                                font-weight: 500;
+                                font-size: 20px;
+                                margin: 30px 0 0 0;
+                                line-height: 1.4;
+
+                                &:first-child {
+                                    margin: 0;
+                                }
+
+                                &.checked{
+                                    &::after{
+                                        position: relative;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0 0 0 8px;
+                                        width: 20px;
+                                        height: 20px;
+                                        border-radius: 50%;
+                                        background-color: $primary-colour;
+                                        font-family: 'nowicon';
+                                        content: "\e905";
+                                        color: white;     
+                                        font-size: 10px;                               }
+                                }
+
+                                a.verify{
+                                    position: relative;
+                                    top: 2px;
+                                    display: inline-block;
+                                    margin:0 0 0 8px;
+                                    font-size: 14px;
+                                    text-decoration: underline;
+                                }
+
+                            }
+
+                            a {
+                                cursor: pointer;
+                                font-size: 18px;
+                                font-family: $content-font;
+                                display: inline-block;
+                                margin: 30px 0 0 0;
+
+                                &.mobile{color:#9b9b99; display: none;}
+
+                                &:first-child {
+                                    margin: 0;
+                                }
+                            }
+
+                            .billdate {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+
+                                a {
+                                    color: $text-black;
+                                    text-decoration: underline;
+                                    display: inline-block;
+                                    margin: 0 8% 0 0;
+                                    white-space: nowrap;
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+
+                                    &:hover {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .box {
+                            width: 75%;
+                            display: none;
+
+                            &.active{
+                                display: block;
+                            }
+
+                            input {
+                                padding: 12px;
+                                margin: 0 0 16px 0;
+                            }
+
+                            p.error {
+                                margin:0 0 16px 0;
+                                font-size: 16px;
+                                color: $text-error;
+                                &.active{
+                                    display: block;
+                                }
+                            }
+
+                            .cta-buttons {
+                                margin: 0 0 0 0;
+
+                                button {
+                                    margin: 0 16px 0 0;
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .controls {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 24px;
+
+                            label {
+                                color: #9b9b99;
+                                font-weight: 500;
+                                font-size: 16px;
+                            }
+
+                            a {
+                                font-size: 18px;
+                                color: #9b9b99;
+                                text-decoration: none;
+                                display: inline-block;
+                                margin: 0 0 38px 0;
+                                &:last-child{margin: 0;}
+
+                                &:hover {
+                                    color: $text-grey;
+                                }
+                            }
+                        }
+
+                        &.editMode {
+
+                            .data,
+                            .controls {
+                                display: none;
+                            }
+
+                            .box {
+                                display: block;
+                            }
+                        }
+
+                        &.addnew {
+                            .controls {
+                                display: none;
+                            }
+                        }
+
+                        &.address{
+                            .box{
+                                p.error{margin: 0 0 16px 0;}
+                            }
+                        }
+
+                    }
+
+                }
+
+                .other-links {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 50px;
+                    padding-top: 40px;
+                    border-top: 2px solid #d8d8d8;
+
+                    a {
+                        font-size: 18px;
+                        display: inline-block;
+                        align-self: flex-start;
+                        margin-bottom: 30px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .single-link{
+                    font-size: 18px;
+                }
+
+            }
+
+        }
+
+        .logout-wrapper {
+            text-align: center;
+            border-top: 2px solid #d8d8d8;
+            padding-top: 32px;
+            margin-bottom: 96px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .myaccount-wrapper {
+
+        .myaccount-section{
+            section {
+                .container {
+                    flex-direction: column;
+                }
+    
+                .title {
+                    width: 100%;
+                    margin: 0 0 36px 0;
+    
+                    p {
+                        margin: 10px 0 0 0;
+                    }
+                }
+    
+                .account-details {
+                    width: 100%;
+                    padding: 0;
+    
+                    .item {
+                        flex-direction: column;
+    
+                        h6 {
+                            width: 100%;
+                            margin: 0 0 8px 0;
+                        }
+    
+                        .information {
+                            width: 100%;
+                            .data {
+                                b {
+                                    margin: 20px 0 0 0;
+                                    top: 0;
+                                }
+    
+                                a {
+                                    margin: 20px 0 0 0;
+    
+                                    &:first-child {
+                                        margin: 0;
+                                    }
+                                }
+    
+                                .billdate {
+                                    a {
+                                        margin: 0 10% 0 0;
+                                    }
+                                }
+                            }
+    
+                            .controls {
+                                margin: 4px 0 0 20px;
+                                a{
+                                    margin: 0 0 32px 0;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+        
+
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .myaccount-wrapper {
+        .heading {
+            margin: 40px 0;
+            h2 {margin: 0 0 8px 0;}
+        }
+
+        .myaccount-section{
+            section {
+                width: 100%;
+                background: none;
+                padding-top: 0;
+                padding-bottom: 0;
+
+                .title {
+                    padding: 24px 0;
+                    margin: 0;
+
+                    h3 {
+                        position: relative;
+                        cursor: pointer;
+                        padding-right: 16px;
+
+                        &::after {
+                            position: absolute;
+                            content: "\e900";
+                            font-family: 'nowicon';
+                            font-size: 10px;
+                            color: #9b9b9b;
+                            right: 0;
+                            top: 8px;
+                            -webkit-transition: transform 0.2s linear;
+                            -moz-transition: transform 0.2s linear;
+                            -o-transition: transform 0.2s linear;
+                            transition: transform 0.2s linear;
+                        }
+                    }
+
+                    p {
+                        transition: height 0.3s ease;
+                        height: 0;
+                        margin: 0;
+                        font-size: 14px;
+                        opacity: 0;
+                    }
+                }
+
+                .account-details {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: height 0.3s ease;
+                    padding-bottom: 0;
+
+                    .item {
+                        margin: 0 0 32px 0;
+
+                        .information {
+                            width: 100%;
+                            flex-direction: column;
+
+                            .data {
+                                b {
+                                    font-size: 18px;
+                                    margin: 12px 0 0 0;
+                                    &.checked{
+                                        &::after{
+                                            margin: 0 0 0 6px;
+                                            width: 16px;
+                                            height: 16px;    
+                                            font-size: 8px;                               }
+                                    }
+
+                                    a.verify{
+                                        top: 1px;
+                                    }
+                                }
+
+                                a {
+                                    font-size: 16px;
+                                    margin: 12px 0;
+                                    
+                                    &.mobile{color:#9b9b99; display: inline-block;margin: 4px 0 0 0;}
+                                }
+
+                            }
+
+                            .box {
+                                width: 100%;
+
+                                input {
+                                    padding: 12px;
+                                }
+
+                                p.error {
+                                    font-size: 14px;
+                                }
+
+                                .cta-buttons {
+                                    margin: 16px 0 0 0;
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    button {
+                                        margin: 0 16px 0 0;
+                                    }
+                                }
+
+                            }
+
+
+                            .controls {
+                                margin: 4px 0 0 0;
+
+                                label {
+                                    font-size: 14px;
+                                }
+
+                                a {
+                                    align-self: flex-start;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    margin: 0 0 0 0;
+                                    &.desktop{display: none;}
+                                }
+                            }
+
+                        }
+                    }
+
+                    .other-links {
+                        margin: 30px 0 0 0;
+                        padding: 30px 0 0 0;
+
+                        a {
+                            font-size: 16px;
+                            margin: 0 0 24px 0;
+                        }
+                    }
+                    .single-link{
+                        font-size: 16px;
+                    }
+                }
+
+
+
+                &.active {
+                    .title {
+                        h3 {
+                            &::after {
+                                color: $primary-colour;
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        p {
+                            opacity: 1;
+                            height: initial;
+                            margin: 6px 0 0 0;
+                        }
+                    }
+                    .account-details {
+                        max-height: initial;
+                        padding-bottom: 24px;
+                    }
+                    
+                }
+
+
+            }
+        }
+    }
+}
