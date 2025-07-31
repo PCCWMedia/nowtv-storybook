@@ -6,6 +6,9 @@ export default {
   component: Template5,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    }
   },
   tags: ['autodocs'],
 };

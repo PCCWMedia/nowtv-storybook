@@ -21,7 +21,7 @@ const BorderCard: React.FC<BorderCardProps> = ({
 }) => {
   const cardClass = imageSrc ? 'borderCard hasImg' : 'borderCard';
   return (
-    <a href={linkLabel} className={cardClass}>
+    <a href={linkHref} className={cardClass}>
       {imageSrc && (
         <div className="image-wrapper">
           <img src={imageSrc} alt={label || ''} />

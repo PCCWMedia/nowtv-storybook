@@ -6,6 +6,9 @@ const meta: Meta<typeof Template1> = {
   component: Template1,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    },
     docs: {
       description: {
         component: 'A support landing page template with a title and navigation links. This template is designed for support pages that need to direct users to different support categories.',

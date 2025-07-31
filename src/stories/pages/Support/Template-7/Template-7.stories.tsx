@@ -7,6 +7,9 @@ const meta: Meta<typeof Template7> = {
   component: Template7,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    },
     docs: {
       description: {
         component: 'A support page template for Now TV App Features, displaying FAQs in an accordion style.',

@@ -39,14 +39,14 @@ const PlanOverlay: React.FC<PlanOverlayProps> = ({
     }, []);
 
     return (
-        <div className={`modal-wrapper ${isVisible ? 'show' : ''}`}>
+        <div className={`modal-wrapper ${isVisible ? 'show' : ''}`}  onClick={onClose}>
             <div className="modal-dialog">
                 <div className="modal-content-wrapper sm">
                     <div className="close-modal">
                         <Button className="close-btn" label="Close" onClick={onClose}/>
                     </div>
 
-                    <div className='plan-wrapper'>
+                    <div className='plan-wrapper' onClick={e => e.stopPropagation()}>
                         <h5>{planName}</h5>
                         <div className="plans-item-wrapper">
                             {plans.map((plan, index) => (

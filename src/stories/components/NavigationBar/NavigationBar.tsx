@@ -33,14 +33,15 @@ const Header: React.FC<HeaderProps> = ({
           label: 'Subscribe',
           className: tabActive ? 'active' : '',
           dropdownItems: [
-              { href: '#', label: 'New Customer' },
-              { href: '#', label: 'Existing Customer' },
-              { href: '#', label: 'Now E Customer' }
-          ]
+              { href: '?path=/story/pages-getstarted--default', label: 'New Customer' },
+              { href: '/get-started/', label: 'Existing Customer' },
+              { href: '?path=/story/pages-getstarted--like-now-e', label: 'Now E Customer' }
+          ],
+          href: '/get-started/'
       },
       {
           label: 'Support',
-          href: '#'
+          href: '?path=/story/pages-support-landing--default'
       },
       {
           label: 'Redeem Code',
@@ -66,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({
       },
       {
           label: 'Support',
-          href: '#'
+          href: '?path=/story/pages-support-landing--default'
       },
       {
           label: 'Redeem Code',
@@ -79,8 +80,8 @@ const Header: React.FC<HeaderProps> = ({
           label: 'Now Today',
           dropdownItems: [
             { href: 'https://news.now.com/home', label: 'Now News', target: '_blank' },
-            { href: '#', label: 'Now Finance' },
-            { href: '#', label: 'Now Sports' }
+            { href: 'https://finance.now.com/', label: 'Now Finance', target: '_blank'},
+            { href: 'https://sports.now.com/home', label: 'Now Sports', target: '_blank' }
           ]
       }
     ];
@@ -91,9 +92,9 @@ const Header: React.FC<HeaderProps> = ({
         label: 'Watch',
         buttonClass: 'watch-button',
         dropdownItems: [
-            { href: '#', label: 'Now TV Home' },
-            { href: '#', label: 'TV Guide' },
-            { href: '#', label: 'On Demand' }
+            { href: 'https://nowplayer.now.com/', label: 'Now TV Home', target: '_blank' },
+            { href: 'https://nowplayer.now.com/tvguide', label: 'TV Guide', target: '_blank' },
+            { href: 'https://nowplayer.now.com/ondemand', label: 'On Demand', target: '_blank' }
         ]
     }
   ];
@@ -104,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({
 
       <div className="nav-center">
     
-        <Logo href="/"/>
+        <Logo href="?path=/story/pages-home--default"/>
 
         {(status === 'normal' || status === 'logged-in') && 
           <NavItemList items={navItems as any} />

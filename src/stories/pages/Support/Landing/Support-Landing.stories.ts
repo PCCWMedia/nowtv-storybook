@@ -6,6 +6,9 @@ const meta: Meta<typeof SupportLanding> = {
   component: SupportLanding,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0
+    }
   },
 };
 

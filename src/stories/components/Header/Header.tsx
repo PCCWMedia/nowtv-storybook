@@ -7,7 +7,7 @@ import SearchInputForm from '../NavigationBar/DesktopNav/Search/SearchInputForm/
 import MobileSideSearch from '../MobileSideSearch/MobileSideSearch';
 
 interface HeaderWithMobileNavProps {
-  status: 'normal' | 'logged-in';
+  status: 'normal' | 'subscription' | 'logged-in';
   username?: string;
   tabActive?: boolean;
   onLoginClick?: () => void;

@@ -6,6 +6,9 @@ const meta: Meta<typeof MyAccount> = {
   component: MyAccount,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0
+    }
   },
 };
 

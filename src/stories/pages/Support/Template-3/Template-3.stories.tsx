@@ -7,6 +7,9 @@ const meta: Meta<typeof Template3> = {
   component: Template3,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    }
   },
   tags: ['autodocs'],
 };

@@ -9,34 +9,34 @@ import FAQLinkColumn from '../../../components/Support/FAQLinkColumn/FAQLinkColu
 
 const SupportLanding: React.FC = () => {
   const selectTopicData = [
-    { href: '#', label: 'My Account', className: 'borderLink' },
-    { href: '#', label: 'TV Interfaces', className: 'borderLink' },
-    { href: '#', label: 'Set Top Box & Remote Control', className: 'borderLink' },
-    { href: '#', label: 'Now Player', className: 'borderLink' },
-    { href: '#', label: 'Subscriptions', className: 'borderLink' },
+    { href: '?path=/story/pages-support-template-3--default', label: 'My Account', className: 'borderLink' },
+    { href: '?path=/story/pages-support-template-2--default', label: 'TV Interfaces', className: 'borderLink' },
+    { href: '?path=/story/pages-support-template-1--default', label: 'Set Top Box & Remote Control', className: 'borderLink' },
+    { href: '?path=/story/pages-support-template-4--default', label: 'Now Player', className: 'borderLink' },
+    { href: '?path=/story/pages-support-template-5--default', label: 'Subscriptions', className: 'borderLink' },
   ];
 
   const commonSolutionsData = [
     {
       imageSrc: 'https://www.nowtv.now.com/wp-content/uploads/2019/09/nowtv-app-e.png',
       label: 'How to Watch on Desktop & Mobile Devices',
-      linkHref: '#',
+      linkHref: '?path=/story/pages-support-template-6--default',
     },
     {
       imageSrc: 'https://www.nowtv.now.com/wp-content/uploads/2019/09/web_group_devices02-2.png',
       label: 'Set Top Box & Viewing Errors',
-      linkHref: '#',
+      linkHref: '?path=/story/pages-support-template-7--default',
     },
     {
       imageSrc: 'https://www.nowtv.now.com/wp-content/uploads/2019/09/UX3A_remote-ux3-1-2.png',
       label: 'Remote Control',
-      linkHref: '#',
+      linkHref: '?path=/story/pages-support-template-8--default',
     },
     {
       label: 'Change your service PIN',
       description: 'Create and connect your Now ID with your Now TV set top box.',
       linkLabel: 'See Details',
-      linkHref: '#',
+      linkHref: '?path=/story/pages-support-template-9--default',
     },
     {
       label: 'How to Redeem Code',

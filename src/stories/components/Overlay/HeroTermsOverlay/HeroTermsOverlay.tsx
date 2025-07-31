@@ -29,14 +29,14 @@ export const HeroTermsOverlay: React.FC<HeroTermsOverlayProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className={`modal-wrapper ${isVisible ? 'show' : ''}`}>
+    <div className={`modal-wrapper ${isVisible ? 'show' : ''}`}  onClick={onClose}>
       <div className="modal-dialog">
         <div className="modal-content-wrapper sm">
           <div className="close-modal">
             <Button className="close-btn" label="Close" onClick={onClose} />
           </div>
 
-          <div className="hero-terms-wrapper">
+          <div className="hero-terms-wrapper" onClick={e => e.stopPropagation()}>
             {terms.map((term, index) => (
               <p key={index} dangerouslySetInnerHTML={{ __html: term }} />
             ))}

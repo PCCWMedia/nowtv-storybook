@@ -2,6 +2,8 @@ import React from 'react';
 // import FooterColumn from './components/FooterLinks/FooterColumn';
 import ToggleFooterColumn from './FooterLinks/Toggle-FooterColumns';
 import TncLinks from './FooterLinks/TncLinks';
+import SocialMediaLinks from './SocialMediaLinks/SocialMediaLinks';
+
 import './footer.scss';
 
 import anHKTLogo from '../../assets/img/an-hkt-logo-w.png';
@@ -45,6 +47,8 @@ const Footer: React.FC<FooterProps> = ({ status }) => {
                         </ToggleFooterColumn>
                         ))}
                     </div>
+
+                    <SocialMediaLinks />
                 </div>
             </div>
             }

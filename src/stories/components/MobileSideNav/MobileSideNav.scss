@@ -125,10 +125,11 @@ nav.sideMenu{
 
 
     // social media
-    .sideMenu-social-media{
+    .social-media-wrapper{
+        justify-content: flex-start;
         padding: 0 22px;
         margin-top: 16px;
         padding-top: 16px;
-
+        gap: 32px;
     }
 }

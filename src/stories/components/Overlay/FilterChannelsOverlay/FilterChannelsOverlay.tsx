@@ -136,14 +136,14 @@ export const FilterChannelsOverlay: React.FC<FilterChannelsOverlayProps> = ({ is
   if (!isOpen) return null;
 
   return (
-    <div className={`modal-wrapper${isVisible ? ' show' : ''}`}>
+    <div className={`modal-wrapper${isVisible ? ' show' : ''}`} onClick={onClose}>
       <div className="modal-dialog">
         <div className="modal-content-wrapper">
           <div className="close-modal">
             <Button className="close-btn" label="Close" onClick={onClose} />
           </div>
 
-          <div className="filter-channels-wrapper">
+          <div className="filter-channels-wrapper" onClick={e => e.stopPropagation()}>
             <div className='container'>
                 <h4>See Plans for A Catalog Or Channel</h4>
                 

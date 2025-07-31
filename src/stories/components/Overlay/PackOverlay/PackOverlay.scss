@@ -12,6 +12,7 @@
     .container{
         width: 80%;
         margin: 0 auto;
+        padding: 0 22px!important;
     }
 
     .pack-about-wrapper{
@@ -22,6 +23,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            padding: 0;
         }
 
         h4{

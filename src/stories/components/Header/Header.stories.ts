@@ -25,6 +25,13 @@ export const Normal: Story = {
   },
 };
 
+export const Subscription: Story = {
+  args: {
+    status: 'subscription',
+  },
+};
+
+
 export const LoggedIn: Story = {
   args: {
     status: 'logged-in',

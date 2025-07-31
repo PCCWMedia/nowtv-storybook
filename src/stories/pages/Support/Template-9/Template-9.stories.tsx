@@ -6,6 +6,9 @@ const meta: Meta<typeof Template9> = {
   component: Template9,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    },
     docs: {
       description: {
         component: 'A support page template for rebooting the Now One box, with step-by-step instructions and image.',

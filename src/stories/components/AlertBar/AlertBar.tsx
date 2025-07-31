@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AlertBar.scss';
 import Link from '../Link/Link';
 import { Button } from '../Button/Button';
@@ -14,8 +14,9 @@ interface AlertBarProps {
   }
   
   const AlertBar: React.FC<AlertBarProps> = ({ href, btnLabel, className, alertHeading, alertMsg, showCTA }) => {
+    const [isHidden, setIsHidden] = useState(false);
     return (
-        <div className={`notice ${className}`}>
+        <div className={`notice ${className}${isHidden ? ' hide' : ''}`}>
             <div className="container">
                 <div className="wrapper">
                     <div className="icon">
@@ -35,7 +36,7 @@ interface AlertBarProps {
                 </div>
             </div>
 
-            <Button label="" className="close-btn"/>
+            <Button label="" className="close-btn" onClick={() => setIsHidden(true)} />
         </div>
     );
   };

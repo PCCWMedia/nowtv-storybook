@@ -132,14 +132,14 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
     };
 
     return (
-        <div className={`modal-wrapper ${isVisible ? 'show' : ''}`}>
-            <div className="modal-dialog">
+        <div className={`modal-wrapper ${isVisible ? 'show' : ''}`} onClick={onClose}>
+            <div className="modal-dialog" >
                 <div className="modal-content-wrapper">
                     <div className="close-modal">
                         <Button className="close-btn" label="Close" onClick={onClose}/>
                     </div>
 
-                    <div className="pack-overlay-wrapper">
+                    <div className="pack-overlay-wrapper" onClick={e => e.stopPropagation()}>
                         <img src={image} alt={title} className="pack-banner"/>
 
                         <div className="pack-about-wrapper">

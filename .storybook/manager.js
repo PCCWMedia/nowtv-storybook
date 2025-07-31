@@ -3,4 +3,7 @@ import nowTheme from './nowTheme';
  
 addons.setConfig({
   theme: nowTheme,
+  sidebar: {
+    showRoots: false,
+  },
 });

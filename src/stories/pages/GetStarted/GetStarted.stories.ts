@@ -6,6 +6,9 @@ const meta: Meta<typeof GetStarted> = {
   component: GetStarted,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0
+    }
   },
 };
 

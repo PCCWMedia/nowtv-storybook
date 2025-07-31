@@ -3,7 +3,7 @@ import React from 'react';
 import './MobileSideNav.scss';
 import ProfileButton from '../ProfileButton/ProfileButton';
 import MenuList, { type MenuItem } from './MenuList/MenuList';
-import SocialMediaLinks from './SocialMediaLinks/SocialMediaLinks';
+import SocialMediaLinks from '../Footer/SocialMediaLinks/SocialMediaLinks';
 
 interface MobileMenuProps {
   status: 'normal' | 'subscription' | 'logged-in';
@@ -24,28 +24,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
     {
       type: status === 'logged-in' ? 'link' : 'toggle',
       title: status === 'logged-in' ? 'Upgrade' : 'Subscribe',
+      href: status === 'logged-in' ? undefined : '/get-started/',
       subItems: status === 'logged-in' ? undefined : [
         {
           title: 'New Customer',
-          href: '#',
+          href: '?path=/story/pages-getstarted--default',
         },
         {
           title: 'Existing Customer',
-          href: '#',
+          href: '/get-started/',
         },
         {
           title: 'Now E Customer',
-          href: '#',
+          href: '?path=/story/pages-getstarted--like-now-e',
         },
       ],
     },
     {
       type: 'link',
       title: 'Support',
-      href: '#',
+      href: '?path=/story/pages-support-landing--default',
       isActive: false,
     }
   ];
+
 
   const watchMenuItems: MenuItem[] = [
     {
@@ -53,16 +55,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
       title: 'Watch',
       subItems: [
         {
-          title: 'Now Player Home',
-          href: '/now-player'
+          title: 'Now TV Home',
+          href: 'https://nowplayer.now.com/'
         },
         {
           title: 'TV Guide',
-          href: '/tv-guide'
+          href: 'https://nowplayer.now.com/tvguide'
         },
         {
           title: 'On Demand',
-          href: '/on-demand'
+          href: 'https://nowplayer.now.com/ondemand'
         }
       ]
     }

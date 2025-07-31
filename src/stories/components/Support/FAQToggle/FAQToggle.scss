@@ -34,9 +34,11 @@
             flex-direction: column;
             gap: 16px;
             p,ul{
-                font-size: 16px;
-               margin: 0 0 16px 0;
-               &:last-child{margin-bottom: 24px;}
+                    font-size: 16px !important;
+                    margin: 0 0 16px 0 !important;
+                    &:last-child{
+                    margin-bottom: 24px !important;
+                }
             }
             ul{
                 padding: 0;
@@ -88,9 +90,9 @@
                 flex-direction: column;
                 gap: 12px;
                 p,ul{
-                    font-size: 14px;
-                   margin: 0 0 12px 0;
-                   &:last-child{margin-bottom: 20px;}
+                    font-size: 14px !important;
+                   margin: 0 0 12px 0 !important;
+                   &:last-child{margin-bottom: 20px !important;}
                 }
                 ul{
                     padding: 0;

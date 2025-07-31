@@ -12,6 +12,9 @@ const meta: Meta<typeof Template6> = {
   component: Template6,
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0,
+    },
     docs: {
       description: {
         component: 'A support page template for the Now TV App, featuring device images, app download links, and quick navigation.',

@@ -26,7 +26,7 @@
             }
 
             .container {
-                display: flex;
+                @include flex-display;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -47,7 +47,7 @@
                 padding-left: 60px;
 
                 .item{
-                    display: flex;
+                    @include flex-display;
                     flex-direction: row;
                     align-items: flex-start;
                     flex-wrap: wrap;
@@ -68,11 +68,11 @@
 
                     .information{
                         width: 75%;
-                        display: flex;
+                        @include flex-display;
                         flex-direction: row;
 
                         .data{
-                            display: flex;
+                            @include flex-display;
                             flex-direction: column;
 
                             b{
@@ -133,7 +133,7 @@
 
                             .billdate {
                                 width: 100%;
-                                display: flex;
+                                @include flex-display;
                                 flex-direction: row;
 
                                 a {
@@ -191,7 +191,7 @@
                         }
 
                         .controls {
-                            display: flex;
+                            @include flex-display;
                             flex-direction: column;
                             margin-left: 24px;
 
@@ -244,7 +244,7 @@
                 }
 
                 .other-links {
-                    display: flex;
+                    @include flex-display;
                     flex-direction: column;
                     margin-top: 50px;
                     padding-top: 40px;
@@ -449,7 +449,7 @@
 
                                 .cta-buttons {
                                     margin: 16px 0 0 0;
-                                    display: flex;
+                                    @include flex-display;
                                     flex-direction: row;
 
                                     button {

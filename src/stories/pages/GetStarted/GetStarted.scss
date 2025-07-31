@@ -257,7 +257,7 @@
             // pack row
             .pack-row{
                 padding: 0 0 24px 0;
-                display: flex;
+                @include flex-display;
                 justify-content: center;
                 margin: 0;
                 -webkit-transition: all 0.3s ease-in;

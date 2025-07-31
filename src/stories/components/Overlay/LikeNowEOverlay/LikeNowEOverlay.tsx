@@ -26,14 +26,14 @@ const LikeNowEOverlay: React.FC<LikeNowEOverlayProps> = ({ onClose, onContinue }
   }, []);
 
   return (
-    <div className={`modal-wrapper${isVisible ? ' show' : ''}`}>
+    <div className={`modal-wrapper${isVisible ? ' show' : ''}`} onClick={onClose}>
       <div className="modal-dialog">
         <div className="modal-content-wrapper md">
           <div className="close-modal">
             <Button className="close-btn" label="Close" onClick={onClose} />
           </div>
 
-          <div className="likenowe-wrapper">
+          <div className="likenowe-wrapper" onClick={e => e.stopPropagation()}>
             <h4>
               Just like Now E, yet better.
             </h4>
