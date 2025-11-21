@@ -1,3 +1,5 @@
+@import '../../../../styles/variable.scss';
+
 .hero-banner{
     --banner-bg-color: #111111;
     
@@ -75,20 +77,50 @@
             margin: 0 0 8px 0;
         }
         
-        p{
+        p {
             font-family: 'Barlow', sans-serif;
             font-size: 18px;
             margin: 0 0 24px 0;
             line-height: 1.5;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            &:not(:first-of-type) {
-                display: none;
-            }
+            // Removed line-clamp and hiding logic. Now handled by .clamp-4 and .clamp-7 classes.
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            &.clamp-min {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 108px;
+              }
+              
+            &.clamp-max {
+                display: -webkit-box;
+                -webkit-line-clamp: 9;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 245px;
+              }
         }
+
+        .see-more-btn {
+            background: none;
+            border: none;
+            color:#EF9528;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: $content-font;
+            position: relative;
+            top: -16px;
+        }
+
         img{
             position: relative;
             align-self: flex-start;
@@ -156,6 +188,8 @@
     }
 }
 
+
+
 // responsove
 @media screen and (max-width: 1399px) {
     .hero-banner{
@@ -179,8 +213,8 @@
         .swiper {
             width: 100%;
             height: auto;
-            min-height: none;
-            max-height: none;
+            min-height: initial;
+            max-height: initial;
         }
 
         .swiper-slide{
@@ -247,6 +281,35 @@
                 font-size: 16px;
                 margin: 0 0 20px 0;
             }
+
+            p {
+                font-size: 16px;
+                margin: 0 0 20px 0;
+    
+                &.clamp-min {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-height: 96px;
+                  }
+                  
+                &.clamp-max {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-height: 168px;
+                  }
+            }
+
+            .see-more-btn {
+                font-size: 14px;
+                top: -16px;
+            }
+
             a{
                 font-size: 14px;
                 &.terms-link{

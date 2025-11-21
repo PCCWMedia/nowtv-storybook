@@ -1,0 +1,74 @@
+.mobile-search-wrapper {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 150px;
+  padding: 22px;
+}
+.mobile-search-wrapper .search-input-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.mobile-search-wrapper .search-input-section .group {
+  width: 100%;
+}
+.mobile-search-wrapper .search-input-section input {
+  width: 100%;
+  padding-left: 64px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  min-width: auto;
+}
+.mobile-search-wrapper .search-input-section input:focus {
+  border: 0;
+}
+.mobile-search-wrapper .search-input-section button {
+  right: auto;
+  left: 20px;
+}
+.mobile-search-wrapper .box {
+  width: 100%;
+  margin: 24px 0 0 0;
+}
+.mobile-search-wrapper .box h6 {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #9b9b9b;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+.mobile-search-wrapper .box ul {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+.mobile-search-wrapper .box ul li {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+.mobile-search-wrapper .box ul li:last-child {
+  border: 0;
+}
+.mobile-search-wrapper .box ul li a {
+  padding: 20px 0;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  color: #0b0b0b;
+  width: 100%;
+  font-size: 14px;
+  display: block;
+  font-weight: 500;
+}
+.mobile-search-wrapper .box ul li a:hover {
+  font-weight: 600;
+}/*# sourceMappingURL=MobileSideSearch.css.map */

@@ -1,0 +1,50 @@
+.login-profile-btn {
+  transition: all 0.5s ease;
+  position: relative; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  align-items: center;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  width: auto;
+  padding: 0 20px;
+  height: 73px;
+  background-color: #EF9528;
+  color: white;
+  white-space: nowrap;
+  text-decoration: none;
+  max-width: none;
+}
+.login-profile-btn i {
+  color: white;
+  font-size: 29px;
+  margin-right: 17px;
+  position: relative;
+  top: 2px;
+}
+.login-profile-btn .login-info {
+  display: flex;
+  flex-direction: column;
+}
+.login-profile-btn .login-info .username {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+.login-profile-btn .login-info .view-acct {
+  font-size: 16px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+}
+.login-profile-btn:hover {
+  font-weight: 400;
+  background-color: #F37D16;
+}
+
+@media screen and (max-width: 1199px) {
+  .login-profile-btn {
+    height: 50px;
+    padding: 0 16px;
+  }
+}/*# sourceMappingURL=ProfileButton.css.map */

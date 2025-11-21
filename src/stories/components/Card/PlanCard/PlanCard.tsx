@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PlanCard.scss'; // Ensure you have this style file
 import { Button } from '../../Button/Button';
 import PackOverlay from '../../Overlay/PackOverlay/PackOverlay';
@@ -94,6 +94,18 @@ const PlanCard: React.FC<PlanCardProps> = ({
                 return <PriceTag price={priceNumber} />;
         }
     };
+
+    useEffect(() => {
+        if (showOverlay || showPlanOverlay) {
+            document.body.classList.add('modal-open');
+        } else {
+            document.body.classList.remove('modal-open');
+        }
+        // Clean up in case component unmounts while modal is open
+        return () => {
+            document.body.classList.remove('modal-open');
+        };
+    }, [showOverlay, showPlanOverlay]);
 
     return (
 

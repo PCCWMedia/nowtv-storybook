@@ -10,7 +10,8 @@
         position: fixed;
         top: 0;
         right: -380px; // 初始位置在右側
-        width: 380px;
+        width: 100%;
+        max-width: 380px;
         height: 100vh;
         background-color: #fff;
         transition: right 0.3s ease-in-out; // 過渡效果
@@ -51,7 +52,8 @@
       opacity: 0;
       z-index: 1000;
       position: fixed;
-      width: 380px;
+      width: 100%;
+      max-width: 380px;
       right: -380px;
       top: 0;
       -webkit-transition: all 0.3s ease;

@@ -38,6 +38,17 @@
       
   }
 
+  // cookiesBar
+  .cookiesBar {
+    padding: 16px 100px;
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+
+
 }
  
 @media screen and (max-width: 1199px) {
@@ -46,6 +57,13 @@
       .container{
         max-width: 1920px;
         padding: 0 50px;
+      }
+    }
+
+    // cookiesBar
+    .cookiesBar {
+      padding: 16px 50px;
+      .container {
       }
     }
   }
@@ -68,4 +86,13 @@
         
     }
   } 
+}
+
+@media screen and (max-width: 767px) {
+  .home-page {
+    // cookiesBar
+    .cookiesBar {
+      padding: 16px 22px;
+    }
+  }
 }

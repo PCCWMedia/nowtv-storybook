@@ -1,0 +1,222 @@
+@import url("../../../styles/now-icon.css");
+.footer {
+  width: 100%;
+  padding: 0;
+  background-color: #231F20;
+  margin-top: auto;
+}
+.footer .footer-wrapper {
+  border-top: 8px solid #EF9528; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer-wrapper .inner {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 36px 0;
+  margin: 0 -12px;
+}
+.footer .footer-wrapper .inner .column {
+  flex: 1;
+  margin: 0 12px;
+}
+.footer .footer-wrapper .inner .column h6 {
+  color: white;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  margin: 0 0 16px 0;
+}
+.footer .footer-wrapper .inner .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-wrapper .inner .column ul li {
+  margin: 5px 0;
+  text-align: left;
+}
+.footer .footer-wrapper .inner .column ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  padding: 0;
+  height: auto;
+  border: 0;
+  margin: 0 0 8px 0;
+  white-space: break-spaces;
+}
+.footer .footer-wrapper .inner .column ul li a:hover {
+  text-decoration: none;
+}
+.footer .footer-wrapper .inner .column ul li:last-child a {
+  margin: 0;
+}
+.footer .social-media-wrapper {
+  margin: 0 0 24px 0;
+}
+.footer .copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  border-top: 1px solid #EF9528;
+  width: 100%;
+  padding: 16px 0;
+}
+.footer .copyright-wrapper .inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footer .copyright-wrapper .footer-links {
+  margin: 0 0 16px 0;
+}
+.footer .copyright-wrapper .footer-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+.footer .copyright-wrapper .footer-links a:hover {
+  text-decoration: none;
+  font-weight: 400;
+}
+.footer .copyright-wrapper .footer-links a:after {
+  content: "|";
+  margin: 0 18px;
+  color: white;
+}
+.footer .copyright-wrapper .footer-links a:last-child:after {
+  content: "";
+  margin: 0;
+}
+.footer .copyright-wrapper .copyright-text {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+}
+.footer .copyright-wrapper .copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.footer .copyright-wrapper .copyright-text p .note-DPMS {
+  display: inline-block;
+  margin-left: 16px;
+}
+.footer .copyright-wrapper .copyright-text img {
+  width: auto;
+  height: 14px;
+}
+.footer .copyright-wrapper .copyright-text small {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .footer-wrapper .inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer .footer-wrapper .inner .column {
+    flex: none;
+    width: 16.66%;
+    margin: 12px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer .footer-wrapper .inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  .footer .footer-wrapper .inner .column {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #616161;
+  }
+  .footer .footer-wrapper .inner .column h6 {
+    position: relative;
+    padding: 16px 0;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .footer .footer-wrapper .inner .column h6:after {
+    position: absolute;
+    content: "\e904";
+    font-family: "nowicon";
+    transform: rotate(90deg);
+    top: 20px;
+    right: 22px;
+    font-size: 14px;
+    transition: transform 0.2s linear;
+  }
+  .footer .footer-wrapper .inner .column h6.active:after {
+    top: 20px;
+    transform: rotate(-90deg);
+  }
+  .footer .footer-wrapper .inner .column ul {
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  .footer .footer-wrapper .inner .column ul li:last-child {
+    padding-bottom: 16px;
+  }
+  .footer .footer-wrapper .inner .column ul.active {
+    display: block;
+  }
+  .footer .footer-wrapper .social-media-wrapper {
+    margin: 24px 0;
+  }
+  .footer .copyright-wrapper {
+    padding: 24px 0;
+  }
+  .footer .copyright-wrapper .footer-links {
+    text-align: center;
+    margin: 0;
+  }
+  .footer .copyright-wrapper .footer-links a {
+    display: inline-block;
+    margin: 6px 0;
+  }
+  .footer .copyright-wrapper .footer-links a::after {
+    margin: 0 12px;
+  }
+  .footer .copyright-wrapper .copyright-text {
+    margin: 16px 0 0 0;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  .footer .copyright-wrapper .copyright-text p {
+    text-align: center;
+    display: block;
+    margin: 0;
+  }
+  .footer .copyright-wrapper .copyright-text p .note-DPMS {
+    display: none;
+  }
+  .footer .copyright-wrapper .copyright-text img {
+    align-self: center;
+  }
+  .footer .copyright-wrapper .copyright-text small {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Barlow", "Noto Sans TC", sans-serif;
+    line-height: 1.4;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,67 @@
+@import '../../../styles/variable.scss';
+
+.cookiesBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #F7F7F7;
+  box-shadow: 0 -1px 4px 0 #ABABAB;
+  z-index: 1000;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+  font-family: $content-font;
+
+  &.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+   .container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    p{
+        margin: 0;
+        flex: 1;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $text-grey;
+        a{
+            text-decoration: underline;
+        }
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .cookiesBar {
+        .container {
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            
+            p{
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+

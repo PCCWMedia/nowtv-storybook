@@ -1,0 +1,299 @@
+.plan-card {
+  border: 1px solid #9b9b9b;
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.plan-card .pack-image-banner {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.plan-card .pack-image-square {
+  display: none;
+}
+.plan-card .details {
+  padding: 24px;
+}
+.plan-card .details h4 {
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+.plan-card .details p {
+  margin: 24px 0;
+  font-size: 16px;
+  color: #4a4a4a;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+.plan-card .details .includes {
+  margin: 24px 0;
+  text-align: left;
+}
+.plan-card .details .includes h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.plan-card .details .includes ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.plan-card .details .includes ul li {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+.plan-card .details .includes ul li:last-child {
+  margin: 10px 0 0 0;
+}
+.plan-card .details .includes ul li a {
+  position: relative;
+  color: #0b0b0b;
+  text-decoration: none;
+}
+.plan-card .details .includes ul li a::after {
+  position: relative;
+  content: "\e904";
+  font-family: "nowicon";
+  font-size: 12px;
+  right: -8px;
+  top: 1px;
+}
+.plan-card .details .includes ul li a:hover {
+  color: #CF6B0D;
+  font-weight: 500;
+}
+.plan-card .details .bottom-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.plan-card .details .bottom-control .price-wrap {
+  text-align: left;
+}
+.plan-card .details .bottom-control .price-wrap h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+}
+.plan-card .details .bottom-control .price-wrap h4 b {
+  font-weight: 500;
+  font-size: 32px;
+}
+.plan-card .details .bottom-control .price-wrap small {
+  display: inline-block;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #4a4a4a;
+  margin: 8px 0 0 0;
+  line-height: 1.4;
+  font-size: 16px;
+}
+.plan-card.sm {
+  max-width: 600px;
+}
+.plan-card.sm .details h4 {
+  text-align: center;
+}
+.plan-card.sm .details p {
+  text-align: center;
+}
+.plan-card.sm .details .bottom-control {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.plan-card.sm .details .bottom-control .price-wrap {
+  text-align: center;
+}
+.plan-card.sm .details .bottom-control .price-wrap h4 {
+  text-align: center;
+}
+.plan-card.sm .details .bottom-control .price-wrap small {
+  margin: 8px 0 24px 0;
+}
+.plan-card.onerow { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  align-items: center;
+}
+.plan-card.onerow .pack-image-square {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.plan-card.onerow .pack-image-banner {
+  display: none;
+}
+.plan-card.onerow .details .bottom-control .price-wrap {
+  text-align: left;
+}
+.plan-card.fullscreen {
+  border: none; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  padding: 60px 0;
+}
+.plan-card.fullscreen .pack-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.plan-card.fullscreen .pack-image-square {
+  display: flex;
+  width: auto;
+  max-height: 600px;
+  max-width: 100%;
+}
+.plan-card.fullscreen .pack-image-banner {
+  display: none;
+}
+.plan-card.fullscreen .details {
+  width: 50%;
+  padding: 0 24px;
+}
+.plan-card.fullscreen .details h2 {
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+.plan-card.fullscreen .details p {
+  font-size: 18px;
+}
+.plan-card.fullscreen .details .bottom-control {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.plan-card.fullscreen .details .bottom-control .price-wrap {
+  text-align: left;
+}
+.plan-card.fullscreen .details .bottom-control .price-wrap small {
+  margin: 8px 0 24px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .plan-card.onerow {
+    flex-direction: column;
+  }
+  .plan-card.onerow .pack-image-square {
+    display: none;
+  }
+  .plan-card.onerow .pack-image-banner {
+    display: block;
+  }
+  .plan-card.onerow .details .bottom-control .price-wrap {
+    text-align: left;
+  }
+  .plan-card.fullscreen {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .plan-card.fullscreen .pack-img {
+    width: 100%;
+  }
+  .plan-card.fullscreen .pack-image-square {
+    width: 100%;
+    max-width: 400px;
+  }
+  .plan-card.fullscreen .details {
+    width: 100%;
+    padding: 0;
+  }
+  .plan-card.fullscreen .details .bottom-control {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .plan-card.fullscreen .details .bottom-control .price-wrap {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .plan-card .details {
+    padding: 20px;
+  }
+  .plan-card .details h4 {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  .plan-card .details p {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .plan-card .details .includes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .plan-card .details .includes h5 {
+    font-size: 13px;
+  }
+  .plan-card .details .includes ul li {
+    font-size: 14px;
+  }
+  .plan-card .details .includes ul li a::after {
+    font-size: 10px;
+  }
+  .plan-card .details .bottom-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .plan-card .details .bottom-control .price-wrap {
+    text-align: center;
+  }
+  .plan-card .details .bottom-control .price-wrap h4 {
+    text-align: center;
+    font-size: 14px;
+  }
+  .plan-card .details .bottom-control .price-wrap h4 b {
+    font-size: 28px;
+  }
+  .plan-card .details .bottom-control .price-wrap small {
+    margin: 8px 0 20px 0;
+    font-size: 14px;
+  }
+  .plan-card.onerow .details .bottom-control .price-wrap {
+    text-align: center;
+  }
+  .plan-card.fullscreen .details h3 {
+    text-align: left;
+    margin: 0 0 20px 0;
+  }
+  .plan-card.fullscreen .details p {
+    text-align: left;
+    font-size: 16px;
+  }
+  .plan-card.fullscreen .details .includes {
+    align-items: flex-start;
+  }
+  .plan-card.fullscreen .details .bottom-control .price-wrap {
+    text-align: left;
+  }
+  .plan-card.fullscreen .details .bottom-control .price-wrap small {
+    margin: 8px 0 20px 0;
+  }
+}/*# sourceMappingURL=PlanCard.css.map */

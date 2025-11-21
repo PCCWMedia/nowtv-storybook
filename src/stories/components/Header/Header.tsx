@@ -1,5 +1,5 @@
 // src/components/HeaderWithMobileNav.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../NavigationBar/NavigationBar';
 import MobileSideNav from '../MobileSideNav/MobileSideNav';
 import './Header.scss';
@@ -21,6 +21,18 @@ const HeaderWithMobileNav: React.FC<HeaderWithMobileNavProps> = ({
 }) => {
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobileNavActive || isSearchOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+    // Clean up in case component unmounts while modal is open
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isMobileNavActive, isSearchOpen]);
 
   const handleBurgerMenuClick = () => {
     setIsMobileNavActive(true);

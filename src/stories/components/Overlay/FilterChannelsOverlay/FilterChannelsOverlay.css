@@ -1,0 +1,110 @@
+.filter-channels-wrapper {
+  background-color: white;
+  padding: 40px 0 16px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+.filter-channels-wrapper .container {
+  width: 80%;
+  margin: 0 auto;
+}
+.filter-channels-wrapper .mobile-select {
+  display: none;
+}
+.filter-channels-wrapper .channel-options { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+  margin: 24px 0;
+}
+.filter-channels-wrapper .channel-options button {
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: center;
+  border: 0;
+  background-color: #f5f5f5;
+  color: #757575;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+}
+.filter-channels-wrapper .channel-options button.active {
+  background-color: #EF9528;
+  color: white;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+  .filter-channels-wrapper .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter-channels-wrapper h4 {
+    margin: 0 0 20px 0;
+  }
+  .filter-channels-wrapper .mobile-select {
+    cursor: pointer;
+    display: block;
+    background-color: #f5f5f5;
+    color: #757575;
+    font-family: "Barlow", "Noto Sans TC", sans-serif;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 auto 4px auto;
+    border-radius: 6px;
+    position: relative;
+    outline: none;
+    width: 100%;
+    border: 0;
+  }
+  .filter-channels-wrapper .mobile-select::after {
+    position: absolute;
+    right: 12px;
+    content: "\e900";
+    font-family: "nowicon";
+    font-size: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: transform 0.2s linear;
+  }
+  .filter-channels-wrapper .mobile-select.active::after {
+    transform: translate(0%, -50%) rotate(180deg);
+  }
+  .filter-channels-wrapper .channel-options {
+    padding: 0;
+    border-radius: 6px;
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    margin: 0 auto;
+    gap: 0;
+    transition: all 0.2s ease;
+  }
+  .filter-channels-wrapper .channel-options.show {
+    opacity: 1;
+    height: auto;
+  }
+  .filter-channels-wrapper .channel-options button {
+    font-size: 14px;
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    border-top: 1px solid #d8d8d8;
+    border-radius: 0 !important;
+    background-color: #fff;
+  }
+  .filter-channels-wrapper .channel-options button:first-child {
+    border: 0;
+  }
+  .filter-channels-wrapper .title-header {
+    margin: 20px 0 0 0;
+  }
+}/*# sourceMappingURL=FilterChannelsOverlay.css.map */

@@ -1,0 +1,102 @@
+.select-box-group {
+  width: 100%;
+  position: relative;
+}
+.select-box-group button.select-button {
+  width: 100%;
+  min-width: 320px;
+  background-color: white;
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-size: 20px;
+  border: 1px solid #9B9B9B;
+  color: #9b9b9b;
+  text-align: left;
+  font-weight: 400;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  position: relative;
+  max-height: 58px;
+  cursor: pointer;
+  outline: none;
+}
+.select-box-group button.select-button.withvalue {
+  color: #0b0b0b;
+}
+.select-box-group button.select-button::after {
+  content: "\e900";
+  font-family: "nowicon";
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  right: 16px;
+  font-size: 10px;
+  color: #0b0b0b;
+  transition: transform 0.2s linear;
+}
+.select-box-group button.select-button.active::after {
+  transform: translate(0%, -50%) rotate(180deg);
+}
+.select-box-group button.select-button[disabled] {
+  pointer-events: none;
+  opacity: 0.3;
+}
+.select-box-group ul {
+  position: absolute;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 12px 23px 0px rgba(0, 0, 0, 0.13);
+  opacity: 1;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+.select-box-group ul.show {
+  opacity: 1;
+  margin: 5px 0 0 0;
+  pointer-events: all;
+}
+.select-box-group ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+.select-box-group ul li:last-child {
+  margin: 0;
+  border-bottom: 0;
+}
+.select-box-group ul li button {
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  padding: 16px 24px;
+  text-align: left;
+  margin: 0;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .select-box-group {
+    width: 100%;
+    position: relative;
+  }
+  .select-box-group button.select-button {
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+  .select-box-group button.select-button::after {
+    font-size: 9px;
+  }
+  .select-box-group ul li button {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=SelectBox.css.map */

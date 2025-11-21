@@ -1,0 +1,888 @@
+@import url("../../../styles/now-icon.css");
+.myaccount-wrapper .heading {
+  margin: 60px 0;
+  text-align: center;
+}
+.myaccount-wrapper .heading h2 {
+  margin: 0 0 10px 0;
+}
+.myaccount-wrapper .heading h6 {
+  color: #4a4a4a;
+}
+.myaccount-wrapper .myaccount-section section {
+  width: 100%;
+  background: none;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.myaccount-wrapper .myaccount-section section:nth-child(2n-1) {
+  background: #F7F7F7;
+}
+.myaccount-wrapper .myaccount-section section .container { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.myaccount-wrapper .myaccount-section section .title {
+  width: 25%;
+}
+.myaccount-wrapper .myaccount-section section .title p {
+  margin: 20px 0 0 0;
+  color: #9b9b9b;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+}
+.myaccount-wrapper .myaccount-section section .account-details {
+  width: 75%;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  padding-left: 60px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 40px 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item h6 {
+  width: 25%;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  text-align: left;
+  font-weight: 400;
+  color: #4a4a4a;
+  padding-right: 12px;
+  font-size: 16px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information {
+  width: 75%; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data b {
+  position: relative;
+  top: -4px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 30px 0 0 0;
+  line-height: 1.4;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data b:first-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data b.checked::after {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #EF9528;
+  font-family: "nowicon";
+  content: "\e905";
+  color: white;
+  font-size: 10px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data b a.verify {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin: 0 0 0 8px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data a {
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  display: inline-block;
+  margin: 30px 0 0 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data a.mobile {
+  color: #9b9b99;
+  display: none;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data a:first-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data .billdate {
+  width: 100%; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data .billdate a {
+  color: #0b0b0b;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 8% 0 0;
+  white-space: nowrap;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data .billdate a:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .data .billdate a:hover {
+  font-weight: 500;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box {
+  width: 75%;
+  display: none;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box.active {
+  display: block;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box input {
+  padding: 12px;
+  margin: 0 0 16px 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box p.error {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #b00020;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box p.error.active {
+  display: block;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box .cta-buttons {
+  margin: 0 0 0 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box .cta-buttons button {
+  margin: 0 16px 0 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .box .cta-buttons button:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .controls { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  margin-left: 24px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .controls label {
+  color: #9b9b99;
+  font-weight: 500;
+  font-size: 16px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .controls a {
+  font-size: 18px;
+  color: #9b9b99;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 38px 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .controls a:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information .controls a:hover {
+  color: #4a4a4a;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information.editMode .data,
+.myaccount-wrapper .myaccount-section section .account-details .item .information.editMode .controls {
+  display: none;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information.editMode .box {
+  display: block;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information.addnew .controls {
+  display: none;
+}
+.myaccount-wrapper .myaccount-section section .account-details .item .information.address .box p.error {
+  margin: 0 0 16px 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .other-links { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid #d8d8d8;
+}
+.myaccount-wrapper .myaccount-section section .account-details .other-links a {
+  font-size: 18px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 30px;
+}
+.myaccount-wrapper .myaccount-section section .account-details .other-links a:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .myaccount-section section .account-details .single-link {
+  font-size: 18px;
+}
+.myaccount-wrapper .myaccount-section .logout-wrapper {
+  text-align: center;
+  border-top: 2px solid #d8d8d8;
+  padding-top: 32px;
+  margin-bottom: 96px;
+}
+.myaccount-wrapper .subpages {
+  width: 100%;
+  background: rgb(247, 247, 247);
+  background: linear-gradient(90deg, rgb(247, 247, 247) 40%, rgb(255, 255, 255) 40%);
+}
+.myaccount-wrapper .subpages .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.myaccount-wrapper .subpages .section-title {
+  padding: 40px 40px 0 0;
+  width: 33.33%;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+.myaccount-wrapper .subpages .section-title h3 {
+  color: #0b0b0b;
+}
+.myaccount-wrapper .subpages .section-content {
+  width: 66.66%;
+  padding: 40px 0 0 40px;
+}
+.myaccount-wrapper .subpages .section-content h4 {
+  font-weight: 600;
+}
+.myaccount-wrapper .subpages .section-content h4.border {
+  padding: 16px;
+  width: 100%;
+  border-bottom: 2px solid #0b0b0b;
+  margin: 0 0 32px 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper {
+  margin: 40px 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item label {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #4a4a4a;
+  width: 30%;
+  font-size: 16px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box {
+  width: 70%;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box b {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #0b0b0b;
+  font-weight: 400;
+  font-size: 18px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box a {
+  display: inline-block;
+  margin: 0 0 0 20px;
+  text-decoration: underline;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box button {
+  min-width: 100%;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box.month-year-wrap {
+  display: flex;
+  align-items: center;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box.month-year-wrap .month {
+  min-width: 100px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box.month-year-wrap span {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 20px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .box.month-year-wrap .year {
+  min-width: 150px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .item .radio-btn-group label {
+  width: initial;
+  font-size: 18px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper.noBorder .item {
+  border: 0;
+  padding: 0 0 8px 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper.noBorder .cta-wrappers {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 40px;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .notes {
+  margin: 40px 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .notes p {
+  margin: 0 0 16px 0;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .notes p:last-child {
+  margin: 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers button {
+  margin: 0 24px 0 0;
+}
+.myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers.border {
+  padding-top: 40px;
+  border-top: 1px solid #d8d8d8;
+}
+.myaccount-wrapper .subpages .section-content .payment-history .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 32px 0;
+}
+.myaccount-wrapper .subpages .section-content .payment-history .item h6 {
+  margin: 0 0 8px 0;
+  color: #CF6B0D;
+}
+.myaccount-wrapper .subpages .section-content .payment-history .item .data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.myaccount-wrapper .subpages .section-content .payment-history .item .data p {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper h6 {
+  font-weight: 600;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .status {
+  display: flex;
+  flex-direction: row;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  margin: 8px 0 0 0;
+  font-size: 18px;
+  color: #4a4a4a;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .status b {
+  font-weight: 500;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .status div {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper {
+  margin: 32px 0 0 0;
+  padding: 32px 0 0 0;
+  border-top: 2px solid #0b0b0b;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 32px 0;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device {
+  display: flex;
+  flex-direction: row;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 20px;
+  align-items: center;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device .name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device .device-status {
+  font-size: 16px;
+}
+.myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .removeCTA {
+  font-size: 20px;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels {
+  margin: 0 0 60px 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper.hide {
+  display: none;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 40px 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item:nth-child(even) {
+  padding-left: 16px;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .image {
+  display: inline-flex;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  margin: 0 16px 0 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .channel h5 {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .channel p {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #828282;
+  font-size: 16px;
+  margin: 12px 0 0 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper:last-child .item:nth-last-child(1), .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper:last-child .item:nth-last-child(2) {
+  margin: 0;
+}
+.myaccount-wrapper .subpages .section-content .subscribed-channels button {
+  min-width: 180px;
+}
+.myaccount-wrapper .subpages .section-content .value-added-services {
+  margin: 0 0 60px 0;
+}
+.myaccount-wrapper .subpages .section-content .value-added-services ul {
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+.myaccount-wrapper .subpages .section-content .value-added-services ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  color: #0b0b0b;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper {
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 40px;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper h4 {
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper p {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #0b0b0b;
+  margin: 24px 0;
+  font-size: 18px;
+  text-align: center;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper p b {
+  font-weight: 600;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper .cta-buttons {
+  margin: 24px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.myaccount-wrapper .manage-devices-alert-wrapper .cta-buttons button {
+  min-width: 180px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1920px) {
+  .myaccount-wrapper .subpages {
+    background: rgb(247, 247, 247);
+    background: linear-gradient(90deg, rgb(247, 247, 247) 30%, rgb(255, 255, 255) 30%);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .myaccount-wrapper .myaccount-section section .account-details .item h6, .myaccount-wrapper .myaccount-section section .account-details .item .information {
+    width: 100%;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item h6 {
+    margin: 0 0 8px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .myaccount-wrapper .myaccount-section section .container {
+    flex-direction: column;
+  }
+  .myaccount-wrapper .myaccount-section section .title {
+    width: 100%;
+    margin: 0 0 36px 0;
+  }
+  .myaccount-wrapper .myaccount-section section .title p {
+    margin: 10px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details {
+    width: 100%;
+    padding: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item {
+    flex-direction: column;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data b {
+    margin: 20px 0 0 0;
+    top: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data a {
+    margin: 20px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data a:first-child {
+    margin: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data .billdate a {
+    margin: 0 10% 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls {
+    margin: 4px 0 0 20px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls a {
+    margin: 0 0 32px 0;
+  }
+  .myaccount-wrapper .subpages {
+    position: relative;
+    background: white;
+    min-height: 75vh;
+    overflow-x: hidden;
+  }
+  .myaccount-wrapper .subpages .container {
+    flex-direction: column;
+  }
+  .myaccount-wrapper .subpages .section-title {
+    position: relative;
+    z-index: 1;
+    min-height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .myaccount-wrapper .subpages .section-title::after {
+    z-index: -2;
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    left: -200px;
+    top: 0;
+    content: "";
+    background-color: #f7f7f7;
+  }
+  .myaccount-wrapper .subpages .section-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 30px 0 0 0;
+  }
+  .myaccount-wrapper .subpages .section-content h4 {
+    text-align: center;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .notes p {
+    text-align: center;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .myaccount-wrapper .heading {
+    margin: 40px 0;
+  }
+  .myaccount-wrapper .heading h2 {
+    margin: 0 0 8px 0;
+  }
+  .myaccount-wrapper .myaccount-section section {
+    width: 100%;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .title {
+    padding: 24px 0;
+    margin: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .title h3 {
+    position: relative;
+    cursor: pointer;
+    padding-right: 16px;
+  }
+  .myaccount-wrapper .myaccount-section section .title h3::after {
+    position: absolute;
+    content: "\e900";
+    font-family: "nowicon";
+    font-size: 10px;
+    color: #9b9b9b;
+    right: 0;
+    top: 8px;
+    transition: transform 0.2s linear;
+  }
+  .myaccount-wrapper .myaccount-section section .title p {
+    transition: height 0.3s ease;
+    height: 0;
+    margin: 0;
+    font-size: 14px;
+    opacity: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding-bottom: 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item {
+    margin: 0 0 32px 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information {
+    flex-direction: column;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data b {
+    font-size: 18px;
+    margin: 12px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data b.checked::after {
+    margin: 0 0 0 6px;
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data b a.verify {
+    top: 1px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data a {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .data a.mobile {
+    color: #9b9b99;
+    display: inline-block;
+    margin: 4px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .box {
+    width: 100%;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .box input {
+    padding: 12px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .box p.error {
+    font-size: 14px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .box .cta-buttons {
+    margin: 16px 0 0 0; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .box .cta-buttons button {
+    margin: 0 16px 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls {
+    margin: 4px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls label {
+    font-size: 14px;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls a {
+    align-self: flex-start;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .item .information .controls a.desktop {
+    display: none;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .other-links {
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .other-links a {
+    font-size: 16px;
+    margin: 0 0 24px 0;
+  }
+  .myaccount-wrapper .myaccount-section section .account-details .single-link {
+    font-size: 16px;
+  }
+  .myaccount-wrapper .myaccount-section section.active .title h3::after {
+    color: #EF9528;
+    transform: rotate(180deg);
+  }
+  .myaccount-wrapper .myaccount-section section.active .title p {
+    opacity: 1;
+    height: initial;
+    margin: 6px 0 0 0;
+  }
+  .myaccount-wrapper .myaccount-section section.active .account-details {
+    max-height: initial;
+    padding-bottom: 24px;
+  }
+  .myaccount-wrapper .subpages .section-content h4.border {
+    text-align: left;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper {
+    margin: 30px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper.noBorder .cta-wrappers {
+    padding-top: 30px;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item label {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item .box {
+    width: 100%;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item .box b {
+    font-size: 16px;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item .box a {
+    margin: 0 0 0 16px;
+    font-size: 14px;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item .radio-btn-group label {
+    width: initial;
+    font-size: 16px;
+    margin: 0 0 16px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .item .radio-btn-group label label {
+    margin: 0 16px 0 0;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .notes {
+    margin: 30px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .notes p {
+    font-size: 13px;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers {
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .myaccount-wrapper .subpages .section-content .form-wrapper .cta-wrappers button {
+    min-width: 180px;
+    align-self: center;
+    margin: 20px 0 0 0;
+  }
+  .myaccount-wrapper .subpages .section-content .payment-history .item {
+    margin: 0 0 24px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .payment-history .item .data {
+    flex-direction: column;
+  }
+  .myaccount-wrapper .subpages .section-content .payment-history .item .data p {
+    font-size: 14px;
+    text-align: left;
+    margin: 0 0 8px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .payment-history .item .data p :last-child {
+    margin: 0;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .status {
+    flex-direction: column;
+    margin: 8px 0 0 0;
+    font-size: 16px;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .status div {
+    display: inline-block;
+    margin: 0 0 6px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper {
+    margin: 28px 0 0 0;
+    padding: 28px 0 0 0;
+    border-top: 2px solid #0b0b0b;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item {
+    align-items: flex-start;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: flex-start;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device .name {
+    font-size: 16px;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .item .device .device-status {
+    font-size: 14px;
+  }
+  .myaccount-wrapper .subpages .section-content .manage-devices-wrapper .devices-wrapper .removeCTA {
+    font-size: 18px;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels {
+    margin: 0 0 40px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item {
+    width: 100%;
+    padding: 0;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item:nth-child(even) {
+    padding-left: 0;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .channel h5 {
+    font-size: 16px;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper .item .channel p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper:last-child .item:nth-last-child(2) {
+    margin: 0 0 40px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .subscribed-channels .wrapper:last-child .item:last-child {
+    margin: 0;
+  }
+  .myaccount-wrapper .subpages .section-content .value-added-services {
+    margin: 0 0 40px 0;
+  }
+  .myaccount-wrapper .subpages .section-content .value-added-services ul li {
+    font-size: 16px;
+  }
+  .myaccount-wrapper .manage-devices-alert-wrapper {
+    padding: 30px;
+  }
+  .myaccount-wrapper .manage-devices-alert-wrapper h4 {
+    margin: 0 0 20px 0;
+  }
+  .myaccount-wrapper .manage-devices-alert-wrapper p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .myaccount-wrapper .manage-devices-alert-wrapper .cta-buttons {
+    margin: 0 0 0 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .myaccount-wrapper .manage-devices-alert-wrapper .cta-buttons button {
+    align-self: center;
+  }
+}/*# sourceMappingURL=MyAccount.css.map */

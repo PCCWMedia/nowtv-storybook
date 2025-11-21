@@ -1,0 +1,68 @@
+@import url("../../../styles/now-icon.css");
+.close-btn {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+}
+.close-btn:after {
+  position: relative;
+  top: 1px;
+  content: "\e906";
+  font-family: "nowicon";
+  font-size: 12px;
+  background-color: #f1f1f1;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #4a4a4a;
+}
+
+.filter-btn {
+  cursor: pointer;
+  position: relative;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+  padding-left: 56px;
+  border: 0;
+  margin: 0;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.25s ease;
+}
+.filter-btn::before {
+  position: absolute;
+  content: "\e908";
+  font-family: "nowicon";
+  left: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.filter-btn img {
+  max-width: 60px;
+  max-height: 35px;
+  display: inline-block;
+  margin: 0 0 0 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-btn {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=button.css.map */

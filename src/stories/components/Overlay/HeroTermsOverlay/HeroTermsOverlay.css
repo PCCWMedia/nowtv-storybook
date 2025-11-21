@@ -1,0 +1,21 @@
+.hero-terms-wrapper {
+  padding: 22px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-terms-wrapper p {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0b0b0b;
+  margin: 0 0 16px 0;
+}
+.hero-terms-wrapper p:last-child {
+  margin: 0;
+}
+.hero-terms-wrapper button {
+  align-self: center;
+}/*# sourceMappingURL=HeroTermsOverlay.css.map */

@@ -1,0 +1,33 @@
+@import url("../../../../styles/now-icon.css");
+.hasSubMenu {
+  position: relative;
+}
+.hasSubMenu:after {
+  position: absolute;
+  content: "\e904";
+  font-family: "nowicon";
+  top: 18px;
+  font-size: 14px;
+  right: 22px;
+  transition: transform 0.2s linear;
+  transform: rotate(90deg);
+}
+.hasSubMenu.active:after {
+  top: 20px;
+  transform: rotate(-90deg);
+  color: #CF6B0D;
+}
+.hasSubMenu .subMenu {
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  height: 0;
+}
+.hasSubMenu .subMenu li a {
+  color: #0b0b0b;
+  transition: color 0.3s ease;
+}
+.hasSubMenu .subMenu li a:hover {
+  color: #CF6B0D;
+}/*# sourceMappingURL=SideMenuToggle.css.map */

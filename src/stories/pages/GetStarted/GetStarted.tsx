@@ -3,6 +3,7 @@ import './GetStarted.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import AlertBar from '../../components/AlertBar/AlertBar';
+import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
 import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import Plans from '../../components/Swiper/Plans/Plans';
 import Link from '../../components/Link/Link';
@@ -35,6 +36,18 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
             setIsNowEParam(true);
         }   
     }, []);
+
+    useEffect(() => {
+        if (isFilterOverlayOpen || showLikeNowEOverlay) {
+            document.body.classList.add('modal-open');
+        } else {
+            document.body.classList.remove('modal-open');
+        }
+        // Clean up in case component unmounts while modal is open
+        return () => {
+            document.body.classList.remove('modal-open');
+        };
+    }, [isFilterOverlayOpen, showLikeNowEOverlay]);
 
     // genres array will be defined after plan arrays
 
@@ -492,6 +505,7 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
             </div>
 
             <Footer status="normal" />
+            <CookiesBar isVisible={true} />
 
             
         </div>

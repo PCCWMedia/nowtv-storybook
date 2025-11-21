@@ -1,0 +1,50 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+}
+.home-page main {
+  width: 100%;
+}
+.home-page main .container {
+  max-width: 1920px;
+  padding: 0 100px;
+}
+.home-page main section {
+  border-top: 8px solid #d8d8d8;
+}
+.home-page .fullscreen-split .left img {
+  max-height: 600px;
+  max-width: 100%;
+  width: auto;
+}
+.home-page .split-section { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+}
+.home-page .split-section .background-wrap { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1199px) {
+  .home-page main .container {
+    max-width: 1920px;
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home-page main .container {
+    padding: 0 22px;
+  }
+  .home-page .split-section {
+    flex-direction: column;
+  }
+  .home-page .split-section .background-wrap {
+    width: 100%;
+  }
+  .home-page .split-section .background-wrap:last-child {
+    border-top: 8px solid #d8d8d8;
+  }
+}/*# sourceMappingURL=Home.css.map */

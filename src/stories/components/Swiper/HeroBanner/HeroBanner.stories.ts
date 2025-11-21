@@ -2,6 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HeroBanner } from './HeroBanner';
 
 // Import images
+import slideMovieMobile from '../../../assets/img/home/NowTV-King-of-Movie-750X700-EN.jpg';
+import slideMovieDesktop from '../../../assets/img/home/NowTV-King-of-Movie-1500X720-EN.jpg';
+import slidePLMobile from '../../../assets/img/home/Now-TV-PL2526-750X700-EN.jpg';
+import slidePLDesktop from '../../../assets/img/home/Now-TV-PL2526-1500X700-EN.jpg';
 import slide1Mobile from '../../../assets/img/home/uefa-mobile.jpg';
 import slide1Desktop from '../../../assets/img/home/uefa-desktop.jpg';
 import slide1TitleArt from '../../../assets/img/home/uefa-title.png';
@@ -22,6 +26,9 @@ import slide1ChlibLogo from '../../../assets/img/ch-logo/641_e.png';
 import slide3ChlibLogo from '../../../assets/img/ch-logo/L00051_c.png';
 import slide4ChlibLogo from '../../../assets/img/ch-logo/netflix-logo-r.svg';
 
+import slideFakeMobile from '../../../assets/img/home/fake-mobile.jpg';
+import slideFakeDesktop from '../../../assets/img/home/fake-desktop.jpg';
+
 
 const meta: Meta<typeof HeroBanner> = {
   title: 'Components/Swiper/HeroBanner',
@@ -38,6 +45,40 @@ type Story = StoryObj<typeof HeroBanner>;
 export const Default: Story = {
   args: {
     slides: [
+      {
+        id: 'slide-movie',
+        image: {
+          mobile: slideMovieMobile,
+          desktop: slideMovieDesktop,
+        },
+        content: {
+          title: 'Home to Every Movie Fan',
+          description: 'Discover over 2,800* Chinese, Hollywood, Japanese, and Korean films — from timeless classics and blockbuster hits to exclusive premieresˇ and award-winning stories you won’t find anywhere else. <br><br> Dive into a rich mix of genres crafted to satisfy every movie lover’s craving starting from HK$68/month^',
+          buttonText: 'Learn More',
+          terms: [
+            '*Limited time offer. This offer applicable to new subscription or existing Now TV/ 1O1O/ csl/ Club Sim/ Netvigator customers who subscribe to this offer via dedicated sales channel. This offer is not applicable to online subscription. Customers can subscribe to 3-pack Soccer Combo (with Set-Top Box or without Set-Top Box) with 24/36 commitment period at HK$228 per month. The subscription fees do not include the SD/HD/4K connection fee and rental fee of a Now TV Set-Top Box. The subscription fees shown here do not include the data usage and charges that incurred for viewing and streaming Now TV contents on Now TV app. Subject to the relevant terms and conditions, please refer to <a href="http://bit.ly/pl2526">bit.ly/pl2526</a>. Now TV services are provided by Now TV Limited and available in designated areas. Now TV is a registered trademark of the HKT group. Please contact the salesperson for details. Customer can visit <a href="http://www.pccw.com">http://www.pccw.com</a> for store location.'
+          ],
+          backgroundColor: '#000000',
+        },
+        
+      },
+      {
+        id: 'slide-PL',
+        image: {
+          mobile: slidePLMobile,
+          desktop: slidePLDesktop,
+        },
+        content: {
+          title: 'Premier League kicks off on August 16!',
+          description: 'True fans never miss a match! With Now TV’s 3-Pack Soccer Combo from $228/month*, watch every game live on smart TVs, phones, or tablets. Stream on two devices at once—no installation needed. Experience the excitement anywhere, anytime, and cheer your team through every high and low.',
+          buttonText: 'Learn More',
+          terms: [
+            '*Limited time offer. This offer applicable to new subscription or existing Now TV/ 1O1O/ csl/ Club Sim/ Netvigator customers who subscribe to this offer via dedicated sales channel. This offer is not applicable to online subscription. Customers can subscribe to 3-pack Soccer Combo (with Set-Top Box or without Set-Top Box) with 24/36 commitment period at HK$228 per month. The subscription fees do not include the SD/HD/4K connection fee and rental fee of a Now TV Set-Top Box. The subscription fees shown here do not include the data usage and charges that incurred for viewing and streaming Now TV contents on Now TV app. Subject to the relevant terms and conditions, please refer to <a href="http://bit.ly/pl2526">bit.ly/pl2526</a>. Now TV services are provided by Now TV Limited and available in designated areas. Now TV is a registered trademark of the HKT group. Please contact the salesperson for details. Customer can visit <a href="http://www.pccw.com">http://www.pccw.com</a> for store location.'
+          ],
+          backgroundColor: '#a21f2d',
+        },
+        
+      },
       {
         id: 'slide-1',
         image: {
@@ -84,7 +125,7 @@ export const Default: Story = {
         },
         content: {
           title: 'All 6 Pandas Have Arrived!\nCatch the exclusive action now!',
-          description: 'Panda twin cubs have finally made their grand debut! Join catch the live action on Panda TV Channel 200. With two exclusive live camera, you can experience the adorable antics of all 6 giant pandas anytime, anywhere!# Sign up for FREE* to watch seamless Panda TV live and a treasure trove of exclusive panda clips on the Now TV App or your set-top box!',
+          description: 'Panda twin cubs are here! Catch their adorable antics anytime on Panda TV Channel 200 with two exclusive live cameras. Sign up FREE* to enjoy nonstop panda action, live streams, and special clips on the Now TV App or your set-top box—bringing all six giant pandas closer than ever.',
           buttonText: 'Sign up Now ID now',
           terms: [
             '<sup>*</sup>This is a different set of terms for slide 3.',
@@ -151,6 +192,19 @@ export const Default: Story = {
           isDark: true,
           isCentered: true,
           description: '',
+        },
+      },
+      {
+        id: 'slide-fake',
+        image: {
+          mobile: slideFakeMobile,
+          desktop: slideFakeDesktop,
+        },
+        content: {
+          title: 'Beware of scammers posing as the company to steal bank information',
+          description: 'Beware of scammers posing as telecom staff to steal bank or card details. Now TV never requests such info by phone. Confirm identities via SEM sender “Now TV” or official WhatsApp. Use the “My HKT” app for secure payments. If unsure, call 1000 or contact Anti-Fraud Support on WhatsApp 6800 0123.',
+          buttonText: 'Learn More',
+          backgroundColor: '#111022',
         },
       },
     ],

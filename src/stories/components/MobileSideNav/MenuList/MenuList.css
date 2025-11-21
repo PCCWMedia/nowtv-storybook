@@ -1,0 +1,33 @@
+.menuList ul {
+  padding: 0;
+  margin: 0;
+}
+.menuList ul li {
+  position: relative;
+  list-style: none;
+}
+.menuList ul li a { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0b0b0b;
+  height: 50px;
+  padding: 0 22px;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0;
+}
+.menuList ul li.active a {
+  color: #CF6B0D;
+}
+.menuList ul li.active ul li a {
+  color: #0b0b0b;
+  font-weight: 400;
+}
+.menuList ul li.active ul li a:hover {
+  color: #0b0b0b;
+}
+.menuList ul li.hasSubMenu.active {
+  background-color: #f1f1f1;
+}/*# sourceMappingURL=MenuList.css.map */

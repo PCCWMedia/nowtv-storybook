@@ -1,0 +1,40 @@
+.social-media-wrapper { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  gap: 36px;
+  justify-content: center;
+}
+.social-media-wrapper .item a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+}
+.social-media-wrapper .item a.fb {
+  background-image: url("../../../assets/img/footer/facebook-logo-grey.svg");
+}
+.social-media-wrapper .item a.fb:hover {
+  background-image: url("../../../assets/img/footer/facebook-logo.svg");
+}
+.social-media-wrapper .item a.ins {
+  background-image: url("../../../assets/img/footer/ig-logo-grey.svg");
+}
+.social-media-wrapper .item a.ins:hover {
+  background-image: url("../../../assets/img/footer/ig-logo.svg");
+}
+.social-media-wrapper .item a.yt {
+  background-image: url("../../../assets/img/footer/youtube-logo-grey.svg");
+}
+.social-media-wrapper .item a.yt:hover {
+  background-image: url("../../../assets/img/footer/youtube-logo.svg");
+}
+
+@media screen and (max-width: 991px) {
+  .social-media-wrapper {
+    gap: 32px;
+  }
+  .social-media-wrapper .item a {
+    display: inline-block;
+  }
+}/*# sourceMappingURL=SocialMediaLinks.css.map */
