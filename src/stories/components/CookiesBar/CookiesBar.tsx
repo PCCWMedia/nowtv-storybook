@@ -31,7 +31,7 @@ export const CookiesBar = ({
   return (
     <div className={`cookiesBar ${isVisible ? 'visible' : 'hidden'}`}>
       <div className="container">
-        <p className="cookiesBar__text" dangerouslySetInnerHTML={{ __html: text }} />
+        <p className="" dangerouslySetInnerHTML={{ __html: text }} />
         <Button 
           label={buttonLabel}
           className="btn primary"
