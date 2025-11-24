@@ -1,4 +1,4 @@
-@import '../../../../styles/variable.scss';
+@use '../../../../styles/variable.scss' as *;
 
 .pack-overlay-wrapper{
     background-color: #f9f9f9;

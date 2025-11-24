@@ -1,4 +1,4 @@
-@import '../../../../styles/variable.scss';
+@use '../../../../styles/variable.scss' as *;
 
 .plan-card {
     border: 1px solid #9b9b9b;

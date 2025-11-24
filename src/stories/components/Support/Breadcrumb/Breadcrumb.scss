@@ -1,4 +1,4 @@
-@import '../../../../styles/variable.scss';
+@use '../../../../styles/variable.scss' as *;
 
 .breadcrumb{
     margin: 0;

@@ -1,4 +1,4 @@
-@import '../../../styles/variable.scss';
+@use '../../../styles/variable.scss' as *;
 @import url('../../../styles/now-icon.css');
 
 .getstarted-page .container{
