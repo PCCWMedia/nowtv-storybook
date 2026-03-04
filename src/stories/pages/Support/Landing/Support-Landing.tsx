@@ -3,6 +3,7 @@ import '../Support.scss';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import { CookiesBar } from '../../../components/CookiesBar/CookiesBar';
+import { ChatBubble } from '../../../components/Chats/ChatBubble/ChatBubble';
 import InputBox from '../../../components/Form/InputBox/InputBox';
 import Link from '../../../components/Link/Link';
 import BorderCard from '../../../components/Card/BorderCard/BorderCard';
@@ -179,6 +180,11 @@ const SupportLanding: React.FC = () => {
       </div>
       <Footer status="normal" />
       <CookiesBar isVisible={true} />
+      <ChatBubble 
+        isVisible={true}
+        onlineSalesLink="https://wa.me/85298766800"
+        customerServiceLink="https://wa.me/85298766888"
+      />
     </div>
   );
 };

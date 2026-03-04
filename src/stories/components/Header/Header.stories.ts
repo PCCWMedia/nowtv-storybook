@@ -39,3 +39,9 @@ export const LoggedIn: Story = {
     tabActive: false,
   },
 };
+
+export const nowid: Story = {
+  args: {
+    status: 'nowid',
+  },
+};

@@ -73,8 +73,8 @@ const BillSettings: React.FC = () => {
                     </div>
                     <div className="section-content">
                         <h4>My Bill Preference</h4>
-                        <div className="form-wrapper noBorder">
-                            <div className="item">
+                        <div className="form-wrapper ">
+                            <div className="item noBorder">
                                 <RadioButton
                                     key={billPreference}
                                     name="bill-preference"
@@ -179,7 +179,7 @@ const BillSettings: React.FC = () => {
                                 </div>
                             )}
                             
-                            <div className="cta-wrappers">
+                            <div className="cta-wrappers noBorder">
                                 <Button
                                     label="Save"
                                     className="btn primary"

@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import AlertBar from '../../components/AlertBar/AlertBar';
 import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
+import { ChatBubble } from '../../components/Chats/ChatBubble/ChatBubble';
 import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import Plans from '../../components/Swiper/Plans/Plans';
 import Link from '../../components/Link/Link';
@@ -506,6 +507,11 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
 
             <Footer status="normal" />
             <CookiesBar isVisible={true} />
+            <ChatBubble 
+                isVisible={true}
+                onlineSalesLink="https://wa.me/85298766800"
+                customerServiceLink="https://wa.me/85298766888"
+            />
 
             
         </div>

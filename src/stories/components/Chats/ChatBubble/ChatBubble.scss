@@ -8,6 +8,16 @@
     -webkit-tap-highlight-color: transparent;
     z-index: 10;
     display: block;
+    opacity: 0;
+    transform: translateY(120px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
 
     .link-wrapper{
         display: none;

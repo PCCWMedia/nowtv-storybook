@@ -6,6 +6,7 @@ import { FullscreenBG } from '../../components/Fullscreen/FullscreenBG/Fullscree
 import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import SplitFeature from '../../components/SplitFeature/SplitFeature';
 import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
+import { ChatBubble } from '../../components/Chats/ChatBubble/ChatBubble';
 import slidePLMobile from '../../assets/img/home/Now-TV-PL2526-750X700-EN.jpg';
 import slidePLDesktop from '../../assets/img/home/Now-TV-PL2526-1500X700-EN.jpg';
 import slide1Mobile from '../../assets/img/home/uefa-mobile.jpg';
@@ -144,7 +145,7 @@ const Home: React.FC = () => {
       },
       content: {
         title: '6隻大熊貓全部登陸Now TV  ​獨家鏡頭即時睇',
-        description: '熊貓BB「加加」（家姐）同「得得」（細佬）現已登場啦！即到200台收看熊貓直播，新增兩個獨家鏡頭，一齊隨時隨地捕捉6隻大熊貓獨家可愛一面！# 仲有更多熊貓絕密片段等緊你! 無論用Now TV應用程式或機頂盒都一樣方便！新用戶亦可免費下載登記',
+        description: '熊貓BB「加加」（家姐）同「得得」（細佬）現已登場啦！即到200台收看熊貓直播，新增兩個獨家鏡頭，一齊隨時隨地捕捉6隻大熊貓獨家可愛一面！<sup>#</sup><br><br> 仲有更多熊貓絕密片段等緊你! 無論用Now TV應用程式或機頂盒都一樣方便！新用戶亦可免費下載登記',
         buttonText: '立即登記Now ID',
         terms: [
           '<sup>*</sup>直播時段將依照海洋公園展館的開放時間進行。請注意，時間表可能會根據場館實際情況而進行調整，直播內容與現場實際情況存在延遲。直播只限香港境內使用。*請下載及登入Now TV應用程式免費登記Now ID。熊貓 TV 200台只適用於成功登記Now ID 之客戶。'
@@ -281,12 +282,16 @@ const Home: React.FC = () => {
           />
         </section>
 
-
       </main>
 
 
     <Footer status="normal" />
     <CookiesBar isVisible={true} />
+    <ChatBubble 
+      isVisible={true}
+      onlineSalesLink="https://wa.me/85298766800"
+      customerServiceLink="https://wa.me/85298766888"
+    />
     </div>
   );
 };

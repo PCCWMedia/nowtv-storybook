@@ -79,9 +79,12 @@ header.navigation {
         }
     }
 
-   
 
-
+    &.nowid{
+        .nav-left{display: flex;}
+        .nav-center{flex: 1;justify-content: center;}
+        .nav-right{flex: 1;justify-content: flex-end;}
+    }
 
 }
 
@@ -166,5 +169,16 @@ header.navigation {
                 @include flex-display;
             }
         }
+
+        // for nowid
+        &.nowid{
+            .lang-button {
+                @include flex-display;
+                justify-content: center;
+            }
+            .burger-menu-btn{display: none;}
+        }
+
+
     } 
 }

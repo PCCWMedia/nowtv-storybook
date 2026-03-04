@@ -43,6 +43,24 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
+
+  // Check scroll position to show bubble
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setShowBubble(true);
+      } else {
+        setShowBubble(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Check if device is mobile/tablet
   useEffect(() => {
@@ -117,7 +135,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
 
   return (
     <div 
-      className={`livechat-btn-wrapper ${className} ${isMobile ? 'mobile' : ''}`}
+      className={`livechat-btn-wrapper ${className} ${isMobile ? 'mobile' : ''} ${showBubble ? 'show' : ''}`}
       onClick={handleWrapperClick}
     >
       <div 

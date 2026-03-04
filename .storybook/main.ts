@@ -15,6 +15,12 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
+  },
+  "viteFinal": async (config) => {
+    return {
+      ...config,
+      base: '/nowtv-storybook/'
+    };
   }
 };
 export default config;

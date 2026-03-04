@@ -8,7 +8,7 @@ import ProfileButton from '../ProfileButton/ProfileButton';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 interface HeaderProps {
-  status: 'normal' | 'subscription' | 'logged-in';
+  status: 'normal' | 'subscription' | 'logged-in' | 'nowid';
   username?: string; // Optional, only needed for logged-in status
   tabActive?: boolean; 
   onLoginClick?: () => void;
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className={`navigation ${status === 'subscription' ? 'subscription' : ''}`}>
+    <header className={`navigation ${status === 'subscription' ? 'subscription' : ''} ${status === 'nowid' ? 'nowid' : ''}`}>
       <div className='nav-left'></div>
 
       <div className="nav-center">
@@ -125,7 +125,7 @@ const Header: React.FC<HeaderProps> = ({
           <NavItemList items={watchItems} />
         }
 
-        {status !== 'subscription' && (
+        {status !== 'subscription' && status !== 'nowid' && (
           <ProfileButton
               status={status === 'logged-in' ? 'logged-in' : 'login'}
               username={username}

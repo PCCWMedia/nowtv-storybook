@@ -6,7 +6,7 @@ import MenuList, { type MenuItem } from './MenuList/MenuList';
 import SocialMediaLinks from '../Footer/SocialMediaLinks/SocialMediaLinks';
 
 interface MobileMenuProps {
-  status: 'normal' | 'subscription' | 'logged-in';
+  status: 'normal' | 'subscription' | 'logged-in' | 'nowid';
   username?: string;
   tabActive?: boolean;
   onLoginClick?: () => void;
@@ -120,7 +120,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
           <a className="nav-close-button" onClick={onClose}><i className="icon-close"></i></a>
         </div>
         <div className='button-wrapper'>
-          {status !== 'subscription' && (
+          {status !== 'subscription' && status !== 'nowid' && (
             <ProfileButton
               status={status === 'logged-in' ? 'logged-in' : 'login'}
               username={username}
@@ -129,7 +129,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
           )}
           <div className="watch-menu-wrapper">
             <MenuList 
-              status={status === 'subscription' ? 'logged-in' : status} 
+              status={status === 'subscription' || status === 'nowid' ? 'logged-in' : status} 
               items={watchMenuItems} 
               tabActive={tabActive}
             />
@@ -139,7 +139,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
       <div className='mobile-menu-wrapper'>
         <div className='menu-wrapper'>
           <MenuList 
-            status={status === 'subscription' ? 'logged-in' : status} 
+            status={status === 'subscription' || status === 'nowid' ? 'logged-in' : status} 
             items={mainMenuItems} 
             tabActive={tabActive}
           />
@@ -151,7 +151,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ status, username, tabActive, on
 
         <div className='menu-wrapper footer-menu-wrapper'>
           <MenuList 
-            status={status === 'subscription' ? 'logged-in' : status} 
+            status={status === 'subscription' || status === 'nowid' ? 'logged-in' : status} 
             items={footerMenuItems} 
             tabActive={tabActive}
           />
