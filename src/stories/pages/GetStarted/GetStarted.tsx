@@ -509,8 +509,10 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
             <CookiesBar isVisible={true} />
             <ChatBubble 
                 isVisible={true}
-                onlineSalesLink="https://wa.me/85298766800"
-                customerServiceLink="https://wa.me/85298766888"
+                options={[
+                    { label: 'Online Sales Team', link: 'https://wa.me/85298766800' },
+                    { label: 'Customer Service', link: 'https://wa.me/85298766888' },
+                ]}
             />
 
             

@@ -3,42 +3,34 @@ import './ChatBubble.scss';
 import chatMessageIcon from '../../../assets/img/icon/icon-chat-message.svg';
 import whatsappIcon from '../../../assets/img/icon/icon-chat-whatsapp.svg';
 
+export interface ChatOption {
+  /** Text label for the chat option */
+  label: string;
+  /** Link URL for the chat option */
+  link: string;
+  /** Click handler for the chat option */
+  onClick?: () => void;
+}
+
 export interface ChatBubbleProps {
   /** Whether the chat bubble is visible */
   isVisible?: boolean;
   /** Custom class name for styling */
   className?: string;
-  /** Online sales team WhatsApp link */
-  onlineSalesLink?: string;
-  /** Customer service WhatsApp link */
-  customerServiceLink?: string;
-  /** Callback when online sales is clicked */
-  onOnlineSalesClick?: () => void;
-  /** Callback when customer service is clicked */
-  onCustomerServiceClick?: () => void;
+  /** Array of chat options to display */
+  options?: ChatOption[];
   /** Callback when close button is clicked */
   onClose?: () => void;
-}
-
-export interface ChatOption {
-  /** Icon source for the chat option */
-  icon: string;
-  /** Text label for the chat option */
-  label: string;
-  /** Link URL for the chat option */
-  link?: string;
-  /** Click handler for the chat option */
-  onClick?: () => void;
 }
 
 /** Chat bubble component for customer support */
 export const ChatBubble: React.FC<ChatBubbleProps> = ({
   isVisible = true,
   className = '',
-  onlineSalesLink = '#',
-  customerServiceLink = '#',
-  onOnlineSalesClick,
-  onCustomerServiceClick,
+  options = [
+    { label: 'Online Sales Team', link: '#' },
+    { label: 'Customer Service', link: '#' },
+  ],
   onClose,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -108,19 +100,11 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
     e.stopPropagation();
   };
 
-  const handleOnlineSalesClick = (e: React.MouseEvent) => {
+  const handleOptionClick = (option: ChatOption) => (e: React.MouseEvent) => {
     e.preventDefault();
-    onOnlineSalesClick?.();
-    if (onlineSalesLink && onlineSalesLink !== '#') {
-      window.open(onlineSalesLink, '_blank');
-    }
-  };
-
-  const handleCustomerServiceClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    onCustomerServiceClick?.();
-    if (customerServiceLink && customerServiceLink !== '#') {
-      window.open(customerServiceLink, '_blank');
+    option.onClick?.();
+    if (option.link && option.link !== '#') {
+      window.open(option.link, '_blank');
     }
   };
 
@@ -153,14 +137,17 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
 
       <div className={`link-wrapper ${isExpanded ? 'show' : ''}`}>
         <div className="button-wrapper">
-          <a href={onlineSalesLink} target="_blank" onClick={handleOnlineSalesClick}>
-            <img src={whatsappIcon} alt="WhatsApp" />
-            <span>Online Sales Team</span>
-          </a>
-          <a href={customerServiceLink} target="_blank" onClick={handleCustomerServiceClick}>
-            <img src={whatsappIcon} alt="WhatsApp" />
-            <span>Customer Service</span>
-          </a>
+          {options.map((option, index) => (
+            <a 
+              key={index}
+              href={option.link} 
+              target="_blank" 
+              onClick={handleOptionClick(option)}
+            >
+              <img src={whatsappIcon} alt="WhatsApp" />
+              <span>{option.label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </div>

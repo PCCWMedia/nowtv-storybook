@@ -182,8 +182,10 @@ const SupportLanding: React.FC = () => {
       <CookiesBar isVisible={true} />
       <ChatBubble 
         isVisible={true}
-        onlineSalesLink="https://wa.me/85298766800"
-        customerServiceLink="https://wa.me/85298766888"
+        options={[
+          { label: 'Customer Service', link: 'https://wa.me/85298766888' },
+          { label: 'Technical Support', link: 'https://wa.me/85298766800' },
+        ]}
       />
     </div>
   );
