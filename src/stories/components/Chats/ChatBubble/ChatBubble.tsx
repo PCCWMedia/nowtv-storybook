@@ -8,6 +8,8 @@ export interface ChatOption {
   label: string;
   /** Link URL for the chat option */
   link: string;
+  /** Icon to display for this option (defaults to WhatsApp icon) */
+  icon?: string;
   /** Click handler for the chat option */
   onClick?: () => void;
 }
@@ -28,8 +30,9 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
   isVisible = true,
   className = '',
   options = [
-    { label: 'Online Sales Team', link: '#' },
-    { label: 'Customer Service', link: '#' },
+    { label: 'Live Chat', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: chatMessageIcon },
+    { label: 'Online Sales Team', link: 'https://wa.me/85298766800', icon: whatsappIcon },
+    { label: 'Customer Service', link: 'https://wa.me/85298766888', icon: whatsappIcon },
   ],
   onClose,
 }) => {
@@ -144,8 +147,8 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
               target="_blank" 
               onClick={handleOptionClick(option)}
             >
-              <img src={whatsappIcon} alt="WhatsApp" />
-              <span>{option.label}</span>
+              <img src={option.icon || whatsappIcon} alt={option.label} />
+              <span dangerouslySetInnerHTML={{ __html: option.label }} />
             </a>
           ))}
         </div>

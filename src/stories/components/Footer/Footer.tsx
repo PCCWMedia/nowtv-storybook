@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ status }) => {
                     <div className='inner'>
                         <TncLinks links={tncLinksData} />
                         <div className="copyright-text">
-                            <p>© PCCW Media Limited, 2025  <span className='note-DPMS'>DPMS Category A Registrant (Registration No. A-B-24-11-08337)</span></p>
+                            <p>© PCCW Media Limited, {new Date().getFullYear()}  <span className='note-DPMS'>DPMS Category A Registrant (Registration No. A-B-24-11-08337)</span></p>
                             <img src={anHKTLogo} alt=""/>
                             <small>
                             DPMS Category A Registrant (Registration No. A-B-24-11-08337)

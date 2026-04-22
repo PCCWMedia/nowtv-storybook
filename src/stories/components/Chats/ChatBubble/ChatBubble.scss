@@ -45,8 +45,15 @@
                 color: $text-grey;
                 text-decoration: none;
                 white-space: nowrap;
+                span{
+                    display: inline-flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    b{font-weight: 400;color: #4a4a4a;font-size: 12px;}
+                }
                 img{
                     width: auto;
+                    max-width: 30px;
                     height: 30px;
                     margin: 0 10px 0 0;
                 }
@@ -132,7 +139,9 @@
                 a{
                     padding: 10px 14px;
                     font-size: 13px;
+                    span{gap: 2px;}
                     img{
+                        max-width: 28px;
                         height: 28px;
                         margin: 0 8px 0 0;
                     }  

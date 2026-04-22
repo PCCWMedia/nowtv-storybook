@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 import { ChatBubble } from './ChatBubble';
+import chatMessageIcon from '../../../assets/img/icon/icon-chat-message.svg';
+import whatsappIcon from '../../../assets/img/icon/icon-chat-whatsapp.svg';
 
 const meta = {
   title: 'Components/Chats/ChatBubble',
@@ -18,21 +20,9 @@ const meta = {
       control: 'text',
       description: 'Custom class name for styling'
     },
-    onlineSalesLink: { 
-      control: 'text',
-      description: 'Online sales team WhatsApp link'
-    },
-    customerServiceLink: { 
-      control: 'text',
-      description: 'Customer service WhatsApp link'
-    },
-    onOnlineSalesClick: { 
-      action: 'online sales clicked',
-      description: 'Callback when online sales is clicked'
-    },
-    onCustomerServiceClick: { 
-      action: 'customer service clicked',
-      description: 'Callback when customer service is clicked'
+    options: { 
+      control: 'object',
+      description: 'Array of chat options to display'
     },
     onClose: { 
       action: 'close clicked',
@@ -41,10 +31,26 @@ const meta = {
   },
   args: {
     isVisible: true,
-    onlineSalesLink: 'https://wa.me/1234567890',
-    customerServiceLink: 'https://wa.me/0987654321',
-    onOnlineSalesClick: fn(),
-    onCustomerServiceClick: fn(),
+    options: [
+      { 
+        label: 'Online Sales Team <b>(Live Chat)</b>', 
+        link: 'https://shop.theclub.com.hk/live-chat?___store=en_US',
+        icon: chatMessageIcon,
+        onClick: fn()
+      },
+      { 
+        label: 'Online Sales Team <b>(Whatsapp)</b>', 
+        link: 'https://wa.me/1234567890',
+        icon: whatsappIcon,
+        onClick: fn()
+      },
+      { 
+        label: 'Customer Service', 
+        link: 'https://wa.me/0987654321',
+        icon: whatsappIcon,
+        onClick: fn()
+      },
+    ],
     onClose: fn(),
   },
 } satisfies Meta<typeof ChatBubble>;
@@ -55,12 +61,4 @@ type Story = StoryObj<typeof meta>;
 // Default chat bubble
 export const Default: Story = {
   args: {},
-};
-
-// Chat bubble with custom links
-export const WithCustomLinks: Story = {
-  args: {
-    onlineSalesLink: 'https://wa.me/1234567890?text=Hi%20I%20need%20help%20with%20sales',
-    customerServiceLink: 'https://wa.me/0987654321?text=Hi%20I%20need%20customer%20support',
-  },
 };

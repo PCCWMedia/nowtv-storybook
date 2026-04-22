@@ -5,6 +5,8 @@ import Footer from '../../components/Footer/Footer';
 import AlertBar from '../../components/AlertBar/AlertBar';
 import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
 import { ChatBubble } from '../../components/Chats/ChatBubble/ChatBubble';
+import chatMessageIcon from '../../assets/img/icon/icon-chat-message.svg';
+import whatsappIcon from '../../assets/img/icon/icon-chat-whatsapp.svg';
 import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import Plans from '../../components/Swiper/Plans/Plans';
 import Link from '../../components/Link/Link';
@@ -510,8 +512,9 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
             <ChatBubble 
                 isVisible={true}
                 options={[
-                    { label: 'Online Sales Team', link: 'https://wa.me/85298766800' },
-                    { label: 'Customer Service', link: 'https://wa.me/85298766888' },
+                    { label: 'Online Sales Team <b>(Live Chat)</b>', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: chatMessageIcon },
+                    { label: 'Online Sales Team <b>(Whatsapp)</b>', link: 'https://wa.me/85298766800', icon: whatsappIcon },
+                    { label: 'Customer Service', link: 'https://wa.me/85298766888', icon: whatsappIcon },
                 ]}
             />
 

@@ -1,0 +1,262 @@
+ @use '../../../styles/variable.scss'as *;
+
+
+ // download now tv
+ .download-nowtv {
+     position: relative;
+     background-color: #fff;
+     width: 100%;
+     border-top: 1px solid #d8d8d8;
+     padding: 80px 0;
+
+     hr {
+         margin: 40px 0;
+         display: block;
+         border: 0;
+         border-top: 1px solid #d8d8d8;
+     }
+
+     h2 {
+
+         font-weight: 600;
+         text-align: center;
+         margin: 0 0 20px 0;
+     }
+
+     h5 {
+         text-align: center;
+         margin: 8px auto 0 auto;
+         width: 100%;
+         max-width: 900px;
+         line-height: 1.5;
+
+     }
+
+     .nowtv-apps-wrapper {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         justify-content: center;
+         margin: 40px 0 0 0;
+
+         img {
+             max-width: 100%;
+         }
+
+         .image {
+             max-width: 420px;
+         }
+
+         .apps-wrapper {
+             display: flex;
+             flex-direction: row;
+             min-width: 60%;
+
+             .nowtv-app {
+                 width: 80px;
+                 min-width: 60px;
+                 height: auto;
+                 padding: 42px 0 0 0;
+                 margin: 0 0 0 32px;
+
+                 img {
+                     width: 100%;
+                     height: auto;
+                 }
+             }
+
+             .app-labels-wrapper {
+                 display: flex;
+                 flex-direction: row;
+
+                 .download-section {
+                     display: flex;
+                     flex-direction: column;
+                     align-items: flex-start;
+                     min-width: 100px;
+                     margin: 0 0 0 32px;
+
+                     h5 {
+                         color: $primary-colour;
+                         font-weight: 500;
+                         margin: 0 0 16px 0;
+                     }
+
+                     &.mobile {
+
+                         // justify-content: space-between;
+                         a {
+                             margin: 0 0 8px 0;
+
+                             &:last-child {
+                                 margin: 0;
+                             }
+                         }
+
+                         img {
+                             max-width: 160px;
+                             width: 100%;
+                         }
+                     }
+
+                     &.tv {
+
+                         // justify-content: space-between;
+                         img {
+                             width: 100%;
+                             margin: 0 0 24px 0;
+
+                             &:last-child {
+                                 margin: 0;
+                             }
+                         }
+
+                         img.android {
+                             max-width: 120px;
+                         }
+
+                         img.samsung {
+                             max-width: 192px;
+                         }
+
+                         img.lg {
+                             max-width: 181px;
+                         }
+
+                         img.firetv {
+                             max-width: 195px;
+                         }
+                     }
+                 }
+             }
+
+         }
+
+     }
+
+
+
+ }
+
+ @media screen and (max-width: 991px) {
+
+     // download now tv
+     .download-nowtv {
+         padding-top: 60px;
+
+         .nowtv-apps-wrapper {
+             flex-direction: column;
+             align-items: center;
+
+             img {
+                 max-width: 100%;
+             }
+
+             .apps-wrapper {
+                 flex-direction: row;
+                 min-width: 100%;
+                 justify-content: center;
+
+                 .nowtv-app {
+                     padding: 0 0 0 0;
+                     margin: 0 32px 0 0;
+                 }
+
+                 .app-labels-wrapper {
+                     flex-direction: column;
+
+                     .download-section {
+                         display: flex;
+                         flex-direction: column;
+                         align-items: flex-start;
+                         min-width: 100px;
+                         margin: 0;
+
+                         &.mobile {
+                             margin: 0 0 32px 0;
+                         }
+
+                         &.tv {
+                             justify-content: flex-start;
+                             text-align: left;
+
+                             img {
+                                 margin: 0 0 16px 0;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 767px) {
+
+     // download now tv
+     .download-nowtv {
+         padding-top: 40px;
+
+         hr {
+             margin: 30px 0;
+         }
+
+         h2 {
+             margin: 0 0 16px 0;
+         }
+
+         .nowtv-apps-wrapper {
+             margin: 30px 0 0 0;
+
+             .apps-wrapper {
+
+                 .nowtv-app {
+                     width: 65px;
+                     padding: 0 0 0 0;
+                     margin: 0 32px 0 0;
+                 }
+
+                 .app-labels-wrapper {
+                     flex-direction: column;
+
+                     .download-section {
+                         margin: 0;
+
+                         &.mobile {
+                             img {
+                                 max-width: 140px;
+                             }
+                         }
+
+                         &.tv {
+                             img {
+                                 margin: 0 0 16px 0;
+                             }
+
+                             img.android {
+                                 max-width: 108px;
+                             }
+
+                             img.samsung {
+                                 max-width: 173px;
+                             }
+
+                             img.lg {
+                                 max-width: 163px;
+                             }
+
+                             img.firetv {
+                                 max-width: 176px;
+                             }
+                         }
+                     }
+                 }
+
+             }
+
+         }
+
+
+
+     }
+ }
