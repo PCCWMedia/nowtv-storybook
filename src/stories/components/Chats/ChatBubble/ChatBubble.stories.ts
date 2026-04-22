@@ -45,7 +45,7 @@ const meta = {
         onClick: fn()
       },
       { 
-        label: 'Customer Service', 
+        label: 'Customer Service <b>(Whatsapp)</b>', 
         link: 'https://wa.me/0987654321',
         icon: whatsappIcon,
         onClick: fn()
