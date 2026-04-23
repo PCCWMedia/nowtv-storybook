@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ChatBubble.scss';
 import chatMessageIcon from '../../../assets/img/icon/icon-chat-message.svg';
-import cartIcon from '../../../assets/img/icon/cart-d.svg';
+import textChatIcon from '../../../assets/img/icon/textchat-d.svg';
 import whatsappIcon from '../../../assets/img/icon/whatsapp-d.svg';
 
 
@@ -32,7 +32,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
   isVisible = true,
   className = '',
   options = [
-    { label: 'Online Sales Team', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: cartIcon },
+    { label: 'Online Sales Team', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: textChatIcon },
     { label: 'Whatsapp Enquiry', link: 'https://wa.me/85298766800', icon: whatsappIcon },
     { label: 'Whatsapp CS', link: 'https://wa.me/85298766888', icon: whatsappIcon },
   ],

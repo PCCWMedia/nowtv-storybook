@@ -7,7 +7,9 @@ import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import SplitFeature from '../../components/SplitFeature/SplitFeature';
 import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
 import { ChatBubble } from '../../components/Chats/ChatBubble/ChatBubble';
-import cartIcon from '../../assets/img/icon/cart-d.svg';
+
+import textChatIcon from '../../assets/img/icon/textchat-d.svg';
+
 import whatsappIcon from '../../assets/img/icon/whatsapp-d.svg';
 import slidePLMobile from '../../assets/img/home/Now-TV-PL2526-750X700-EN.jpg';
 import slidePLDesktop from '../../assets/img/home/Now-TV-PL2526-1500X700-EN.jpg';
@@ -292,7 +294,7 @@ const Home: React.FC = () => {
     <ChatBubble 
       isVisible={true}
       options={[
-        { label: 'Online Sales Team', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: cartIcon },
+        { label: 'Online Sales Team', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: textChatIcon },
         { label: 'Whatsapp Enquiry', link: 'https://wa.me/85298766800', icon: whatsappIcon },
         { label: 'Whatsapp CS', link: 'https://wa.me/85298766888', icon: whatsappIcon },
       ]}
