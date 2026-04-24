@@ -512,9 +512,9 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
             <ChatBubble 
                 isVisible={true}
                 options={[
-                    { label: 'Live Chat', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: textChatIcon },
-                    { label: 'Whatsapp Enquiry', link: 'https://wa.me/85298766800', icon: whatsappIcon },
-                    { label: 'Whatsapp CS', link: 'https://wa.me/85298766888', icon: whatsappIcon },
+                    { label: 'Live Chat with Sales<b>09:00 - 22:00</b>', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: textChatIcon },
+                    { label: 'Sales Team<b>WhatsApp</b>', link: 'https://wa.me/85298766800', icon: whatsappIcon },
+                    { label: 'Customer Service<b>WhatsApp</b>', link: 'https://wa.me/85298766888', icon: whatsappIcon },
                 ]}
             />
 
