@@ -33,19 +33,19 @@ const meta = {
     isVisible: true,
     options: [
       { 
-        label: 'Live Chat</b>', 
+        label: 'Live Chat with Sales<b>09:00 - 22:00</b>', 
         link: 'https://shop.theclub.com.hk/live-chat?___store=en_US',
         icon: chatMessageIcon,
         onClick: fn()
       },
       { 
-        label: 'Online Sales Team', 
+        label: 'Sales Team<b>WhatsApp</b>', 
         link: 'https://wa.me/1234567890',
         icon: whatsappIcon,
         onClick: fn()
       },
       { 
-        label: 'Customer Service', 
+        label: 'Customer Service<b>WhatsApp</b>', 
         link: 'https://wa.me/0987654321',
         icon: whatsappIcon,
         onClick: fn()
