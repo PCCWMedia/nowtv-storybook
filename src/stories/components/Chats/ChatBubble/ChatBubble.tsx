@@ -83,7 +83,12 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
 
   // Handle document click to close mobile menu
   useEffect(() => {
-    const handleDocumentClick = () => {
+    const handleDocumentClick = (e: MouseEvent) => {
+      // Don't close if clicking on the chat bubble wrapper or close button
+      const chatWrapper = document.querySelector('.livechat-btn-wrapper');
+      if (chatWrapper && chatWrapper.contains(e.target as Node)) {
+        return;
+      }
       if (isMobile && isExpanded) {
         setIsExpanded(false);
       }
@@ -116,6 +121,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
   };
 
   const handleCloseClick = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     setIsExpanded(false);
     onClose?.();
