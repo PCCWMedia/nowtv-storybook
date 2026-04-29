@@ -5,6 +5,15 @@
   -webkit-tap-highlight-color: transparent;
   z-index: 10;
   display: block;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.livechat-btn-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .livechat-btn-wrapper .link-wrapper {
   display: none;
@@ -34,12 +43,24 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.livechat-btn-wrapper .link-wrapper .button-wrapper a span {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.livechat-btn-wrapper .link-wrapper .button-wrapper a span b {
+  font-weight: 400;
+  color: #888;
+  font-size: 12px;
+}
 .livechat-btn-wrapper .link-wrapper .button-wrapper a img {
   width: auto;
-  height: 30px;
+  max-width: 24px;
+  height: 24px;
   margin: 0 10px 0 0;
 }
 .livechat-btn-wrapper .link-wrapper .button-wrapper a:hover {
+  font-weight: 500;
   background-color: #f9f9f9;
 }
 .livechat-btn-wrapper .link-wrapper:hover {
@@ -109,8 +130,12 @@
     padding: 10px 14px;
     font-size: 13px;
   }
+  .livechat-btn-wrapper .link-wrapper .button-wrapper a span {
+    gap: 2px;
+  }
   .livechat-btn-wrapper .link-wrapper .button-wrapper a img {
-    height: 28px;
+    max-width: 20px;
+    height: 20px;
     margin: 0 8px 0 0;
   }
   .livechat-btn-wrapper .content {

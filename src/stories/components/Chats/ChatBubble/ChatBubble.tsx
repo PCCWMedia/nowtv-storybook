@@ -3,6 +3,8 @@ import './ChatBubble.scss';
 import chatMessageIcon from '../../../assets/img/icon/icon-chat-message.svg';
 import textChatIcon from '../../../assets/img/icon/textchat-d.svg';
 import whatsappIcon from '../../../assets/img/icon/whatsapp-d.svg';
+import closeChatIcon from '../../../assets/img/icon/icon-close-w.svg';
+
 
 
 export interface ChatOption {
@@ -136,7 +138,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
           Need Help?<br />Let's Chat.
         </div>
         <div className="close" onClick={handleCloseClick}>
-          <img src="../img/icons/icon-close-w.svg" alt="Close" />
+          <img src={closeChatIcon} alt="Close" />
         </div>
       </div>
 
