@@ -115,8 +115,9 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
     }
   };
 
-  const handleCloseClick = (e: React.MouseEvent) => {
+  const handleCloseClick = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
+    setIsExpanded(false);
     onClose?.();
   };
 
@@ -137,7 +138,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({
         <div className="text">
           Need Help?<br />Let's Chat.
         </div>
-        <div className="close" onClick={handleCloseClick}>
+        <div className="close" onClick={handleCloseClick} onTouchEnd={handleCloseClick}>
           <img src={closeChatIcon} alt="Close" />
         </div>
       </div>
