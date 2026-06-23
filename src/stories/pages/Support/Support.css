@@ -29,13 +29,13 @@
   border: 1px solid #D8D8D8;
   box-shadow: 1px 1px 4px 0px rgb(216, 209, 216);
 }
+.support-landing-page section:nth-child(even) {
+  background-color: #f7f7f7;
+}
 .support-landing-page section {
   padding: 48px 0;
   width: 100%;
   text-align: center;
-}
-.support-landing-page section:nth-child(even) {
-  background-color: #f7f7f7;
 }
 .support-landing-page .select-a-Topic .option-wrapper {
   display: flex;

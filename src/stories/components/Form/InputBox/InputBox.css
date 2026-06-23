@@ -14,7 +14,7 @@
   font-family: "Barlow", "Noto Sans TC", sans-serif;
   min-width: 320px;
 }
-.group input:not(:-moz-placeholder-shown) ~ label {
+.group input:not(:-moz-placeholder) ~ label {
   top: -13px;
   left: 18px;
   background-color: white;
@@ -93,7 +93,7 @@
     padding: 16px 20px;
     font-size: 18px;
   }
-  .group input:not(:-moz-placeholder-shown) ~ label {
+  .group input:not(:-moz-placeholder) ~ label {
     top: -12px;
     left: 16px;
     padding: 0 4px;

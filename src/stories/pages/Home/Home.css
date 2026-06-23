@@ -27,11 +27,21 @@
   width: 50%;
   justify-content: space-between;
 }
+.home-page .cookiesBar {
+  padding: 16px 100px;
+}
+.home-page .cookiesBar .container {
+  max-width: 100%;
+  padding: 0;
+}
 
 @media screen and (max-width: 1199px) {
   .home-page main .container {
     max-width: 1920px;
     padding: 0 50px;
+  }
+  .home-page .cookiesBar {
+    padding: 16px 50px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -46,5 +56,13 @@
   }
   .home-page .split-section .background-wrap:last-child {
     border-top: 8px solid #d8d8d8;
+  }
+  .home-page .cookiesBar {
+    padding: 16px 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-page .cookiesBar {
+    padding: 16px 22px;
   }
 }/*# sourceMappingURL=Home.css.map */

@@ -30,9 +30,14 @@ export const SelectBox: React.FC<SelectBoxProps> = ({
     if (defaultValue) {
       const option = options.find(opt => opt.value === defaultValue);
       if (option) {
+        setSelectedValue(option.value);
         setSelectedLabel(option.label);
       }
+      return;
     }
+
+    setSelectedValue(undefined);
+    setSelectedLabel('');
   }, [defaultValue, options]);
 
   useEffect(() => {
@@ -75,10 +80,12 @@ export const SelectBox: React.FC<SelectBoxProps> = ({
           {buttonText}
         </button>
         <ul className={isOpen ? 'show' : ''}>
-          {options.map((option, index) => (
-            <li key={index}>
+          {options.map((option) => (
+            <li key={option.value}>
               <button
                 type="button"
+                className={selectedValue === option.value ? 'active' : ''}
+                aria-pressed={selectedValue === option.value}
                 onClick={() => handleOptionClick(option)}
               >
                 {option.label}

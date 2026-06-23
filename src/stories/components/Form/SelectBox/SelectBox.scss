@@ -95,6 +95,12 @@
                 font-family: $content-font;
                 font-size: 20px;
                 cursor: pointer;
+
+                &.active,
+                &:hover {
+                    background-color: #F7F7F7;
+                    color: #0b0b0b;
+                }
             }
         }
     }

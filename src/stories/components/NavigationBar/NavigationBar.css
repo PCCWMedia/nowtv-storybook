@@ -57,6 +57,17 @@ header.navigation .lang-button {
 header.navigation .lang-button:hover {
   font-weight: 700;
 }
+header.navigation.nowid .nav-left {
+  display: flex;
+}
+header.navigation.nowid .nav-center {
+  flex: 1;
+  justify-content: center;
+}
+header.navigation.nowid .nav-right {
+  flex: 1;
+  justify-content: flex-end;
+}
 
 @media screen and (max-width: 1199px) {
   header.navigation {
@@ -104,5 +115,12 @@ header.navigation .lang-button:hover {
   }
   header.navigation.subscription .lang-button { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
     display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+  header.navigation.nowid .lang-button { /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */ /* TWEENER - IE 10 */ /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+  }
+  header.navigation.nowid .burger-menu-btn {
+    display: none;
   }
 }/*# sourceMappingURL=NavigationBar.css.map */
