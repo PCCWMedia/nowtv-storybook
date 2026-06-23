@@ -83,6 +83,10 @@
   font-size: 20px;
   cursor: pointer;
 }
+.select-box-group ul li button.active, .select-box-group ul li button:hover {
+  background-color: #F7F7F7;
+  color: #0b0b0b;
+}
 
 @media screen and (max-width: 767px) {
   .select-box-group {
