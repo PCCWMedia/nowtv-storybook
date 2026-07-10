@@ -129,14 +129,6 @@
       "type": "Entertainment"
     },
     {
-      "number": "168",
-      "name": "MOOV Concert ‧ MV Preview Channel",
-      "name_zh": "MOOV演唱會 ‧ MV台 (預覽頻道)",
-      "description": "MOOV Concert ‧ MV offering more than 100 pop concerts on demand and MV channels with over 1000 MVs per year. New content is updated regularly. (Channel 168 MOOV Concert ‧ MV Preview Channel is only available for viewing through Now TV set-top box.)",
-      "description_zh": "MOOV演唱會 ‧ MV台提供演唱會自選服務及多條MV頻道；全年提供超過100個演唱會及超過1000個MV，內容更不停更新。[168台MOOV演唱會 ‧ MV台 (預覽頻道) 只可以經Now TV機頂盒收看。]",
-      "type": "Entertainment"
-    },
-    {
       "number": "208",
       "name": "Discovery Asia",
       "name_zh": "Discovery Asia",
@@ -633,22 +625,6 @@
       "type": "Sports"
     },
     {
-      "number": "618",
-      "name": "Now Sports 618",
-      "name_zh": "Now Sports 618",
-      "description": "Bringing you live coverage of UEFA EURO 2024™.",
-      "description_zh": "直播歐洲國家盃2024賽事。",
-      "type": "Sports"
-    },
-    {
-      "number": "619",
-      "name": "Now Sports 619",
-      "name_zh": "Now Sports 619",
-      "description": "Bringing you live coverage of UEFA EURO 2024™.",
-      "description_zh": "直播歐洲國家盃2024賽事。",
-      "type": "Sports"
-    },
-    {
       "number": "620",
       "name": "Now Sports Premier League TV",
       "name_zh": "Now Sports Premier League TV",
@@ -1089,6 +1065,38 @@
       "type": "Foreign"
     },
     {
+      "number": "901",
+      "name": "Ice Fire",
+      "name_zh": "冰火頻道",
+      "description": "The very best of adult entertainment, 24 hours a day. The channel is acquired for direct re-transmission and may contain indirect advertising.",
+      "description_zh": "冰火頻道每日 24 小時不停播放全球多國不同類型成人節目。包括電影，電視，紀錄片及綜合性節目。 頻道屬外購作直接轉播, 節目可能含有間接宣傳。",
+      "type": "Adult"
+    },
+    {
+      "number": "903",
+      "name": "Channel Adult",
+      "name_zh": "成人極品台",
+      "description": "Guarantee 8 hours of new experiences exclusive every night! Catch up with the hot A-grade babes around the world. The channel is acquired for direct re-transmission and may contain indirect advertising.",
+      "description_zh": "至激至薄，保証每晚 8 小時新片，集合日本最新最 Top A 級女優，獨家本地製作，中台歐美韓泰印，一個台睇晒。 頻道屬外購作直接轉播, 節目可能含有間接宣傳。",
+      "type": "Adult"
+    },
+    {
+      "number": "DaVinciKids-app",
+      "name": "Da Vinci Kids App",
+      "name_zh": "Da Vinci Kids 應用程式",
+      "description": "Get your child the superpower of knowledge with the Da Vinci Kids app! Featuring hours of award-winning educational entertainment shows, as well as brain-teasing games. At home or on the go, Da Vinci Kids takes learning outside of the classroom.",
+      "description_zh": "Da Vinci Kids app提供多個得獎教學節目及益智互動遊戲，讓小朋友在課堂外也能探索更多知識。",
+      "type": ""
+    },
+    {
+      "number": "viu-app",
+      "name": "Viu Premium Lite Service (web & app)",
+      "name_zh": "Viu升級會員Lite 服務 (網頁及應用程式)",
+      "description": "Viu Premium Lite Service brings you the latest dramas from Korea, Japan, Taiwan & China plus Korean variety shows and Japanese animations. Viu premium Lite members can enjoy unlimited download for viewing anytime, anywhere.<br><br>To activate the Viu Premium Lite service, you must provide an email address that has not already been registered for the Viu Premium Lite Service.",
+      "description_zh": "Viu升級會員Lite 服務為你帶來最新韓日台中劇集，韓國綜藝節目及日本動畫。Viu升級會員Lite 更享無限劇集下載，盡情去到邊，煲到邊。<br><br>客戶須提供未有登記Viu升級會員Lite 服務之電郵地址以開啟Viu升級會員Lite服務。",
+      "type": ""
+    },
+    {
       "number": "L00051",
       "name": "Now News On Demand",
       "name_zh": "Now新聞台自選服務",
@@ -1106,18 +1114,18 @@
     },
     {
       "number": "L00101",
-      "name": "Max",
-      "name_zh": "Max",
-      "description": "Max featuring blockbuster movies, groundbreaking series, iconic hits, best-in-class real-life stories from food, home, lifestyle and documentary, as well as family favorites. Dive into the worlds of HBO, Harry Potter, the DC Universe, Warner Bros. and beyond. Elevate your streaming experience with exclusive stories and quality entertainment with Max.",
-      "description_zh": "Max 提供最新荷里活猛片、獨創話題劇集、合家歡節目，以及美食、家居、生活品味與紀錄片等精彩絕倫的真人騷。盡情投入HBO、哈利波特、DC 宇宙及華納兄弟等經典品牌世界，體驗獨家精彩故事，享受高質素娛樂體驗。",
+      "name": "HBO Max",
+      "name_zh": "HBO Max",
+      "description": "HBO Max featuring blockbuster movies, groundbreaking series, iconic hits, best-in-class real-life stories from food, home, lifestyle and documentary, as well as family favorites. Dive into the worlds of HBO, Harry Potter, the DC Universe, Warner Bros. and beyond. Elevate your streaming experience with exclusive stories and quality entertainment with HBO Max.",
+      "description_zh": "HBO Max 提供最新荷里活猛片、獨創話題劇集、合家歡節目，以及美食、家居、生活品味與紀錄片等精彩絕倫的真人騷。盡情投入HBO、哈利波特、DC 宇宙及華納兄弟等經典品牌世界，體驗獨家精彩故事，享受高質素娛樂體驗。",
       "type": "Movie"
     },
     {
       "number": "L50001",
-      "name": "Max",
-      "name_zh": "Max",
+      "name": "HBO Max App",
+      "name_zh": "HBO Max 應用程式",
       "description": "A brand new app featuring blockbuster movies, groundbreaking series, iconic hits, best-in-class real-life stories from food, home, lifestyle and documentary, as well as family favorites.",
-      "description_zh": "全新Max應用程式帶你深入探索 HBO、 哈利波特、 DC宇宙、卡通頻道、華納兄弟及 Discovery 頻道的精彩世界。",
+      "description_zh": "全新HBO Max應用程式帶你深入探索 HBO、 哈利波特、 DC宇宙、卡通頻道、華納兄弟及 Discovery 頻道的精彩世界。",
       "type": "Movie"
     },
     {
@@ -1361,6 +1369,14 @@
       "type": "Sports"
     },
     {
+      "number": "L00452",
+      "name": "On Demand - Now Cinema",
+      "name_zh": "自選服務 - Now Cinema",
+      "description": "\"Now Cinema,\" a brand-new video-on-demand service crafted for entertainment enthusiasts! Featuring a curated selection of Local, Asian, and Western content, spanning genres like drama, action, comedy, romance, suspense, and more.",
+      "description_zh": "「Now Cinema」一個專為娛樂愛好者打造的全新視頻點播平台！匯聚精選的本地、亞洲及歐美影視內容，涵蓋戲劇、動作、喜劇、愛情、懸疑等多樣類型。",
+      "type": "Movie"
+    },
+    {
       "number": "L00461",
       "name": "Watch n Learn On Demand",
       "name_zh": "智叻樂園",
@@ -1423,14 +1439,6 @@
       "description": "Lifetime On Demand allows you to enjoy highlighted programs anytime!",
       "description_zh": "Lifetime自選點播服務讓你隨時重溫精選節目！",
       "type": "WesternEntertainment"
-    },
-    {
-      "number": "L00589",
-      "name": "MOOV Concert ‧ MV Preview Channel",
-      "name_zh": "MOOV演唱會 ‧ MV台 (預覽頻道)",
-      "description": "MOOV Concert ‧ MV offering more than 100 pop concerts on demand and MV channels with over 1000 MVs per year. New content is updated regularly.",
-      "description_zh": "MOOV演唱會 ‧ MV台提供演唱會自選服務及多條MV頻道；全年提供超過100個演唱會及超過1000個MV，內容更不停更新。",
-      "type": ""
     },
     {
       "number": "L00601",

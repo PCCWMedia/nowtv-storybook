@@ -13,6 +13,9 @@ interface ChannelSelectionProps {
     selectedItem: any;
     onItemClick: (item: any, event: React.MouseEvent<HTMLLIElement>) => void;
     disableActiveClass?: boolean;
+    showItemLabel?: boolean;
+    itemLabelKey?: 'channelNo' | 'name';
+    logoWrapperClassName?: string;
 }
 
 const ChannelSelection: React.FC<ChannelSelectionProps> = ({
@@ -21,6 +24,9 @@ const ChannelSelection: React.FC<ChannelSelectionProps> = ({
     selectedItem,
     onItemClick,
     disableActiveClass = false,
+    showItemLabel = false,
+    itemLabelKey = 'name',
+    logoWrapperClassName,
 }) => {
     return (
         <>
@@ -42,7 +48,16 @@ const ChannelSelection: React.FC<ChannelSelectionProps> = ({
                                 data-type={item.type}
                                 onClick={(e) => onItemClick(item, e)}
                             >
-                                <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
+                                {showItemLabel && item[itemLabelKey] && (
+                                    <p className="channel-item-label">{item[itemLabelKey]}</p>
+                                )}
+                                {logoWrapperClassName ? (
+                                    <div className={logoWrapperClassName}>
+                                        <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
+                                    </div>
+                                ) : (
+                                    <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
+                                )}
                             </li>
                         ))}
                     </ul>

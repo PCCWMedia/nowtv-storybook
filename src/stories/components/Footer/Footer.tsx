@@ -16,13 +16,13 @@ const Footer: React.FC<FooterProps> = ({ status }) => {
     const columns = [
         { title: 'About', links: [{ text: 'Now TV', href: '#' }, { text: 'Advertising', href: '#' }, { text: 'Anti-Scam', href: '#' }] },
         { title: 'Subscribe', links: [{ text: 'New Customers', href: '#' }, { text: 'Existing Customers', href: '#' }, { text: 'Business Customers', href: '#' }, { text: 'All Packs', href: '#' }, { text: 'Redeem Gifts', href: '#' }] },
-        { title: "What's On", links: [{ text: 'Channels & On Demand', href: '#' }] },
+        { title: "What's On", links: [{ text: 'Channels & On Demand', href: '?path=/story/pages-channeloverview--default' }] },
         { title: 'Watch Now TV', links: [{ text: 'Now TV', href: '#' }, { text: 'Set Top Box TV Interface', href: '#' }, { text: 'TV Guide', href: '#' }, { text: 'Set Top Box TV Tips for new users', href: '#' }] },
         { title: 'Account', links: [{ text: 'My Account', href: '#' }, { text: 'Support Centre', href: '#' }, { text: 'Service Termination', href: '#' }] },
         { title: 'Contact Us', links: [{ text: 'WhatsApp (CS)', href: '#' }, { text: 'WhatsApp (Sales)', href: '#' }, { text: 'See All Contacts', href: '#' }] },
         { title: 'More Now', links: [{ text: 'Now.com', href: '#' }, { text: 'Now Video Express', href: '#' }, { text: 'Now Sports', href: '#' }, { text: 'Apps', href: '#' }] },
     ];
-    
+
     const tncLinksData = [
         { text: 'Sitemap', href: '#' },
         { text: 'Terms & Conditions', href: '#' },

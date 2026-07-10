@@ -1,0 +1,261 @@
+.channel-overview-page {
+  background-color: white;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-options {
+  position: relative;
+  z-index: 2;
+  margin: 70px 0 0 0;
+  border: 0;
+  bottom: -2px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-options button {
+  position: relative;
+  border: 0;
+  font-size: 16px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  font-weight: 600;
+  padding: 0 40px 20px 40px;
+  color: #0b0b0b;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-options button:hover {
+  color: #CF6B0D;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-options button.active {
+  color: #CF6B0D;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-options button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #CF6B0D;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content-wrapper {
+  background-color: #F7F7F7;
+  border-top: 2px solid #D8D8D8;
+  padding: 32px 0 60px 0;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content-wrapper .channel-content-wrapper {
+  position: relative;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper {
+  position: relative;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out, padding 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name .channel-title {
+  display: flex;
+  gap: 8px;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name .channel-actions {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: column;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name .channel-actions a {
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  color: #CF6B0D;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name .channel-actions a.btn {
+  color: white;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name span {
+  color: #9b9b9b;
+  font-family: "Montserrat", "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name h6 {
+  font-weight: 600;
+  color: #0b0b0b;
+  text-align: left;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description p {
+  margin: 0 0 0 48px;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  color: #4a4a4a;
+  width: 100%;
+  max-width: 60%;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+.channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description.active {
+  max-height: 500px;
+  opacity: 1;
+  padding: 30px 0;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content {
+  padding: 0;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper {
+  margin: 0;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper h6 {
+  font-size: 16px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group {
+  max-width: 240px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group button.select-button {
+  min-width: 120px;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #d8d8d8;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group ul li button {
+  font-size: 16px;
+  padding: 16px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group ul li button.active {
+  background-color: #CF6B0D;
+  color: white;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .filtered-content.fade-in {
+  opacity: 0;
+  animation: channelFilterFadeIn 0.25s ease-in-out forwards;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .title-header {
+  display: none;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li {
+  flex-direction: column;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li .channel-item-label {
+  margin: 0 0 12px 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-family: "Barlow", "Noto Sans TC", sans-serif;
+  text-align: left;
+  word-break: break-word;
+}
+.channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li .channel-logo {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes channelFilterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 991px) {
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .container {
+    flex-direction: column;
+  }
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name {
+    width: 100%;
+  }
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name .channel-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description p {
+    max-width: 100%;
+    margin: 10px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .channel-overview-page .channel-tabs-wrapper .tabs-options {
+    margin: 40px 0 0 0;
+    text-align: center;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-options button {
+    font-size: 14px;
+    padding: 0 24px 16px 24px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description .channel-name span {
+    font-size: 16px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .channel-content-wrapper .channel-description p {
+    font-size: 14px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper h6 {
+    font-size: 14px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group {
+    max-width: 200px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group button.select-button {
+    padding: 14px;
+    font-size: 14px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .type-filter-wrapper .select-box-group ul li button {
+    font-size: 14px;
+    padding: 14px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li {
+    min-height: 70px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li .channel-item-label {
+    margin: 0 0 12px 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li .channel-logo {
+    width: 100%;
+    min-height: 40px;
+  }
+  .channel-overview-page .channel-tabs-wrapper .tabs-content .channel-list-wrapper ul li .channel-logo img {
+    max-height: 40px;
+  }
+}/*# sourceMappingURL=ChannelOverview.css.map */

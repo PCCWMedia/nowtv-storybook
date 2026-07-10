@@ -69,5 +69,6 @@
   .channel-list-wrapper ul li {
     padding: 6px 12px;
     min-height: 70px;
+    width: calc(50% - 12px);
   }
 }/*# sourceMappingURL=ChannelSelection.css.map */
