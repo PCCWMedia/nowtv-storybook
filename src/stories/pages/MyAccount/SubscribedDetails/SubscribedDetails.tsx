@@ -17,11 +17,15 @@ const getIncludedPacks = (planName: string, includes: string[]) =>
         return pack;
     });
 const comboPacks = getIncludedPacks(comboPlan.planName, comboPlan.includes);
-const signaturePacks = getIncludedPacks(signaturePlan.planName, signaturePlan.includes);
+const westernSignaturePack = getIncludedPacks(signaturePlan.planName, signaturePlan.includes)
+    .find((pack) => pack.name === 'Western Signature Pack');
+
+if (!westernSignaturePack) {
+    throw new Error(`Western Signature Pack is not included in ${signaturePlan.planName}.`);
+}
 
 const SubscribedDetails: React.FC = () => {
     const [isComboExpanded, setIsComboExpanded] = useState(false);
-    const [isSignatureExpanded, setIsSignatureExpanded] = useState(false);
     const [selectedPack, setSelectedPack] = useState<(typeof comboPacks)[number] | null>(null);
 
     return (
@@ -65,34 +69,18 @@ const SubscribedDetails: React.FC = () => {
                             </div>
                         </section>
 
-                        <section className="subscription-combo">
+                        <section className="subscription-add-on">
                             <h4 className="border">Add-on Packs</h4>
                             <div className="item">
-                                <div className={`subscribed${isSignatureExpanded ? ' active' : ''}`}>
+                                <div className="subscribed">
                                     <button
-                                        className="combo"
                                         type="button"
-                                        aria-expanded={isSignatureExpanded}
-                                        onClick={() => setIsSignatureExpanded((expanded) => !expanded)}
+                                        className="pack-link"
+                                        onClick={() => setSelectedPack(westernSignaturePack)}
                                     >
-                                        Signature Combo
+                                        Western Signature Pack
                                     </button>
                                     <p className="date">Renew on: 25 Jan 2025</p>
-                                    <div className="packs-wrapper">
-                                        <ul>
-                                            {signaturePacks.map((pack) => (
-                                                <li key={pack.name}>
-                                                    <button
-                                                        type="button"
-                                                        className="pack-link"
-                                                        onClick={() => setSelectedPack(pack)}
-                                                    >
-                                                        {pack.name}
-                                                    </button>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </section>

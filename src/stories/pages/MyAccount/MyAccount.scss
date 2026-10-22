@@ -704,6 +704,37 @@
                 }
             }
 
+            .subscription-add-on {
+                margin: 0 0 60px;
+
+                .item {
+                    padding: 0 16px;
+                }
+
+                .subscribed {
+                    width: 100%;
+
+                    p {
+                        margin: 8px 0 0;
+                        color: $text-grey;
+                        font-family: $content-font;
+                        font-size: 16px;
+                    }
+                }
+
+                .pack-link {
+                    padding: 0;
+                    border: 0;
+                    background: none;
+                    color: #cf6b0d;
+                    cursor: pointer;
+                    font-family: $heading-font;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: left;
+                }
+            }
+
         }
 
     }
