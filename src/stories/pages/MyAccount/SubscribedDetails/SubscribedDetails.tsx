@@ -37,7 +37,7 @@ const SubscribedDetails: React.FC = () => {
                         <h3>Subscription Details and Renewal Dates</h3>
                     </div>
                     <div className="section-content">
-                        <section className="subscription-combo">
+                        <section className="subscription-content">
                             <h4 className="border">Combo</h4>
                             <div className="item">
                                 <div className={`subscribed${isComboExpanded ? ' active' : ''}`}>
@@ -69,7 +69,7 @@ const SubscribedDetails: React.FC = () => {
                             </div>
                         </section>
 
-                        <section className="subscription-add-on">
+                        <section className="subscription-content">
                             <h4 className="border">Add-on Packs</h4>
                             <div className="item">
                                 <div className="subscribed">

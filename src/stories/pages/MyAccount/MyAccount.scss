@@ -393,8 +393,6 @@
 
 
 
-
-
                     }
 
                     // bill settings
@@ -615,7 +613,7 @@
             }
 
             // Subscribed Details
-            .subscription-combo {
+            .subscription-content {
                 margin: 0 0 60px 0;
 
                 .item {
@@ -651,6 +649,19 @@
                             color: #cf6b0d;
                             transform: rotate(90deg);
                         }
+                    }
+
+                    > .pack-link {
+                        display: inline-block;
+                        padding: 0;
+                        border: 0;
+                        background: none;
+                        color: #cf6b0d;
+                        cursor: pointer;
+                        font-family: $heading-font;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: left;
                     }
 
                     p {
@@ -704,36 +715,7 @@
                 }
             }
 
-            .subscription-add-on {
-                margin: 0 0 60px;
 
-                .item {
-                    padding: 0 16px;
-                }
-
-                .subscribed {
-                    width: 100%;
-
-                    p {
-                        margin: 8px 0 0;
-                        color: $text-grey;
-                        font-family: $content-font;
-                        font-size: 16px;
-                    }
-                }
-
-                .pack-link {
-                    padding: 0;
-                    border: 0;
-                    background: none;
-                    color: #cf6b0d;
-                    cursor: pointer;
-                    font-family: $heading-font;
-                    font-size: 18px;
-                    font-weight: 600;
-                    text-align: left;
-                }
-            }
 
         }
 
@@ -1119,6 +1101,9 @@
                 h4{
                     &.border{
                         text-align: left;
+                        font-size: 20px;
+                        padding: 12px;
+                        margin: 0 0 24px 0;
                     }
                 }
 
@@ -1302,19 +1287,24 @@
 
                 }
 
-                .subscription-combo {
+                .subscription-content {
                     margin: 0 0 40px 0;
-
+                    .item{
+                        padding: 0 12px;
+                    }
                     .subscribed {
 
                         .combo {
-                        font-size: 16px;
+                            font-size: 16px;
 
-                        &[aria-expanded='true']::after {
-                            color: #cf6b0d;
-                            transform: rotate(90deg);
+                            &[aria-expanded='true']::after {
+                                color: #cf6b0d;
+                                transform: rotate(90deg);
+                            }
                         }
-                    }
+                         > .pack-link {
+                            font-size: 16px;
+                        }
 
                         p {
                             font-size: 14px;
