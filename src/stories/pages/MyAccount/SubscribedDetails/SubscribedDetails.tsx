@@ -84,6 +84,8 @@ const SubscribedDetails: React.FC = () => {
                                 </div>
                             </div>
                         </section>
+
+
                     </div>
                 </div>
             </div>
