@@ -46,7 +46,7 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
 
     const channelWrapperRef = useRef<HTMLDivElement>(null);
     const getChannelAppFlag = (id: string) =>
-        channelsData.channels.find(channel => channel.number === id)?.app === true;
+        channelsData.channels.find(channel => channel.number === id)?.app === true || id.endsWith('-app');
 
     useEffect(() => {
         // Add a small delay to ensure the initial state is rendered

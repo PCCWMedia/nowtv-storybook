@@ -75,7 +75,7 @@ const ChannelSelection: React.FC<ChannelSelectionProps> = ({
                                     data-type={item.type}
                                     onClick={disableItemClick ? undefined : (event) => onItemClick(item, event)}
                                 >
-                                    {item.app === true && itemLabelPosition !== 'below' && (
+                                    {item.app === true && !(showItemLabel && itemLabelPosition === 'below') && (
                                         <p className="channel-app-label">3rd-Party App</p>
                                     )}
                                     {showItemLabel && itemLabelPosition === 'above' && item[itemLabelKey] && (
