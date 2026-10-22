@@ -66,7 +66,7 @@ const SubscribedDetails: React.FC = () => {
                         </section>
 
                         <section className="subscription-combo">
-                            <h4 className="border">Signature Combo</h4>
+                            <h4 className="border">Add-on Packs</h4>
                             <div className="item">
                                 <div className={`subscribed${isSignatureExpanded ? ' active' : ''}`}>
                                     <button
