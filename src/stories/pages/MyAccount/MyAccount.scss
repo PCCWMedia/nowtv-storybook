@@ -810,7 +810,7 @@
             margin: 0 0 8px;
             color: #cf6b0d;
             font-size: 18px;
-            text-align: center;
+            text-align: left;
             font-weight: 600;
         }
 
@@ -819,7 +819,7 @@
             color: $text-black;
             font-family: $content-font;
             font-size: 18px;
-            text-align: center;
+            text-align: left;
 
             &.note {
                 margin: 24px 0;
@@ -1448,7 +1448,9 @@
                 font-size: 20px;
             }
 
-
+            h4{
+                text-align: center;
+            }
             p {
                 margin: 8px 0;
                 font-size: 16px;
