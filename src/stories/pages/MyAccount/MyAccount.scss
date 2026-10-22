@@ -973,6 +973,9 @@
 
                 h4{
                     text-align: center;
+                    &.border{
+                        text-align: left;
+                    }
                 }
 
                 .msg{
