@@ -4,26 +4,13 @@ import ChannelSelection from '../../ChannelSelection/ChannelSelection';
 import './FilterChannelsOverlay.scss';
 import channelsData from '../../../assets/data/channels.json';
 import plansData from '../../../assets/data/plans.json';
+import channelCategories from './channelCategories';
 
 export interface FilterChannelsOverlayProps {
   isOpen: boolean;
   onClose: () => void;
   onSelect?: (item: any) => void;
 }
-
-const channelCategories = [
-  { label: 'All', className: 'all' },
-  { label: 'Sports', className: 'Sports' },
-  { label: 'Movies/Drama', className: 'Movie' },
-  { label: 'Entertainment', className: 'Entertainment' },
-  { label: 'Asian Entertainment', className: 'AsianEntertainment' },
-  { label: 'Western Entertainment', className: 'WesternEntertainment' },
-  { label: 'Travel', className: 'Travel' },
-  { label: 'Knowledge', className: 'Knowledge' },
-  { label: 'Kids/Learn', className: 'Kids' },
-  { label: 'Infotainment', className: 'News' },
-  { label: 'Foreign Language', className: 'Foreign' },
-];
 
 interface Channel {
   number: string;
@@ -32,6 +19,7 @@ interface Channel {
   description?: string;
   description_zh?: string;
   type?: string;
+  app?: boolean;
 }
 
 const onDemandCatalogs = (channelsData.channels as Channel[])
@@ -41,6 +29,7 @@ const onDemandCatalogs = (channelsData.channels as Channel[])
     type: channel.type,
     name: channel.name,
     description: channel.description,
+    app: channel.app,
   }));
 
 const liveChannels = (channelsData.channels as Channel[])
@@ -50,6 +39,7 @@ const liveChannels = (channelsData.channels as Channel[])
     type: channel.type,
     name: channel.name,
     description: channel.description,
+    app: channel.app,
   }));
 
 // Get all available onDemandNumbers and channelsNumbers from plans
@@ -175,7 +165,7 @@ export const FilterChannelsOverlay: React.FC<FilterChannelsOverlayProps> = ({ is
             {/* Only show ChannelSelection if there are items */}
             {filteredOnDemandCatalogs.length > 0 && (
               <ChannelSelection
-                title="On-Demand Catalogs"
+                title={`On-Demand Catalogs${filteredOnDemandCatalogs.some(item => item.app === true) ? ' / Apps' : ''}`}
                 items={filteredOnDemandCatalogs}
                 selectedItem={selectedOnDemand}
                 onItemClick={(item, e) => {

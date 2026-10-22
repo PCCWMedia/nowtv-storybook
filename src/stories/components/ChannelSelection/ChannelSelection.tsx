@@ -1,19 +1,24 @@
 import React from 'react';
 import './ChannelSelection.scss';
 
+interface ChannelSelectionItem {
+    id: string;
+    channelNo?: string;
+    name?: string;
+    description?: string;
+    type?: string;
+    app?: boolean;
+}
+
 interface ChannelSelectionProps {
     title: string;
-    items: Array<{
-        id: string;
-        channelNo?: string;
-        name?: string;
-        description?: string;
-        type?: string;
-    }>;
-    selectedItem: any;
-    onItemClick: (item: any, event: React.MouseEvent<HTMLLIElement>) => void;
+    items: ChannelSelectionItem[];
+    selectedItem: ChannelSelectionItem | null;
+    onItemClick: (item: ChannelSelectionItem, event: React.MouseEvent<HTMLLIElement>) => void;
     disableActiveClass?: boolean;
+    disableItemClick?: boolean;
     showItemLabel?: boolean;
+    itemLabelPosition?: 'above' | 'below';
     itemLabelKey?: 'channelNo' | 'name';
     logoWrapperClassName?: string;
 }
@@ -24,7 +29,9 @@ const ChannelSelection: React.FC<ChannelSelectionProps> = ({
     selectedItem,
     onItemClick,
     disableActiveClass = false,
+    disableItemClick = false,
     showItemLabel = false,
+    itemLabelPosition = 'above',
     itemLabelKey = 'name',
     logoWrapperClassName,
 }) => {
@@ -39,27 +46,48 @@ const ChannelSelection: React.FC<ChannelSelectionProps> = ({
             <div className="channel-list-wrapper">
                 <div className="container">
                     <ul>
-                        {items.map(item => (
-                            <li 
-                                key={item.id}
-                                className={
-                                  !disableActiveClass && selectedItem?.id === item.id ? 'active' : ''
-                                }
-                                data-type={item.type}
-                                onClick={(e) => onItemClick(item, e)}
-                            >
-                                {showItemLabel && item[itemLabelKey] && (
-                                    <p className="channel-item-label">{item[itemLabelKey]}</p>
-                                )}
-                                {logoWrapperClassName ? (
-                                    <div className={logoWrapperClassName}>
-                                        <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
-                                    </div>
-                                ) : (
+                        {items.map((item) => {
+                            const logo = logoWrapperClassName ? (
+                                <div className={logoWrapperClassName}>
                                     <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
-                                )}
-                            </li>
-                        ))}
+                                </div>
+                            ) : (
+                                <img src={`https://www.nowtv.now.com/media/s-logo/${item.id}_e.png`} alt="" />
+                            );
+                            const logoContent =
+                                showItemLabel && itemLabelPosition === 'below' ? (
+                                    <div className="channel-selection-logo-box">
+                                        {item.app === true && (
+                                            <p className="channel-app-label">3rd-Party App</p>
+                                        )}
+                                        {logo}
+                                    </div>
+                                ) : logo;
+
+                            return (
+                                <li
+                                    key={item.id}
+                                    className={[
+                                        !disableActiveClass && selectedItem?.id === item.id ? 'active' : '',
+                                        showItemLabel && itemLabelPosition === 'below' ? 'has-label-below' : '',
+                                        disableItemClick ? 'non-interactive' : '',
+                                    ].filter(Boolean).join(' ')}
+                                    data-type={item.type}
+                                    onClick={disableItemClick ? undefined : (event) => onItemClick(item, event)}
+                                >
+                                    {item.app === true && itemLabelPosition !== 'below' && (
+                                        <p className="channel-app-label">3rd-Party App</p>
+                                    )}
+                                    {showItemLabel && itemLabelPosition === 'above' && item[itemLabelKey] && (
+                                        <p className="channel-item-label">{item[itemLabelKey]}</p>
+                                    )}
+                                    {logoContent}
+                                    {showItemLabel && itemLabelPosition === 'below' && item[itemLabelKey] && (
+                                        <p className="channel-item-label">{item[itemLabelKey]}</p>
+                                    )}
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>

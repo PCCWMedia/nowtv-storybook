@@ -7,6 +7,7 @@ import SocialMediaLinks from './SocialMediaLinks/SocialMediaLinks';
 import './footer.scss';
 
 import anHKTLogo from '../../assets/img/an-hkt-logo-w.png';
+import pccwLogo from '../../assets/img/footer/footer-pccw.svg';
 
 interface FooterProps {
     status: 'normal' | 'copyrightOnly';

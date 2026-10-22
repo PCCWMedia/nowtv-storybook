@@ -6,9 +6,9 @@ import channelsData from '../../../assets/data/channels.json';
 
 
 interface PackOverlayProps {
-    image: string;
+    image?: string;
     title: string;
-    packDescription: string;
+    packDescription?: string;
     channels: Array<{
         id: string;
         name?: string;
@@ -20,6 +20,9 @@ interface PackOverlayProps {
         description?: string;
     }>;
     isOnDemand?: boolean;
+    centerTitle?: boolean;
+    showItemNames?: boolean;
+    disableItemDetails?: boolean;
     onClose: () => void;
 }
 
@@ -30,6 +33,9 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
     channels,
     ondemands,
     isOnDemand = false,
+    centerTitle = false,
+    showItemNames = false,
+    disableItemDetails = false,
     onClose
 }) => {
     const [selectedChannel, setSelectedChannel] = useState<null | typeof channels[0]>(null);
@@ -39,6 +45,8 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
     const [isVisible, setIsVisible] = useState(false);
 
     const channelWrapperRef = useRef<HTMLDivElement>(null);
+    const getChannelAppFlag = (id: string) =>
+        channelsData.channels.find(channel => channel.number === id)?.app === true;
 
     useEffect(() => {
         // Add a small delay to ensure the initial state is rendered
@@ -140,21 +148,29 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
                     </div>
 
                     <div className="pack-overlay-wrapper" onClick={e => e.stopPropagation()}>
-                        <img src={image} alt={title} className="pack-banner"/>
+                        {image && <img src={image} alt={title} className="pack-banner"/>}
 
-                        <div className="pack-about-wrapper">
+                        <div className={`pack-about-wrapper${centerTitle ? ' center-title' : ''}`}>
                             <div className="container">
                                 <h4>{title}</h4>
-                                <p dangerouslySetInnerHTML={{ __html: packDescription }}></p>
+                                {packDescription && <p dangerouslySetInnerHTML={{ __html: packDescription }}></p>}
                             </div>
                         </div>
 
                         <div className="channel-wrapper" ref={channelWrapperRef}>
                             {isOnDemand && ondemands.length > 0 && (
                                 <ChannelSelection
-                                    title={`${ondemands.length} On-Demand Catalog${ondemands.length !== 1 ? 's' : ''}`}
-                                    items={ondemands}
+                                    title={`${ondemands.length} On-Demand Catalog${ondemands.length !== 1 ? 's' : ''}${ondemands.some(item => getChannelAppFlag(item.id)) ? ' / Apps' : ''}`}
+                                    items={ondemands.map(item => ({
+                                        ...item,
+                                        name: item.name ?? channelsData.channels.find(channel => channel.number === item.id)?.name,
+                                        app: getChannelAppFlag(item.id),
+                                    }))}
                                     selectedItem={selectedOndemand}
+                                    disableActiveClass={disableItemDetails}
+                                    disableItemClick={disableItemDetails}
+                                    showItemLabel={showItemNames}
+                                    itemLabelPosition="below"
                                     onItemClick={(item, e) => handleItemClick(item, e, 'ondemand')}
                                 />
                             )}
@@ -162,8 +178,16 @@ const PackOverlay: React.FC<PackOverlayProps> = ({
                             {channels.length > 0 && (
                                 <ChannelSelection
                                     title={`${channels.length} Channel${channels.length !== 1 ? 's' : ''}`}
-                                    items={channels}
+                                    items={channels.map(item => ({
+                                        ...item,
+                                        name: item.name ?? channelsData.channels.find(channel => channel.number === item.id)?.name,
+                                        app: getChannelAppFlag(item.id),
+                                    }))}
                                     selectedItem={selectedChannel}
+                                    disableActiveClass={disableItemDetails}
+                                    disableItemClick={disableItemDetails}
+                                    showItemLabel={showItemNames}
+                                    itemLabelPosition="below"
                                     onItemClick={(item, e) => handleItemClick(item, e, 'channel')}
                                 />
                             )}

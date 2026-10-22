@@ -6,31 +6,28 @@ import ChannelSelection from '../../components/ChannelSelection/ChannelSelection
 import Link from '../../components/Link/Link';
 import channelsData from '../../assets/data/channels.json';
 import './ChannelOverview.scss';
-import SelectBox from '../../components/Form/SelectBox/SelectBox';
+import channelCategories from '../../components/Overlay/FilterChannelsOverlay/channelCategories';
 
 type TabType = 'channel' | 'on-demand';
 
 const DESCRIPTION_PANEL_EXTRA_SPACING = 70;
 const ALL_FILTER_VALUE = 'all';
 
-interface FilterOption {
-    value: string;
-    label: string;
-}
-
 interface ChannelData {
     number: string;
     name: string;
     description?: string;
     type?: string;
+    app?: boolean;
 }
 
 interface ChannelSelectionItem {
     id: string;
     channelNo?: string;
-    name: string;
+    name?: string;
     description?: string;
     type?: string;
+    app?: boolean;
 }
 
 const mapSelectionItem = (channel: ChannelData): ChannelSelectionItem => ({
@@ -39,14 +36,8 @@ const mapSelectionItem = (channel: ChannelData): ChannelSelectionItem => ({
     name: channel.name,
     description: channel.description,
     type: channel.type,
+    app: channel.app,
 });
-
-const formatTypeLabel = (type: string): string =>
-    type
-        .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
-        .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
-        .replace(/[_-]+/g, ' ')
-        .trim();
 
 const ChannelOverview: React.FC = () => {
     const [activeTab, setActiveTab] = useState<TabType>('channel');
@@ -56,6 +47,7 @@ const ChannelOverview: React.FC = () => {
     const [descriptionPosition, setDescriptionPosition] = useState(0);
     const [channelTypeFilter, setChannelTypeFilter] = useState(ALL_FILTER_VALUE);
     const [onDemandTypeFilter, setOnDemandTypeFilter] = useState(ALL_FILTER_VALUE);
+    const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
     const contentWrapperRef = useRef<HTMLDivElement>(null);
     const descriptionRef = useRef<HTMLDivElement>(null);
     const activeItemRef = useRef<HTMLLIElement | null>(null);
@@ -80,24 +72,6 @@ const ChannelOverview: React.FC = () => {
                 .map(mapSelectionItem),
         []
     );
-
-    const buildFilterOptions = (items: ChannelSelectionItem[]): FilterOption[] => {
-        const uniqueTypes = Array.from(
-            new Set(
-                items
-                    .map((item) => item.type?.trim())
-                    .filter((type): type is string => Boolean(type))
-            )
-        );
-
-        return [
-            { value: ALL_FILTER_VALUE, label: 'All' },
-            ...uniqueTypes.map((type) => ({ value: type, label: formatTypeLabel(type) })),
-        ];
-    };
-
-    const channelTypeOptions = useMemo(() => buildFilterOptions(channels), [channels]);
-    const onDemandTypeOptions = useMemo(() => buildFilterOptions(onDemand), [onDemand]);
 
     const filteredChannels = useMemo(
         () => channels.filter((item) => channelTypeFilter === ALL_FILTER_VALUE || item.type === channelTypeFilter),
@@ -252,7 +226,61 @@ const ChannelOverview: React.FC = () => {
         hideDescription();
         setChannelTypeFilter(ALL_FILTER_VALUE);
         setOnDemandTypeFilter(ALL_FILTER_VALUE);
+        setIsCategoryDropdownOpen(false);
         setActiveTab(tab);
+    };
+
+    const renderCategoryFilter = (
+        selectedCategory: string,
+        setSelectedCategory: (category: string) => void,
+        filterName: string,
+        items: ChannelSelectionItem[]
+    ) => {
+        const availableTypes = new Set(items.map((item) => item.type));
+        const categories = filterName === 'channel'
+            ? [...channelCategories, { label: 'Adult', className: 'Adult' }]
+            : channelCategories;
+        const availableCategories = categories.filter(
+            (category) => category.className === ALL_FILTER_VALUE || availableTypes.has(category.className)
+        );
+
+        return (
+            <div className="type-filter-wrapper">
+                <div className="container">
+                    <div className="category-filter">
+                        <button
+                            type="button"
+                            className={`mobile-select${isCategoryDropdownOpen ? ' active' : ''}`}
+                            onClick={() => setIsCategoryDropdownOpen((open) => !open)}
+                            aria-expanded={isCategoryDropdownOpen}
+                            aria-controls={`${filterName}-category-options`}
+                        >
+                            {availableCategories.find((category) => category.className === selectedCategory)?.label ?? 'All'}
+                        </button>
+                        <div
+                            id={`${filterName}-category-options`}
+                            className={`channel-options${isCategoryDropdownOpen ? ' show' : ''}`}
+                        >
+                            {availableCategories.map((category) => (
+                                <button
+                                    key={category.className}
+                                    type="button"
+                                    className={`${category.className}${selectedCategory === category.className ? ' active' : ''}`}
+                                    aria-pressed={selectedCategory === category.className}
+                                    onClick={() => {
+                                        setSelectedCategory(category.className);
+                                        setIsCategoryDropdownOpen(false);
+                                        hideDescription();
+                                    }}
+                                >
+                                    {category.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     };
 
     const handleItemClick = (
@@ -350,21 +378,7 @@ const ChannelOverview: React.FC = () => {
                     <div className="channel-content-wrapper" ref={contentWrapperRef}>
                         {activeTab === 'channel' && (
                             <section className="tabs-content" data-content="channel">
-                                <div className="type-filter-wrapper">
-                                    <div className="container">
-                                        <h6>Genre</h6>
-                                        <SelectBox
-                                            options={channelTypeOptions}
-                                            defaultValue={channelTypeFilter}
-                                            onChange={(value) => {
-                                                setChannelTypeFilter(value);
-                                                hideDescription();
-                                            }}
-                                            placeholder="All"
-                                            name="channel-type"
-                                        />
-                                    </div>
-                                </div>
+                                {renderCategoryFilter(channelTypeFilter, setChannelTypeFilter, 'channel', channels)}
 
                                 <div key={`channel-filter-${channelTypeFilter}`} className="filtered-content fade-in">
                                     <ChannelSelection
@@ -373,7 +387,8 @@ const ChannelOverview: React.FC = () => {
                                         selectedItem={selectedChannel}
                                         onItemClick={(item, event) => handleItemClick(item, event, 'channel')}
                                         showItemLabel={true}
-                                        itemLabelKey="channelNo"
+                                        itemLabelPosition="below"
+                                        itemLabelKey="name"
                                         logoWrapperClassName="channel-logo"
                                     />
                                 </div>
@@ -382,21 +397,7 @@ const ChannelOverview: React.FC = () => {
 
                         {activeTab === 'on-demand' && (
                             <section className="tabs-content" data-content="on-demand">
-                                <div className="type-filter-wrapper">
-                                    <div className="container">
-                                        <h6>Genre</h6>
-                                        <SelectBox
-                                            options={onDemandTypeOptions}
-                                            defaultValue={onDemandTypeFilter}
-                                            onChange={(value) => {
-                                                setOnDemandTypeFilter(value);
-                                                hideDescription();
-                                            }}
-                                            placeholder="All"
-                                            name="ondemand-type"
-                                        />
-                                    </div>
-                                </div>
+                                {renderCategoryFilter(onDemandTypeFilter, setOnDemandTypeFilter, 'on-demand', onDemand)}
 
                                 <div key={`ondemand-filter-${onDemandTypeFilter}`} className="filtered-content fade-in">
                                     <ChannelSelection
@@ -405,6 +406,7 @@ const ChannelOverview: React.FC = () => {
                                         selectedItem={selectedOnDemand}
                                         onItemClick={(item, event) => handleItemClick(item, event, 'on-demand')}
                                         showItemLabel={true}
+                                        itemLabelPosition="below"
                                         itemLabelKey="name"
                                         logoWrapperClassName="channel-logo"
                                     />

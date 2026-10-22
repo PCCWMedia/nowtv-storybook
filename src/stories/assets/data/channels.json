@@ -1126,7 +1126,8 @@
       "name_zh": "HBO Max 應用程式",
       "description": "A brand new app featuring blockbuster movies, groundbreaking series, iconic hits, best-in-class real-life stories from food, home, lifestyle and documentary, as well as family favorites.",
       "description_zh": "全新HBO Max應用程式帶你深入探索 HBO、 哈利波特、 DC宇宙、卡通頻道、華納兄弟及 Discovery 頻道的精彩世界。",
-      "type": "Movie"
+      "type": "Movie",
+      "app": true
     },
     {
       "number": "L00102",

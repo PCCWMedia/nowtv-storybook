@@ -1,0 +1,15 @@
+const channelCategories = [
+  { label: 'All', className: 'all' },
+  { label: 'Sports', className: 'Sports' },
+  { label: 'Movies/Drama', className: 'Movie' },
+  { label: 'Entertainment', className: 'Entertainment' },
+  { label: 'Asian Entertainment', className: 'AsianEntertainment' },
+  { label: 'Western Entertainment', className: 'WesternEntertainment' },
+  { label: 'Travel', className: 'Travel' },
+  { label: 'Knowledge', className: 'Knowledge' },
+  { label: 'Kids/Learn', className: 'Kids' },
+  { label: 'Infotainment', className: 'News' },
+  { label: 'Foreign Language', className: 'Foreign' },
+];
+
+export default channelCategories;
