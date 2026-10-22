@@ -618,6 +618,41 @@
 
                 .item {
                     padding: 0 16px;
+                    margin: 0 0 32px 0;
+                }
+
+                .addon-row {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 16px;
+
+                    .subscribed {
+                        width: auto;
+                        flex: 1;
+                    }
+
+                    .cta-button {
+                        flex-shrink: 0;
+                        padding-bottom: 2px;
+
+                        .cancel-renewal-btn {
+                            padding: 0;
+                            border: 0;
+                            background: none;
+                            color: #bb4142;
+                            cursor: pointer;
+                            font-family: $content-font;
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            white-space: nowrap;
+
+                            &:hover {
+                                font-weight: 500;
+                            }
+                        }
+                    }
                 }
 
                 .subscribed {
@@ -755,6 +790,53 @@
             button {
                 min-width: 180px;
                 margin: 0;
+            }
+        }
+    }
+
+    .cancel-auto-renew-wrapper {
+        width: 100%;
+        padding: 40px;
+        border-radius: 8px;
+        background: #fff;
+
+        h2 {
+            margin: 0 0 24px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h4 {
+            margin: 0 0 8px;
+            color: #cf6b0d;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 8px 0;
+            color: $text-black;
+            font-family: $content-font;
+            font-size: 18px;
+            text-align: center;
+
+            &.note {
+                margin: 24px 0;
+                font-size: 16px;
+                text-align: left;
+                color: $text-grey;
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px 0 0;
+
+            button {
+                min-width: 160px;
             }
         }
     }
@@ -1291,6 +1373,7 @@
                     margin: 0 0 40px 0;
                     .item{
                         padding: 0 12px;
+                        margin: 0 0 24px 0;
                     }
                     .subscribed {
 
@@ -1352,6 +1435,41 @@
                 flex-direction: column-reverse;
 
                 button {
+                    align-self: center;
+                }
+            }
+        }
+
+        .cancel-auto-renew-wrapper {
+            padding: 32px;
+
+            h2 {
+                margin: 0 0 20px;
+                font-size: 20px;
+            }
+
+
+            p {
+                margin: 8px 0;
+                font-size: 16px;
+                text-align: center;
+
+                &.note {
+                    margin: 16px 0;
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+
+            .cta-buttons {
+                display: flex;
+                justify-content: center;
+                flex-direction: column-reverse;
+                gap: 16px;
+                margin: 24px 0 0;
+
+                button {
+                    min-width: 160px;
                     align-self: center;
                 }
             }
