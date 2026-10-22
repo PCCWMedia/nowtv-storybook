@@ -1306,6 +1306,20 @@
                     margin: 0 0 40px 0;
 
                     .subscribed {
+
+                        .combo {
+                        font-size: 16px;
+
+                        &[aria-expanded='true']::after {
+                            color: #cf6b0d;
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                        p {
+                            font-size: 14px;
+                        }
+
                         .packs-wrapper{
                             ul {
                                 display: grid;
