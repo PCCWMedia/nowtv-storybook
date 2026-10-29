@@ -8,6 +8,7 @@ import InputBox from '../../../components/Form/InputBox/InputBox';
 import Link from '../../../components/Link/Link';
 import BorderCard from '../../../components/Card/BorderCard/BorderCard';
 import FAQLinkColumn from '../../../components/Support/FAQLinkColumn/FAQLinkColumn';
+import phoneIcon from '../../../assets/img/icon/icon-phone.svg';
 
 const SupportLanding: React.FC = () => {
   const selectTopicData = [
@@ -183,7 +184,7 @@ const SupportLanding: React.FC = () => {
       <ChatBubble 
         isVisible={true}
         options={[
-          { label: 'Customer Service', link: 'https://wa.me/85298766888' },
+          { label: 'Customer Service', link: 'tel:1833888', icon: phoneIcon },
           { label: 'Technical Support', link: 'https://wa.me/85298766800' },
         ]}
       />

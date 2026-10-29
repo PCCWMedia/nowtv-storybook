@@ -7,6 +7,7 @@ import { CookiesBar } from '../../components/CookiesBar/CookiesBar';
 import { ChatBubble } from '../../components/Chats/ChatBubble/ChatBubble';
 import textChatIcon from '../../assets/img/icon/textchat-d.svg';
 import whatsappIcon from '../../assets/img/icon/whatsapp-d.svg';
+import phoneIcon from '../../assets/img/icon/icon-phone.svg';
 import PlanCard from '../../components/Card/PlanCard/PlanCard';
 import Plans from '../../components/Swiper/Plans/Plans';
 import Link from '../../components/Link/Link';
@@ -514,7 +515,7 @@ const GetStarted: React.FC<GetStartedProps> = ({ showLikeNowEOverlayDefault = fa
                 options={[
                     { label: 'Live Chat with Sales<b>09:00 - 22:00</b>', link: 'https://shop.theclub.com.hk/live-chat?___store=en_US', icon: textChatIcon },
                     { label: 'Sales Team<b>WhatsApp</b>', link: 'https://wa.me/85298766800', icon: whatsappIcon },
-                    { label: 'Customer Service<b>WhatsApp</b>', link: 'https://wa.me/85298766888', icon: whatsappIcon },
+                    { label: 'Customer Service', link: 'tel:1833888', icon: phoneIcon },
                 ]}
             />
 

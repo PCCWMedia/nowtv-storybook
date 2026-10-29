@@ -3,6 +3,7 @@ import { fn } from 'storybook/test';
 import { ChatBubble } from './ChatBubble';
 import chatMessageIcon from '../../../assets/img/icon/icon-chat-message.svg';
 import whatsappIcon from '../../../assets/img/icon/icon-chat-whatsapp.svg';
+import phoneIcon from '../../../assets/img/icon/icon-phone.svg';
 
 const meta = {
   title: 'Components/Chats/ChatBubble',
@@ -45,9 +46,9 @@ const meta = {
         onClick: fn()
       },
       { 
-        label: 'Customer Service<b>WhatsApp</b>', 
-        link: 'https://wa.me/0987654321',
-        icon: whatsappIcon,
+        label: 'Customer Service<b>1833888</b>',
+        link: 'tel:1833888',
+        icon: phoneIcon,
         onClick: fn()
       },
     ],
